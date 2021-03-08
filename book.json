@@ -1,0 +1,24 @@
+{
+  "title": "網站自動化測試 for Python",
+  "description": "適合入門者的網站自動化測試教材，範例使用的語言是 Python。",
+  "language": "zh",
+  "author": "AILIN LIOU <alin.code@gmail.com>",
+  "fontState": {
+    "size": "2",
+    "family": "sans",
+    "theme": "night"
+  },
+  "pdf": {
+    "pageNumbers": true, 
+    "fontFamily": "Arial",
+    "fontSize": 12,
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 56,
+      "bottom": 56
+    }
+  },
+  "plugins": ["expandable-chapters", "anchors"]
+}
