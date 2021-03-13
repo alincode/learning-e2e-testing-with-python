@@ -7,7 +7,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome("./chromedriver")
 driver.get("http://www.python.org")
 assert "Python" in driver.title
 elem = driver.find_element_by_name("q")
@@ -97,7 +97,7 @@ from selenium.webdriver.common.keys import Keys
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome("./chromedriver")
 
     def test_search_in_python_org(self):
         driver = self.driver

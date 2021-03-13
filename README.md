@@ -31,3 +31,7 @@
 - 寄信到 alin.code@gmail.com
 
 最新更新時間：2021/03/14
+
+- <https://alincode.github.io/learning-e2e-testing-with-js/promotion/about-me.html>
+- <https://selenium-python.readthedocs.io/getting-started.html>
+- <https://alincode.github.io/learning-e2e-testing-with-python/browser.html>
