@@ -25,47 +25,55 @@
 - Firefox: https://github.com/mozilla/geckodriver/releases
 - Safari: https://webkit.org/blog/6900/webdriver-support-in-safari-10/
 
-或
+或從
 
-從 <https://www.selenium.dev/downloads/> 找到 Platforms Supported by Selenium 的位址，並下載對應的驅動程式。
+<https://www.selenium.dev/downloads/> 找到 Platforms Supported by Selenium 的位址，並下載對應的驅動程式。
 
-或
+或從 
 
-從 <https://github.com/christian-bromann/awesome-selenium#driver> 找到
+<https://github.com/christian-bromann/awesome-selenium#driver>
 
-### 測試環境準備完成
+## 測試環境
 
-新增一個檔案叫 test.py
+1. [下載 Edge 驅動程式](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+2. 新增一個測試專案
+3. 新增一個檔案叫 test.py
 
 ```python
 # test.py
 from selenium import webdriver
-driver = webdriver.Chrome("./chromedriver")
+
+driver = webdriver.Edge("./msedgedriver.exe")
+# driver = webdriver.Chrome("./chromedriver.exe")
+
+# for Mac
+# driver = webdriver.Chrome("./chromedriver")
+
 driver.get("http://www.python.org")
 ```
 
-在 Windows 上執行
+執行測試程式
 
 ```
-C:\Python38\Scripts\pip.exe install selenium
-C:\Python38\python.exe C:\test.py
-```
-
-在 Mac 上執行
-
-```
-python3 -m pip install --upgrade selenium
+pip install selenium
 python test.py
 ```
 
 ## 練習題 😎
 
-1. 試著將上面的步驟完成
-1. 試著改用其他瀏覽器
+1. 試著照上面的步驟，完成 Edge 瀏覽器的測試環境。
+1. 試著改用 Chrome 瀏覽器來跑測試
 
 ## 補充
 
 ### 環境常見問題
+
+- 瀏覽器版本跟驅動程式不一致
+
+```
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of MSEdgeDriver only supports MSEdge version 91
+Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+```
 
 - 驅動程式的版本一直更新
 

@@ -23,16 +23,18 @@ driver.close()
 執行測試程式
 
 ```bash
-python3 -m pip install --upgrade selenium
+pip install selenium
 python python_org_search.py
 ```
 
-## 一步一步解說
+<!-- python3 -m pip install --upgrade selenium -->
+
+## 詳細解說
 
 ### Step1: 匯入模組
 
-- webdriver 可模擬操作瀏覽器，目前支援 Firefox, Chrome, IE 等等。
-- 而 Keys 類別，提供了模擬鍵盤操作 (e.g. RETURN, F1, ALT)
+- webdriver 可模擬人操作瀏覽器，支援 Firefox, Chrome, IE 等各類型的瀏覽器。
+- 而 `Keys` 類別，提供了模擬鍵盤操作行為 (e.g. RETURN, F1, ALT)
 
 ```python
 from selenium import webdriver
@@ -54,6 +56,9 @@ driver.get("http://www.python.org")
 ```
 
 ### Step4: 斷言 - 確認標題中包含 Python
+
+> 在程式設計中，斷言（assertion）是一種放在程式中的一階邏輯（如一個結果為真或是假的邏輯判斷式），目的是為了標示與驗證程式開發者預期的結果－當程式執行到斷言的位置時，對應的斷言應該為真。若斷言不為真時，程式會中止執行，並給出錯誤訊息。 ***資料來源: Wiki***
+
 
 ```python
 assert "Python" in driver.title
