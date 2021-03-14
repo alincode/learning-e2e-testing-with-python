@@ -2,17 +2,17 @@
 
 - [序](README.md)
   - [關於我](https://docs.google.com/presentation/d/1ADinTuSL-FzdJCXh1wtYPzYPkB0oz7Ar2gUSbsNC79Y/edit?usp=sharing)
+  - [職缺範例](career_example.md)
 - [第一週]()
-
   - [關於測試](https://docs.google.com/presentation/d/1egb5fterPeKqgL3vDc-EFQFZrBk_2A8DkmkR5rUvQ7U/edit?usp=sharing)
-  - [介紹 Selenium](https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing)
-  - [安裝測試開發環境(略過)](install.md)
-  - [入門](getting-started.md)
+  - [關於 Selenium](https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing)
+  - [準備開發環境](install.md)
+  - [入門](getting_started.md)
+  - [與測試框架結合](unittest.md)
   - [練習題](practices/week1.md)
-  - [Python 基礎]()
-    - [基本語法]()
-    - [套件管理工具]()
-  - [相關資源](resource.md)
+  - [Selenium 官方文件](https://www.selenium.dev/documentation/en/)
+  - [Cheat Sheet](cheat_sheet.md)
+  - [其他相關資源](resource.md)
 
 <!-- - [第二週]()
 - [第三週]()
@@ -36,8 +36,9 @@
   - [常見應用情境]()
   - [常見錯誤]()
   - [雲端瀏覽器測試]()
-  - [經驗談](experience-talks.md) -->
+  - [經驗談](experience-talks.md)
 
-<!--  [軟體測試的路線圖](road-map.md)
-- [軟體測試的職場](career.md)
+- [軟體測試的路線圖](road-map.md)
 - [手動測試末日？](is-manual-testing-dying.md)
+
+ -->
