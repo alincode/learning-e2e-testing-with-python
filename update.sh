@@ -1,3 +1,4 @@
+git merge master
 rm -rf docs
 npm run build
 mv _book docs
