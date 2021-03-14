@@ -67,6 +67,13 @@ python test.py
 
 ### 環境常見問題
 
+- 瀏覽器版本跟驅動程式不一致
+
+```
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of MSEdgeDriver only supports MSEdge version 91
+Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+```
+
 - 驅動程式的版本一直更新
 
 可以使用 <https://www.npmjs.com/package/selenium-standalone> 來讓自己省點力
