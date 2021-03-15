@@ -43,8 +43,8 @@
 # test.py
 from selenium import webdriver
 
-driver = webdriver.Edge("./msedgedriver.exe")
-# driver = webdriver.Chrome("./chromedriver.exe")
+# driver = webdriver.Edge("./msedgedriver.exe")
+driver = webdriver.Chrome("./chromedriver.exe")
 
 # for Mac
 # driver = webdriver.Chrome("./chromedriver")
@@ -61,8 +61,8 @@ python test.py
 
 ## 練習題 😎
 
-1. 試著照上面的步驟，完成 Edge 瀏覽器的測試環境。
-1. 試著改用 Chrome 瀏覽器來跑測試
+1. 試著照上面的步驟，完成 Chrome 瀏覽器的測試環境。
+1. 試著改用 Edge 瀏覽器來跑測試
 
 ## 補充
 

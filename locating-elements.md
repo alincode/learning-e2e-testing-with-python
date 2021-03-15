@@ -136,4 +136,5 @@ content = driver.find_element_by_css_selector('p.content')
 ## 總結
 
 - 有這麼多種，到底該用哪一種？
+- 如果 selector 規則很複雜的時候，有沒有其他變通方式？
 - 其他不常使用的，下週再說明。
