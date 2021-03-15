@@ -14,7 +14,7 @@
 
 ### PyCharm IDE
 
-- 下載安裝檔：<https://www.jetbrains.com/pycharm/download/#section=mac>
+- 下載安裝檔：<https://www.jetbrains.com/pycharm/download/>
 - 安裝 Community 版本
 
 ### 安裝 Driver Binaries
@@ -35,7 +35,7 @@
 
 ## 測試環境
 
-1. [下載 Edge 驅動程式](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+1. [下載 Chrome 驅動程式](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 2. 新增一個測試專案
 3. 新增一個檔案叫 test.py
 
