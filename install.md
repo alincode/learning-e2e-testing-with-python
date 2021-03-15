@@ -77,8 +77,6 @@ Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\M
 
 - 驅動程式的版本一直更新
 
-可以使用 <https://www.npmjs.com/package/selenium-standalone> 來讓自己省點力
-
 ## 參考文獻
 
 - <https://selenium-python.readthedocs.io/installation.html>
