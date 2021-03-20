@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>準備開發環境 · 網站自動化測試 for Python</title>
+        <title>驗證 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="getting_started.html" />
+    <link rel="next" href="practices/week2.html" />
     
+    
+    <link rel="prev" href="waits.html" />
     
 
     </head>
@@ -180,7 +182,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="install.html">
+        <li class="chapter " data-level="1.2.3" data-path="install.html">
             
                 <a href="install.html">
             
@@ -303,7 +305,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="assert.html">
+        <li class="chapter active" data-level="1.3.4" data-path="assert.html">
             
                 <a href="assert.html">
             
@@ -506,7 +508,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >準備開發環境</a>
+        <a href="." >驗證</a>
     </h1>
 </div>
 
@@ -521,75 +523,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6E96;&#x5099;&#x958B;&#x767C;&#x74B0;&#x5883;"><a name="&#x6E96;&#x5099;&#x958B;&#x767C;&#x74B0;&#x5883;" class="plugin-anchor" href="#&#x6E96;&#x5099;&#x958B;&#x767C;&#x74B0;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E96;&#x5099;&#x958B;&#x767C;&#x74B0;&#x5883;</h1>
-<ul>
-<li>Python</li>
-<li>PyCharm IDE</li>
-<li>&#x5B89;&#x88DD;&#x700F;&#x89BD;&#x5668;&#x9A45;&#x52D5;</li>
-<li>&#x5B89;&#x88DD; Selenium Webdriver &#x6A21;&#x7D44;</li>
-</ul>
-<h2 id="&#x5B89;&#x88DD;"><a name="&#x5B89;&#x88DD;" class="plugin-anchor" href="#&#x5B89;&#x88DD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88DD;</h2>
-<h3 id="&#x5B89;&#x88DD;-python"><a name="&#x5B89;&#x88DD;-python" class="plugin-anchor" href="#&#x5B89;&#x88DD;-python"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88DD; Python</h3>
-<ul>
-<li>&#x4E0B;&#x8F09;&#x5B89;&#x88DD;&#x6A94;&#xFF1A;<a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></li>
-<li>&#x76EE;&#x524D;&#x7BC4;&#x4F8B;&#x4F7F;&#x7528; Python 3.8</li>
-</ul>
-<h3 id="pycharm-ide"><a name="pycharm-ide" class="plugin-anchor" href="#pycharm-ide"><i class="fa fa-link" aria-hidden="true"></i></a>PyCharm IDE</h3>
-<ul>
-<li>&#x4E0B;&#x8F09;&#x5B89;&#x88DD;&#x6A94;&#xFF1A;<a href="https://www.jetbrains.com/pycharm/download/" target="_blank">https://www.jetbrains.com/pycharm/download/</a></li>
-<li>&#x5B89;&#x88DD; Community &#x7248;&#x672C;</li>
-</ul>
-<h3 id="&#x5B89;&#x88DD;-driver-binaries"><a name="&#x5B89;&#x88DD;-driver-binaries" class="plugin-anchor" href="#&#x5B89;&#x88DD;-driver-binaries"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88DD; Driver Binaries</h3>
-<ul>
-<li>Chrome: <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></li>
-<li>Edge: <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/" target="_blank">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></li>
-<li>Internet Explorer: <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" target="_blank">https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a></li>
-<li>Firefox: <a href="https://github.com/mozilla/geckodriver/releases" target="_blank">https://github.com/mozilla/geckodriver/releases</a></li>
-<li>Safari: <a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/" target="_blank">https://webkit.org/blog/6900/webdriver-support-in-safari-10/</a></li>
-</ul>
-<p>&#x6216;&#x5F9E;</p>
-<p><a href="https://www.selenium.dev/downloads/" target="_blank">https://www.selenium.dev/downloads/</a> &#x627E;&#x5230; Platforms Supported by Selenium &#x7684;&#x4F4D;&#x5740;&#xFF0C;&#x4E26;&#x4E0B;&#x8F09;&#x5C0D;&#x61C9;&#x7684;&#x9A45;&#x52D5;&#x7A0B;&#x5F0F;&#x3002;</p>
-<p>&#x6216;&#x5F9E; </p>
-<p><a href="https://github.com/christian-bromann/awesome-selenium#driver" target="_blank">https://github.com/christian-bromann/awesome-selenium#driver</a></p>
-<h2 id="&#x6E2C;&#x8A66;&#x74B0;&#x5883;"><a name="&#x6E2C;&#x8A66;&#x74B0;&#x5883;" class="plugin-anchor" href="#&#x6E2C;&#x8A66;&#x74B0;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E2C;&#x8A66;&#x74B0;&#x5883;</h2>
-<ol>
-<li><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank">&#x4E0B;&#x8F09; Chrome &#x9A45;&#x52D5;&#x7A0B;&#x5F0F;</a></li>
-<li>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x5C08;&#x6848;</li>
-<li>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6A94;&#x6848;&#x53EB; test.py</li>
-</ol>
-<pre><code class="lang-python"><span class="hljs-comment"># test.py</span>
-<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
-
-<span class="hljs-comment"># driver = webdriver.Edge(&quot;./msedgedriver.exe&quot;)</span>
-driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver.exe&quot;</span>)
-
-<span class="hljs-comment"># for Mac</span>
-<span class="hljs-comment"># driver = webdriver.Chrome(&quot;./chromedriver&quot;)</span>
-
-driver.get(<span class="hljs-string">&quot;http://www.python.org&quot;</span>)
-</code></pre>
-<p>&#x57F7;&#x884C;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;</p>
-<pre><code>pip install selenium
-python test.py
-</code></pre><h2 id="&#x7DF4;&#x7FD2;&#x984C;-&#x1F60E;"><a name="&#x7DF4;&#x7FD2;&#x984C;-&#x1F60E;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;-&#x1F60E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C; &#x1F60E;</h2>
-<ol>
-<li>&#x8A66;&#x8457;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9A5F;&#xFF0C;&#x5B8C;&#x6210; Chrome &#x700F;&#x89BD;&#x5668;&#x7684;&#x6E2C;&#x8A66;&#x74B0;&#x5883;&#x3002;</li>
-<li>&#x8A66;&#x8457;&#x6539;&#x7528; Edge &#x700F;&#x89BD;&#x5668;&#x4F86;&#x8DD1;&#x6E2C;&#x8A66;</li>
-</ol>
-<h2 id="&#x88DC;&#x5145;"><a name="&#x88DC;&#x5145;" class="plugin-anchor" href="#&#x88DC;&#x5145;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88DC;&#x5145;</h2>
-<h3 id="&#x74B0;&#x5883;&#x5E38;&#x898B;&#x554F;&#x984C;"><a name="&#x74B0;&#x5883;&#x5E38;&#x898B;&#x554F;&#x984C;" class="plugin-anchor" href="#&#x74B0;&#x5883;&#x5E38;&#x898B;&#x554F;&#x984C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x74B0;&#x5883;&#x5E38;&#x898B;&#x554F;&#x984C;</h3>
-<ul>
-<li>&#x700F;&#x89BD;&#x5668;&#x7248;&#x672C;&#x8DDF;&#x9A45;&#x52D5;&#x7A0B;&#x5F0F;&#x4E0D;&#x4E00;&#x81F4;</li>
-</ul>
-<pre><code>selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of MSEdgeDriver only supports MSEdge version 91
-Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-</code></pre><ul>
-<li>&#x9A45;&#x52D5;&#x7A0B;&#x5F0F;&#x7684;&#x7248;&#x672C;&#x4E00;&#x76F4;&#x66F4;&#x65B0;</li>
-</ul>
-<h2 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h2>
-<ul>
-<li><a href="https://selenium-python.readthedocs.io/installation.html" target="_blank">https://selenium-python.readthedocs.io/installation.html</a></li>
-</ul>
+                                <h1 id="&#x9A57;&#x8B49;-assert"><a name="&#x9A57;&#x8B49;-assert" class="plugin-anchor" href="#&#x9A57;&#x8B49;-assert"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A57;&#x8B49; (assert)</h1>
+<h3 id="&#x60C5;&#x5883;&#x984C;"><a name="&#x60C5;&#x5883;&#x984C;" class="plugin-anchor" href="#&#x60C5;&#x5883;&#x984C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x60C5;&#x5883;&#x984C;</h3>
+<p>&#x6BCF;&#x500B;&#x5143;&#x7D20;&#x5F8C;&#x9762;&#x90FD;&#x8981;&#x52A0; assert &#x55CE;&#xFF1F;&#x600E;&#x9EBC;&#x4F7F;&#x7528;&#x6642;&#x6A5F;&#xFF1F;</p>
 
                                 
                                 </section>
@@ -617,8 +553,12 @@ Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\M
 
             
                 
+                <a href="waits.html" class="navigation navigation-prev " aria-label="Previous page: 等待 (Wait)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="getting_started.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 快速入門">
+                
+                <a href="practices/week2.html" class="navigation navigation-next " aria-label="Next page: 練習題：填寫表單">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -629,7 +569,7 @@ Current browser version is 89.0.774.50 with binary path C:\Program Files (x86)\M
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"準備開發環境","level":"1.2.3","depth":2,"next":{"title":"快速入門","level":"1.2.4","depth":2,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"previous":{"title":"關於 Selenium","level":"1.2.2","depth":2,"url":"https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing","ref":"https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"install.md","mtime":"2021-03-15T09:37:32.608Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-20T16:47:40.845Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"驗證","level":"1.3.4","depth":2,"next":{"title":"練習題：填寫表單","level":"1.3.5","depth":2,"path":"practices/week2.md","ref":"practices/week2.md","articles":[]},"previous":{"title":"等待 (Wait)","level":"1.3.3","depth":2,"path":"waits.md","ref":"waits.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"assert.md","mtime":"2021-03-20T16:47:36.434Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-20T16:47:40.845Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
