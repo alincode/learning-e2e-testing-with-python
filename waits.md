@@ -13,17 +13,20 @@ Selenium Webdriver 提供兩種類型的 Wait：
 
 因為第一個按鈕一開始是被 disable，需要等到五秒後，才會被 enable，所以如果我們要點擊第一個按鈕，必需要等到五秒之後。
 
-### 語法
+### WebDriverWait 語法
 
 ```
-WebDriverWait(driver, 超时时长, 调用频率, 忽略异常).until(可执行方法, 超时时返回的信息)
+WebDriverWait(driver, timeout, poll_frequency=0.5, ignored_exceptions=None)
 ```
 
-> 這裡需要特別注意的是 until 或 until_not 中的可執行方法 method
+- driver：WebDriver 的驅動程式(Ie, Firefox, Chrome 或遠端)
+- timeout：最長超時時間，預設以秒為單位。
+- poll_frequency：休眠時間的間隔（步長）時間，預設為 0.5 秒。
+- ignored_exceptions：超時後的異常資訊，預設情況下拋 NoSuchElementException 異常。
 
 ## 顯式等待 (Explicit Waits)
 
-顯式等待需等特定條件發生時，在執行後面的程序，常與 until() 和 until_not() 搭配使用。
+顯示等待是指明確的等到某個元素的出現，或者是某個元素的可點選等條件符合，等不到就一直等，直到規定的時間之內都沒找到，則跳出 Exception。顯式等待需等特定條件發生時，在執行後面的程序，常與 `until()` 和 `until_not()` 搭配使用。
 
 ```python
 from selenium import webdriver
@@ -43,7 +46,7 @@ finally:
     driver.quit()
 ```
 
-在上面的範例 Selenium 最多等待 10 秒，若元素則拋出 `TimeoutException`。在預設情況下，每 500 ms 會檢查一次條件，如果成功 `ExpectedCondition` 會返回 true，找不到元素，則返回 null。
+在上面的範例 Selenium 最多等待 10 秒，若元素則拋出 `TimeoutException`。在預設情況下，每 500 ms 會檢查一次條件，如果成功 `ExpectedCondition` 會返回 `true`，找不到元素，則返回 `null`。
 
 ### 預期條件 (Expected Conditions)
 
@@ -71,16 +74,21 @@ alert_is_present
 
 ## 隱式等待 (Implicit Waits)
 
-- 隱式等待不用設定任何符合條件，會強制等待到指定的秒數才執行後面的指令。
-- 隱式等待對整個 driver 週期都起作用，所以只要設定一次即可
+- 隱式等待是代表建立一個最長等待時間，這個方法是得不到某個元素就等待，直到拿到元素位置(如果一直拿不到就等到時間截止)，再執行下一步。
+- 隱式等待對整個 driver 週期都起作用，所以只要設定一次即可。
 
 ```python
 from selenium import webdriver
 
-driver = webdriver.Firefox()
-driver.implicitly_wait(10) # 單位是秒
-driver.get("http://somedomain/url_that_delays_loading")
-myDynamicElement = driver.find_element_by_id("myDynamicElement")
+driver = webdriver.Chrome("./chromedriver")
+driver.implicitly_wait(5) # 單位是秒
+driver.get("https://demoqa.com/dynamic-properties")
+assert "ToolsQA" in driver.title
+try:
+    element = driver.find_element_by_id("visibleAfter")
+    print(element.text)
+finally:
+    driver.quit()
 ```
 
 ## 補充：強制等待
@@ -90,6 +98,9 @@ from time import sleep
 sleep(3)
 ```
 
+> 盡量不要使用，如果真的使用需小心謹慎。
+
 ## 參考文獻
 
-[5. Waits](https://selenium-python.readthedocs.io/waits.html)
+- [5. Waits](https://selenium-python.readthedocs.io/waits.html)
+- [Python selenium — 一定要会用 selenium 的等待，三種等待方式解讀](https://huilansame.github.io/huilansame.github.io/archivers/sleep-implicitlywait-wait)
