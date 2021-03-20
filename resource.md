@@ -2,11 +2,11 @@
 
 ### 可供測試的網站
 
+- <http://demoqa.com/>
+- <http://www.globalsqa.com/demo-site/>
 - <https://opensource-demo.orangehrmlive.com/>
 - <http://the-internet.herokuapp.com/>
-- Demo Testing Site - GlobalSQA: <http://www.globalsqa.com/demo-site/>
-- <http://demoqa.com/>
-- Way 2 Automation - Website For Testing Selenium / QTP Scripts: <http://www.way2automation.com/demo.html>
+- <http://www.way2automation.com/demo.html>
 - <http://juliemr.github.io/protractor-demo/>
 - <http://automationpractice.com/>
 
