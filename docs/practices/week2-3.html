@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>練習題：TextBox 表格 · 網站自動化測試 for Python</title>
+        <title>練習題：學生註冊表格 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -269,7 +269,7 @@
                 <a target="_blank" href="https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing">
             
                     
-                    最小的測試組成元素
+                    測試組成元素
             
                 </a>
             
@@ -360,7 +360,7 @@
                 <a href="week2-3.html">
             
                     
-                    練習題：TextBox 表格
+                    練習題：學生註冊表格
             
                 </a>
             
@@ -413,33 +413,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../web_element.html">
+        <li class="chapter " data-level="1.4.3" >
             
-                <a href="../web_element.html">
-            
-                    
-                    元素
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="../assert.html">
-            
-                <a href="../assert.html">
+                <span>
             
                     
                     驗證
             
-                </a>
+                </span>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" >
+        <li class="chapter " data-level="1.4.4" >
             
                 <span>
             
@@ -452,7 +439,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" >
+        <li class="chapter " data-level="1.4.5" >
             
                 <span>
             
@@ -465,7 +452,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" >
+        <li class="chapter " data-level="1.4.6" >
             
                 <span>
             
@@ -655,7 +642,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >練習題：TextBox 表格</a>
+        <a href=".." >練習題：學生註冊表格</a>
     </h1>
 </div>
 
@@ -670,38 +657,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-textbox-&#x8868;&#x683C;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-textbox-&#x8868;&#x683C;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-textbox-&#x8868;&#x683C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A; TextBox &#x8868;&#x683C;</h1>
-<p><a href="https://demoqa.com/text-box" target="_blank">https://demoqa.com/text-box</a></p>
-<p>&#x7DF4;&#x7FD2;</p>
-<h3 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h3>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x586B;&#x5BEB;&#x8868;&#x55AE;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x586B;&#x5BEB;&#x8868;&#x55AE;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x586B;&#x5BEB;&#x8868;&#x55AE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x586B;&#x5BEB;&#x8868;&#x55AE;</h1>
+<p><a href="https://demoqa.com/automation-practice-form" target="_blank">https://demoqa.com/automation-practice-form</a></p>
+<p><img src="assets/week2-3.png" alt=""></p>
+<!-- <https://demoqa.com/login> -->
+<!-- <https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/register> -->
+<!--
 
-driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
-driver.get(<span class="hljs-string">&quot;https://demoqa.com/text-box&quot;</span>)
-<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
+### 答案
 
-<span class="hljs-keyword">try</span>:
-    user_name = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#userName&quot;</span>)
-    user_name.send_keys(<span class="hljs-string">&quot;AILIN LIOU&quot;</span>)
+```py
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
-    user_email = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#userEmail&quot;</span>)
-    user_email.send_keys(<span class="hljs-string">&quot;ooxx@ooxx.com&quot;</span>)
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/automation-practice-form")
+print(driver.title)
+assert "ToolsQA" in driver.title
 
-    current_address = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#currentAddress&quot;</span>)
-    current_address.send_keys(<span class="hljs-string">&quot;TAiWAN&quot;</span>)
+driver.maximize_window()
 
-    permanent_address = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#permanentAddress&quot;</span>)
-    permanent_address.send_keys(<span class="hljs-string">&quot;&#x53F0;&#x7063;&quot;</span>)
+try:
 
-    submit_button = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#submit&quot;</span>)
-    submit_button.click()
+    first_name = driver.find_element_by_css_selector("#firstName")
+    first_name.send_keys("AILIN")
+    last_name = driver.find_element_by_css_selector("#lastName")
+    last_name.send_keys("LIOU")
+    user_email = driver.find_element_by_css_selector("#userEmail")
+    user_email.send_keys("aaa@aaa.com")
+    user_number = driver.find_element_by_css_selector("#userNumber")
+    user_number.send_keys("0123456789")
 
-    output = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#name&quot;</span>)
-    <span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;Name:AILIN LIOU&quot;</span> <span class="hljs-keyword">in</span> output.text
+    male_radio = driver.find_element_by_css_selector("[for='gender-radio-1']")
+    male_radio.click()
 
-<span class="hljs-keyword">finally</span>:
+    date_of_birth_input = driver.find_element_by_css_selector("#dateOfBirthInput")
+    date_of_birth_input.send_keys('21 Mar 2021' + Keys.ENTER)
+
+    # subjects_container = driver.find_element_by_css_selector("#subjectsContainer")
+    # subjects_container.click()
+    # subjects_container.send_keys("m" + Keys.ENTER)
+    # subjects_container.send_keys("e" + Keys.ENTER)
+
+    sports_checkbox = driver.find_element_by_css_selector("[for='hobbies-checkbox-1']")
+    sports_checkbox.click()
+
+    reading_checkbox = driver.find_element_by_css_selector("[for='hobbies-checkbox-2']")
+    reading_checkbox.click()
+
+    current_address = driver.find_element_by_css_selector("#currentAddress")
+    current_address.send_keys("TAIPEI")
+
+    picture = driver.find_element_by_css_selector("[type='file']")
+    picture.send_keys('/Users/alin/PycharmProjects/demo/screenshot.png')
+
+    submit_button = driver.find_element_by_css_selector("#submit")
+    submit_button.submit()
+
+    close_large_modal = driver.find_element_by_css_selector("#closeLargeModal")
+    close_large_modal.click()
+finally:
     driver.quit()
-</code></pre>
+
+``` -->
 
                                 
                                 </section>
@@ -741,7 +759,7 @@ driver.get(<span class="hljs-string">&quot;https://demoqa.com/text-box&quot;</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：TextBox 表格","level":"1.3.8","depth":2,"next":{"title":"第三週 - WebDriver (下)","level":"1.4","depth":1,"ref":"","articles":[{"title":"等待 (Wait)","level":"1.4.1","depth":2,"path":"waits.md","ref":"waits.md","articles":[]},{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"元素","level":"1.4.3","depth":2,"path":"web_element.md","ref":"web_element.md","articles":[]},{"title":"驗證","level":"1.4.4","depth":2,"path":"assert.md","ref":"assert.md","articles":[]},{"title":"頁籤","level":"1.4.5","depth":2,"ref":"","articles":[]},{"title":"測試常見的專有名詞","level":"1.4.6","depth":2,"ref":"","articles":[]},{"title":"練習題：學生註冊表格","level":"1.4.7","depth":2,"ref":"","articles":[]}]},"previous":{"title":"導航 (Navigating)","level":"1.3.7","depth":2,"path":"navigating.md","ref":"navigating.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week2-3.md","mtime":"2021-03-21T16:24:21.616Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T16:24:25.988Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：學生註冊表格","level":"1.3.8","depth":2,"next":{"title":"第三週 - WebDriver (下)","level":"1.4","depth":1,"ref":"","articles":[{"title":"等待 (Wait)","level":"1.4.1","depth":2,"path":"waits.md","ref":"waits.md","articles":[]},{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"驗證","level":"1.4.3","depth":2,"ref":"","articles":[]},{"title":"頁籤","level":"1.4.4","depth":2,"ref":"","articles":[]},{"title":"測試常見的專有名詞","level":"1.4.5","depth":2,"ref":"","articles":[]},{"title":"練習題：學生註冊表格","level":"1.4.6","depth":2,"ref":"","articles":[]}]},"previous":{"title":"導航 (Navigating)","level":"1.3.7","depth":2,"path":"navigating.md","ref":"navigating.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week2-3.md","mtime":"2021-03-21T16:35:13.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T16:35:17.384Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
