@@ -72,22 +72,19 @@ textarea.send_keys("demo")
 
 ## submit
 
+模擬 submit 行為
+
 ```py
 driver.find_element_by_id("submit").click()
 element.submit()
 ```
 
-## 練習題 - 登入頁
+## 上傳檔案
 
-- <https://opensource-demo.orangehrmlive.com/>
-
-### 測試登入失敗
-
-我們會練習到 send_keys 和 submit 語法
-
-### 測試登入成功
-
-我們會練習到 clear 語法
+```python
+picture = driver.find_element_by_css_selector("[type='file']")
+picture.send_keys('/demo/screenshot.png')
+```
 
 <!-- ## select
 
@@ -107,3 +104,7 @@ options = select.options
 select = Select(driver.find_element_by_id('id'))
 select.deselect_all()
 ``` -->
+
+### 參考文獻
+
+- [Selenium File Upload](https://saucelabs.com/resources/articles/best-practices-tips-selenium-file-upload)

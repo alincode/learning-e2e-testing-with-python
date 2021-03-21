@@ -58,7 +58,7 @@ action = webdriver.ActionChains(driver)
 action.key_down(Keys.SHIFT).send_keys_to_element(search, "qwerty").key_up(Keys.SHIFT).send_keys("qwerty").perform()
 ```
 
-## Clear
+## clear
 
 清除可編輯元素的內容。這僅適用於可編輯和可交互的元素，否則 Selenium 返回錯誤（無效的元素狀態（或）不可交互的元素）
 
@@ -79,4 +79,4 @@ SearchInput.clear()
 
 ### 使用情境
 
-- 第一次測試登入失敗，第二次登入測試成功。
+- 預防頁面有預設的文字
