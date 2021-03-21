@@ -35,13 +35,16 @@ driver.fullscreen_window()
 ```py
 from selenium import webdriver
 
-driver = webdriver.Chrome()
-driver.get("http://www.example.com")
+driver = webdriver.Chrome("./chromedriver")
+driver.get("http://www.google.com")
 
-# Returns and base64 encoded string into image
 driver.save_screenshot('./image.png')
 driver.quit()
 ```
+
+### 使用情境
+
+- 檢查是否有畫面破版的情況
 
 <!--
 ### TakeElementScreenshot
