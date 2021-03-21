@@ -6,4 +6,4 @@ find_element_by_link_text
 find_element_by_partial_link_text
 ```
 
-### ### Find Element From Element
+### Find Element From Element
