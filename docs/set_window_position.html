@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="keyboard.html" />
+    <link rel="next" href="practices/week2-1.html" />
     
+    
+    <link rel="prev" href="keyboard.html" />
     
 
     </head>
@@ -277,20 +279,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="set_window_position.html">
-            
-                <a href="set_window_position.html">
-            
-                    
-                    設定視窗位置
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="keyboard.html">
+        <li class="chapter " data-level="1.3.2" data-path="keyboard.html">
             
                 <a href="keyboard.html">
             
@@ -303,7 +292,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="form.html">
+        <li class="chapter active" data-level="1.3.3" data-path="set_window_position.html">
+            
+                <a href="set_window_position.html">
+            
+                    
+                    設定視窗位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="practices/week2-1.html">
+            
+                <a href="practices/week2-1.html">
+            
+                    
+                    練習題：登入練習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="form.html">
             
                 <a href="form.html">
             
@@ -316,7 +331,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="navigating.html">
+        <li class="chapter " data-level="1.3.6" data-path="practices/week2-2.html">
+            
+                <a href="practices/week2-2.html">
+            
+                    
+                    練習題：上傳檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="navigating.html">
             
                 <a href="navigating.html">
             
@@ -329,12 +357,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="practices/week2.html">
+        <li class="chapter " data-level="1.3.8" data-path="practices/week2-3.html">
             
-                <a href="practices/week2.html">
+                <a href="practices/week2-3.html">
             
                     
-                    練習題：填寫表單
+                    練習題：TextBox 表格
             
                 </a>
             
@@ -432,6 +460,19 @@
             
                     
                     測試常見的專有名詞
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    練習題：學生註冊表格
             
                 </span>
             
@@ -650,13 +691,16 @@
 <p>&#x64F7;&#x53D6;&#x87A2;&#x5E55;&#x756B;&#x9762;</p>
 <pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 
-driver = webdriver.Chrome()
-driver.get(<span class="hljs-string">&quot;http://www.example.com&quot;</span>)
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.get(<span class="hljs-string">&quot;http://www.google.com&quot;</span>)
 
-<span class="hljs-comment"># Returns and base64 encoded string into image</span>
 driver.save_screenshot(<span class="hljs-string">&apos;./image.png&apos;</span>)
 driver.quit()
 </code></pre>
+<h3 id="&#x4F7F;&#x7528;&#x60C5;&#x5883;"><a name="&#x4F7F;&#x7528;&#x60C5;&#x5883;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x60C5;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x60C5;&#x5883;</h3>
+<ul>
+<li>&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x756B;&#x9762;&#x7834;&#x7248;&#x7684;&#x60C5;&#x6CC1;</li>
+</ul>
 <!--
 ### TakeElementScreenshot
 
@@ -691,8 +735,12 @@ driver.quit()
 
             
                 
+                <a href="keyboard.html" class="navigation navigation-prev " aria-label="Previous page: 鍵盤操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="keyboard.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 鍵盤操作">
+                
+                <a href="practices/week2-1.html" class="navigation navigation-next " aria-label="Next page: 練習題：登入練習">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -703,7 +751,7 @@ driver.quit()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"設定視窗位置","level":"1.3.2","depth":2,"next":{"title":"鍵盤操作","level":"1.3.3","depth":2,"path":"keyboard.md","ref":"keyboard.md","articles":[]},"previous":{"title":"最小的測試組成元素","level":"1.3.1","depth":2,"url":"https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing","ref":"https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"set_window_position.md","mtime":"2021-03-21T13:36:49.860Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T13:36:54.860Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"設定視窗位置","level":"1.3.3","depth":2,"next":{"title":"練習題：登入練習","level":"1.3.4","depth":2,"path":"practices/week2-1.md","ref":"practices/week2-1.md","articles":[]},"previous":{"title":"鍵盤操作","level":"1.3.2","depth":2,"path":"keyboard.md","ref":"keyboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"set_window_position.md","mtime":"2021-03-21T16:24:21.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T16:24:25.988Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

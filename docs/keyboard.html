@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="form.html" />
+    <link rel="next" href="set_window_position.html" />
     
-    
-    <link rel="prev" href="set_window_position.html" />
     
 
     </head>
@@ -279,20 +277,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="set_window_position.html">
-            
-                <a href="set_window_position.html">
-            
-                    
-                    設定視窗位置
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.3.3" data-path="keyboard.html">
+        <li class="chapter active" data-level="1.3.2" data-path="keyboard.html">
             
                 <a href="keyboard.html">
             
@@ -305,7 +290,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="form.html">
+        <li class="chapter " data-level="1.3.3" data-path="set_window_position.html">
+            
+                <a href="set_window_position.html">
+            
+                    
+                    設定視窗位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="practices/week2-1.html">
+            
+                <a href="practices/week2-1.html">
+            
+                    
+                    練習題：登入練習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="form.html">
             
                 <a href="form.html">
             
@@ -318,7 +329,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="navigating.html">
+        <li class="chapter " data-level="1.3.6" data-path="practices/week2-2.html">
+            
+                <a href="practices/week2-2.html">
+            
+                    
+                    練習題：上傳檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="navigating.html">
             
                 <a href="navigating.html">
             
@@ -331,12 +355,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="practices/week2.html">
+        <li class="chapter " data-level="1.3.8" data-path="practices/week2-3.html">
             
-                <a href="practices/week2.html">
+                <a href="practices/week2-3.html">
             
                     
-                    練習題：填寫表單
+                    練習題：TextBox 表格
             
                 </a>
             
@@ -434,6 +458,19 @@
             
                     
                     測試常見的專有名詞
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    練習題：學生註冊表格
             
                 </span>
             
@@ -679,7 +716,7 @@ action = webdriver.ActionChains(driver)
 <span class="hljs-comment"># Enters text &quot;qwerty&quot; with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)</span>
 action.key_down(Keys.SHIFT).send_keys_to_element(search, <span class="hljs-string">&quot;qwerty&quot;</span>).key_up(Keys.SHIFT).send_keys(<span class="hljs-string">&quot;qwerty&quot;</span>).perform()
 </code></pre>
-<h2 id="clear"><a name="clear" class="plugin-anchor" href="#clear"><i class="fa fa-link" aria-hidden="true"></i></a>Clear</h2>
+<h2 id="clear"><a name="clear" class="plugin-anchor" href="#clear"><i class="fa fa-link" aria-hidden="true"></i></a>clear</h2>
 <p>&#x6E05;&#x9664;&#x53EF;&#x7DE8;&#x8F2F;&#x5143;&#x7D20;&#x7684;&#x5167;&#x5BB9;&#x3002;&#x9019;&#x50C5;&#x9069;&#x7528;&#x65BC;&#x53EF;&#x7DE8;&#x8F2F;&#x548C;&#x53EF;&#x4EA4;&#x4E92;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5426;&#x5247; Selenium &#x8FD4;&#x56DE;&#x932F;&#x8AA4;&#xFF08;&#x7121;&#x6548;&#x7684;&#x5143;&#x7D20;&#x72C0;&#x614B;&#xFF08;&#x6216;&#xFF09;&#x4E0D;&#x53EF;&#x4EA4;&#x4E92;&#x7684;&#x5143;&#x7D20;&#xFF09;</p>
 <pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 <span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
@@ -696,7 +733,7 @@ SearchInput.clear()
 </code></pre>
 <h3 id="&#x4F7F;&#x7528;&#x60C5;&#x5883;"><a name="&#x4F7F;&#x7528;&#x60C5;&#x5883;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x60C5;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x60C5;&#x5883;</h3>
 <ul>
-<li>&#x7B2C;&#x4E00;&#x6B21;&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x5931;&#x6557;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x767B;&#x5165;&#x6E2C;&#x8A66;&#x6210;&#x529F;&#x3002;</li>
+<li>&#x9810;&#x9632;&#x9801;&#x9762;&#x6709;&#x9810;&#x8A2D;&#x7684;&#x6587;&#x5B57;</li>
 </ul>
 
                                 
@@ -725,12 +762,8 @@ SearchInput.clear()
 
             
                 
-                <a href="set_window_position.html" class="navigation navigation-prev " aria-label="Previous page: 設定視窗位置">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="form.html" class="navigation navigation-next " aria-label="Next page: 表單操作">
+                <a href="set_window_position.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 設定視窗位置">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -741,7 +774,7 @@ SearchInput.clear()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"鍵盤操作","level":"1.3.3","depth":2,"next":{"title":"表單操作","level":"1.3.4","depth":2,"path":"form.md","ref":"form.md","articles":[]},"previous":{"title":"設定視窗位置","level":"1.3.2","depth":2,"path":"set_window_position.md","ref":"set_window_position.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"keyboard.md","mtime":"2021-03-21T13:13:44.934Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T13:36:54.860Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"鍵盤操作","level":"1.3.2","depth":2,"next":{"title":"設定視窗位置","level":"1.3.3","depth":2,"path":"set_window_position.md","ref":"set_window_position.md","articles":[]},"previous":{"title":"最小的測試組成元素","level":"1.3.1","depth":2,"url":"https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing","ref":"https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"keyboard.md","mtime":"2021-03-21T16:24:21.611Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T16:24:25.988Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
