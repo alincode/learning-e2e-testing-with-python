@@ -2,7 +2,7 @@
 
 <https://demoqa.com/automation-practice-form>
 
-![](form.png)
+![](assets/week2.png)
 
 <!-- <https://demoqa.com/login> -->
 <!-- <https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/register> -->

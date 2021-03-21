@@ -1,4 +1,4 @@
-# 選取元素 (Locating Elements)
+# 定位元素 (Locating Elements)
 
 有多種策略可以找到元素，你可以跟自己的情況選擇使用。
 
@@ -64,14 +64,14 @@ CSS_SELECTOR = "css selector"
 
 ```html
 <html>
- <body>
-  <form id="loginForm">
-   <input name="username" type="text" />
-   <input name="password" type="password" />
-   <input name="continue" type="submit" value="Login" />
-  </form>
- </body>
-<html/>
+  <body>
+    <form id="loginForm">
+      <input name="username" type="text" />
+      <input name="password" type="password" />
+      <input name="continue" type="submit" value="Login" />
+    </form>
+  </body>
+</html>
 ```
 
 ```python
@@ -84,10 +84,10 @@ login_form = driver.find_element_by_id('loginForm')
 
 ```html
 <html>
- <body>
-  <p class="content">Site content goes here.</p>
-</body>
-<html>
+  <body>
+    <p class="content">Site content goes here.</p>
+  </body>
+</html>
 ```
 
 ```python
@@ -100,14 +100,14 @@ content = driver.find_element_by_class_name('content')
 
 ```html
 <html>
- <body>
-  <form id="loginForm">
-   <input name="username" type="text" />
-   <input name="password" type="password" />
-   <input name="continue" type="submit" value="Login" />
-   <input name="continue" type="button" value="Clear" />
-  </form>
-</body>
+  <body>
+    <form id="loginForm">
+      <input name="username" type="text" />
+      <input name="password" type="password" />
+      <input name="continue" type="submit" value="Login" />
+      <input name="continue" type="button" value="Clear" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -120,10 +120,10 @@ password = driver.find_element_by_name('password')
 
 ```html
 <html>
- <body>
-  <p class="content">Site content goes here.</p>
-</body>
-<html>
+  <body>
+    <p class="content">Site content goes here.</p>
+  </body>
+</html>
 ```
 
 ```python
