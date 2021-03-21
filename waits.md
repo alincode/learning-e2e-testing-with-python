@@ -9,7 +9,7 @@ Selenium Webdriver 提供兩種類型的 Wait：
 
 ### 模擬情境說明
 
-<https://demoqa.com/dynamic-properties">
+<https://demoqa.com/dynamic-properties>
 
 因為第一個按鈕一開始是被 disable，需要等到五秒後，才會被 enable，所以如果我們要點擊第一個按鈕，必需要等到五秒之後。
 
@@ -70,6 +70,33 @@ element_located_to_be_selected
 element_selection_state_to_be
 element_located_selection_state_to_be
 alert_is_present
+```
+
+- [官方 API 文件](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected_conditions)
+
+### 自訂等待條件
+
+```py
+class element_has_css_class(object):
+  """An expectation for checking that an element has a particular css class.
+
+  locator - used to find the element
+  returns the WebElement once it has the particular css class
+  """
+  def __init__(self, locator, css_class):
+    self.locator = locator
+    self.css_class = css_class
+
+  def __call__(self, driver):
+    element = driver.find_element(*self.locator)   # Finding the referenced element
+    if self.css_class in element.get_attribute("class"):
+        return element
+    else:
+        return False
+
+# Wait until an element with id='myNewInput' has class 'myCSSClass'
+wait = WebDriverWait(driver, 10)
+element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 ```
 
 ## 隱式等待 (Implicit Waits)
