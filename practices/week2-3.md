@@ -1,38 +1,67 @@
-# 練習題： TextBox 表格
+# 練習題：填寫表單
 
-<https://demoqa.com/text-box>
+<https://demoqa.com/automation-practice-form>
 
-練習
+![](assets/week2-3.png)
+
+<!-- <https://demoqa.com/login> -->
+<!-- <https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/register> -->
+
+<!--
 
 ### 答案
 
 ```py
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/text-box")
+driver.get("https://demoqa.com/automation-practice-form")
+print(driver.title)
 assert "ToolsQA" in driver.title
 
-try:
-    user_name = driver.find_element_by_css_selector("#userName")
-    user_name.send_keys("AILIN LIOU")
+driver.maximize_window()
 
+try:
+
+    first_name = driver.find_element_by_css_selector("#firstName")
+    first_name.send_keys("AILIN")
+    last_name = driver.find_element_by_css_selector("#lastName")
+    last_name.send_keys("LIOU")
     user_email = driver.find_element_by_css_selector("#userEmail")
-    user_email.send_keys("ooxx@ooxx.com")
+    user_email.send_keys("aaa@aaa.com")
+    user_number = driver.find_element_by_css_selector("#userNumber")
+    user_number.send_keys("0123456789")
+
+    male_radio = driver.find_element_by_css_selector("[for='gender-radio-1']")
+    male_radio.click()
+
+    date_of_birth_input = driver.find_element_by_css_selector("#dateOfBirthInput")
+    date_of_birth_input.send_keys('21 Mar 2021' + Keys.ENTER)
+
+    # subjects_container = driver.find_element_by_css_selector("#subjectsContainer")
+    # subjects_container.click()
+    # subjects_container.send_keys("m" + Keys.ENTER)
+    # subjects_container.send_keys("e" + Keys.ENTER)
+
+    sports_checkbox = driver.find_element_by_css_selector("[for='hobbies-checkbox-1']")
+    sports_checkbox.click()
+
+    reading_checkbox = driver.find_element_by_css_selector("[for='hobbies-checkbox-2']")
+    reading_checkbox.click()
 
     current_address = driver.find_element_by_css_selector("#currentAddress")
-    current_address.send_keys("TAiWAN")
+    current_address.send_keys("TAIPEI")
 
-    permanent_address = driver.find_element_by_css_selector("#permanentAddress")
-    permanent_address.send_keys("台灣")
+    picture = driver.find_element_by_css_selector("[type='file']")
+    picture.send_keys('/Users/alin/PycharmProjects/demo/screenshot.png')
 
     submit_button = driver.find_element_by_css_selector("#submit")
-    submit_button.click()
+    submit_button.submit()
 
-    output = driver.find_element_by_css_selector("#name")
-    assert "Name:AILIN LIOU" in output.text
-
+    close_large_modal = driver.find_element_by_css_selector("#closeLargeModal")
+    close_large_modal.click()
 finally:
     driver.quit()
 
-```
+``` -->
