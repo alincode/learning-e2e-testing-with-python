@@ -5,3 +5,4 @@ mv _book docs
 git add .
 git commit -m 'build'
 git push
+git co master
