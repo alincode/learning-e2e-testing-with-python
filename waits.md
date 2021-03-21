@@ -127,6 +127,13 @@ sleep(3)
 
 > 盡量不要使用，如果真的使用需小心謹慎。
 
+## 練習題
+
+<https://demoqa.com/dynamic-properties>
+
+- 顯式等待
+- 隱式等待
+
 ## 參考文獻
 
 - [5. Waits](https://selenium-python.readthedocs.io/waits.html)
