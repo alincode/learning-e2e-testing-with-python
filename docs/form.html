@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python Cheat Sheet · 網站自動化測試 for Python</title>
+        <title>表單操作 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="resource.html" />
+    <link rel="next" href="navigating.html" />
     
+    
+    <link rel="prev" href="keyboard.html" />
     
 
     </head>
@@ -290,7 +292,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="form.html">
+        <li class="chapter active" data-level="1.3.3" data-path="form.html">
             
                 <a href="form.html">
             
@@ -555,7 +557,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.4" data-path="cheat_sheet.html">
+        <li class="chapter " data-level="1.6.4" data-path="cheat_sheet.html">
             
                 <a href="cheat_sheet.html">
             
@@ -616,7 +618,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python Cheat Sheet</a>
+        <a href="." >表單操作</a>
     </h1>
 </div>
 
@@ -631,13 +633,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="cheat-sheet"><a name="cheat-sheet" class="plugin-anchor" href="#cheat-sheet"><i class="fa fa-link" aria-hidden="true"></i></a>Cheat Sheet</h1>
-<ul>
-<li>Python: <a href="https://www.pythoncheatsheet.org/" target="_blank">https://www.pythoncheatsheet.org/</a></li>
-<li>Pip: <a href="https://opensource.com/sites/default/files/gated-content/cheat_sheet_pip.pdf" target="_blank">https://opensource.com/sites/default/files/gated-content/cheat_sheet_pip.pdf</a></li>
-</ul>
-<pre><code>pip list
+                                <h1 id="&#x8868;&#x55AE;&#x64CD;&#x4F5C;"><a name="&#x8868;&#x55AE;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8868;&#x55AE;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x55AE;&#x64CD;&#x4F5C;</h1>
+<h2 id="&#x8207;&#x8868;&#x55AE;&#x4E92;&#x52D5;"><a name="&#x8207;&#x8868;&#x55AE;&#x4E92;&#x52D5;" class="plugin-anchor" href="#&#x8207;&#x8868;&#x55AE;&#x4E92;&#x52D5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8207;&#x8868;&#x55AE;&#x4E92;&#x52D5;</h2>
+<h3 id="sendkeys"><a name="sendkeys" class="plugin-anchor" href="#sendkeys"><i class="fa fa-link" aria-hidden="true"></i></a>send_keys</h3>
+<p>&#x6A21;&#x64EC;&#x8F38;&#x5165;&#x503C;&#x5230;&#x5143;&#x7D20;&#x4E2D;</p>
+<p><img src="assets/input_text.png" alt=""></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/action_page.php&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>Username:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;pwd&quot;</span>&gt;</span>Password:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pwd&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;pwd&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Submit&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
+<pre><code class="lang-py">form_textfield = driver.find_element_by_name(<span class="hljs-string">&apos;username&apos;</span>)
+form_textfield.send_keys(<span class="hljs-string">&quot;admin&quot;</span>)
+</code></pre>
+<h3 id="select"><a name="select" class="plugin-anchor" href="#select"><i class="fa fa-link" aria-hidden="true"></i></a>select</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> Select
+select = Select(driver.find_element_by_name(<span class="hljs-string">&apos;name&apos;</span>))
+select.select_by_index(index)
+select.select_by_visible_text(<span class="hljs-string">&quot;text&quot;</span>)
+select.select_by_value(value)
+</code></pre>
+<pre><code>options = select.options
+</code></pre><pre><code class="lang-py">select = Select(driver.find_element_by_id(<span class="hljs-string">&apos;id&apos;</span>))
+select.deselect_all()
+</code></pre>
+<h3 id="submit"><a name="submit" class="plugin-anchor" href="#submit"><i class="fa fa-link" aria-hidden="true"></i></a>submit</h3>
+<pre><code class="lang-py">driver.find_element_by_id(<span class="hljs-string">&quot;submit&quot;</span>).click()
+element.submit()
+</code></pre>
+<h2 id="&#x7DF4;&#x7FD2;&#x984C;---&#x767B;&#x5165;&#x9801;"><a name="&#x7DF4;&#x7FD2;&#x984C;---&#x767B;&#x5165;&#x9801;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;---&#x767B;&#x5165;&#x9801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C; - &#x767B;&#x5165;&#x9801;</h2>
+<ul>
+<li><a href="https://opensource-demo.orangehrmlive.com/" target="_blank">https://opensource-demo.orangehrmlive.com/</a></li>
+</ul>
+<h3 id="&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x5931;&#x6557;"><a name="&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x5931;&#x6557;" class="plugin-anchor" href="#&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x5931;&#x6557;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x5931;&#x6557;</h3>
+<p>&#x6211;&#x5011;&#x6703;&#x7DF4;&#x7FD2;&#x5230; send_keys &#x548C; submit &#x8A9E;&#x6CD5;</p>
+<h3 id="&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x6210;&#x529F;"><a name="&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x6210;&#x529F;" class="plugin-anchor" href="#&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x6210;&#x529F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E2C;&#x8A66;&#x767B;&#x5165;&#x6210;&#x529F;</h3>
+<p>&#x6211;&#x5011;&#x6703;&#x7DF4;&#x7FD2;&#x5230; clear &#x8A9E;&#x6CD5;</p>
+
                                 
                                 </section>
                             
@@ -664,8 +699,12 @@
 
             
                 
+                <a href="keyboard.html" class="navigation navigation-prev " aria-label="Previous page: 鍵盤操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="resource.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 其他相關資源">
+                
+                <a href="navigating.html" class="navigation navigation-next " aria-label="Next page: 導航 (Navigating)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -676,7 +715,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python Cheat Sheet","level":"1.6.4","depth":2,"next":{"title":"其他相關資源","level":"1.6.5","depth":2,"path":"resource.md","ref":"resource.md","articles":[]},"previous":{"title":"W3C Webdriver","level":"1.6.3","depth":2,"url":"https://www.w3.org/TR/webdriver1/","ref":"https://www.w3.org/TR/webdriver1/","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"cheat_sheet.md","mtime":"2021-03-19T15:38:09.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T09:40:23.173Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"表單操作","level":"1.3.3","depth":2,"next":{"title":"導航 (Navigating)","level":"1.3.4","depth":2,"path":"navigating.md","ref":"navigating.md","articles":[]},"previous":{"title":"鍵盤操作","level":"1.3.2","depth":2,"path":"keyboard.md","ref":"keyboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"form.md","mtime":"2021-03-21T09:40:18.218Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T09:40:23.173Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
