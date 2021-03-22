@@ -156,24 +156,12 @@ EC.url_changes(url)
 
 - [官方 API 文件](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected_conditions)
 
-### 完整範例
+### 範例
 
 ```python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-
-try:
-    element = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "enableAfter"))
-    )
-finally:
-    driver.quit()
+element = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "enableAfter"))
+)
 ```
 
 在上面的範例 Selenium 最多等待 10 秒，若元素則拋出 `TimeoutException`。在預設情況下，每 500 ms 會檢查一次條件，如果成功 `ExpectedCondition` 會返回 `true`，找不到元素，則返回 `null`。
@@ -209,18 +197,11 @@ element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 - 隱式等待是代表建立一個最長等待時間，這個方法是得不到某個元素就等待，直到拿到元素位置(如果一直拿不到就等到時間截止)，再執行下一步。
 - 隱式等待對整個 driver 週期都起作用，所以只要設定一次即可。
 
-```python
-from selenium import webdriver
+### 範例
 
-driver = webdriver.Chrome("./chromedriver")
+```python
 driver.implicitly_wait(5) # 單位是秒
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-try:
-    element = driver.find_element_by_id("visibleAfter")
-    print(element.text)
-finally:
-    driver.quit()
+element = driver.find_element_by_id("demo")
 ```
 
 ## 補充：強制等待
@@ -237,7 +218,42 @@ sleep(3)
 <https://demoqa.com/dynamic-properties>
 
 - 顯式等待
+
+<!--
+```py
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/dynamic-properties")
+assert "ToolsQA" in driver.title
+
+try:
+    element = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, "enableAfter"))
+    )
+finally:
+    driver.quit()
+``` -->
+
 - 隱式等待
+
+<!--
+```py
+from selenium import webdriver
+
+driver = webdriver.Chrome("./chromedriver")
+driver.implicitly_wait(5) # 單位是秒
+driver.get("https://demoqa.com/dynamic-properties")
+assert "ToolsQA" in driver.title
+try:
+    element = driver.find_element_by_id("visibleAfter")
+    print(element.text)
+finally:
+    driver.quit()
+``` -->
 
 ## 參考文獻
 
