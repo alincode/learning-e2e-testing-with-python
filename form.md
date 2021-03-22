@@ -86,24 +86,42 @@ picture = driver.find_element_by_css_selector("[type='file']")
 picture.send_keys('/demo/screenshot.png')
 ```
 
-<!-- ## select
+### select
+
+```html
+<select class="month-select">
+  <option value="0">January</option>
+  <option value="1">February</option>
+  <option value="2">March</option>
+  <option value="3">April</option>
+  <option value="4">May</option>
+  <option value="5">June</option>
+  <option value="6">July</option>
+  <option value="7">August</option>
+  <option value="8">September</option>
+  <option value="9">October</option>
+  <option value="10">November</option>
+  <option value="11">December</option>
+</select>
+```
 
 ```py
 from selenium.webdriver.support.ui import Select
-select = Select(driver.find_element_by_name('name'))
-select.select_by_index(index)
-select.select_by_visible_text("text")
-select.select_by_value(value)
-```
-
-```
-options = select.options
+select_year = Select(driver.find_element_by_css_selector('.month-select'))
+select_year.select_by_value('1')
 ```
 
 ```py
 select = Select(driver.find_element_by_id('id'))
+
+select.select_by_index(index)
+select.select_by_visible_text("text")
+select.select_by_value(value)
+
+options = select.options
+
 select.deselect_all()
-``` -->
+```
 
 ### 參考文獻
 

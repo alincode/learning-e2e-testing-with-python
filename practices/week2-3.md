@@ -4,12 +4,12 @@
 
 ![](assets/week2-3.png)
 
-<!-- <https://demoqa.com/login> -->
-<!-- <https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/register> -->
+### 練習目標
 
-<!--
+- 控制 radio, checkbox 元素
+- 控制 modal
 
-### 答案
+### 解答
 
 ```py
 from selenium import webdriver
@@ -33,17 +33,11 @@ try:
     user_number = driver.find_element_by_css_selector("#userNumber")
     user_number.send_keys("0123456789")
 
+    # radio
     male_radio = driver.find_element_by_css_selector("[for='gender-radio-1']")
     male_radio.click()
 
-    date_of_birth_input = driver.find_element_by_css_selector("#dateOfBirthInput")
-    date_of_birth_input.send_keys('21 Mar 2021' + Keys.ENTER)
-
-    # subjects_container = driver.find_element_by_css_selector("#subjectsContainer")
-    # subjects_container.click()
-    # subjects_container.send_keys("m" + Keys.ENTER)
-    # subjects_container.send_keys("e" + Keys.ENTER)
-
+    # checkbox
     sports_checkbox = driver.find_element_by_css_selector("[for='hobbies-checkbox-1']")
     sports_checkbox.click()
 
@@ -53,15 +47,17 @@ try:
     current_address = driver.find_element_by_css_selector("#currentAddress")
     current_address.send_keys("TAIPEI")
 
+    # file
     picture = driver.find_element_by_css_selector("[type='file']")
     picture.send_keys('/Users/alin/PycharmProjects/demo/screenshot.png')
 
     submit_button = driver.find_element_by_css_selector("#submit")
     submit_button.submit()
 
+    # modal
     close_large_modal = driver.find_element_by_css_selector("#closeLargeModal")
     close_large_modal.click()
 finally:
     driver.quit()
 
-``` -->
+```

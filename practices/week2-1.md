@@ -8,23 +8,27 @@
 
 ![](assets/orangehrmlive.png)
 
-## 2. 擷取一張登入後最大化視窗的截圖
+### 解答
 
-- 會練習到最大化視窗
-- 截圖語法
+## 2. 擷取一張登入後最大化視窗的截圖
 
 ![](assets/login_success.png)
 
-<!--
+### 練習目標
+
+- 最大化視窗
+- 截圖語法
+
 ### 解答
 
-```py
+````py
 from selenium import webdriver
 
 driver = webdriver.Chrome("./chromedriver")
 driver.get("https://opensource-demo.orangehrmlive.com/")
 assert "OrangeHRM" in driver.title
 
+# 最大化視窗
 driver.maximize_window()
 
 try:
@@ -37,7 +41,9 @@ try:
     login_button = driver.find_element_by_css_selector("#btnLogin")
     login_button.submit()
 
+    # 截圖存檔
     driver.save_screenshot('screenshot.png')
 finally:
     driver.quit()
-``` -->
+```
+````

@@ -27,4 +27,7 @@ button = driver.find_element_by_id("gobutton")
 input1.send_keys("1")
 input2.send_keys("2")
 button.send_keys(Keys.ENTER)
+
+# 7. 關閉視窗
+driver.quit()
 ```
