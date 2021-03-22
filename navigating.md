@@ -61,7 +61,3 @@ driver.refresh()
 ```py
 driver.title
 ```
-
-## 練習題
-
-- 將 clear 改用 refresh 替代
