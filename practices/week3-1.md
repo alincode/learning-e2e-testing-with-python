@@ -1,13 +1,8 @@
-# 練習題 - Web Tables
+# select
 
-https://demoqa.com/webtables
+<https://demoqa.com/select-menu>
 
-'.action-buttons'
+## 練習目標
 
-- 新增一筆資料
-- 驗證新增成功
-- 測試 filter 功能
-- 測試編輯功能
-- 測試刪除功能
-- 驗證成功刪除
-- 測試分頁功能
+- 單選
+- 多選

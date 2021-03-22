@@ -4,12 +4,13 @@
 
 ![](assets/file_uploader.png)
 
+### 練習目標
+
 - 上傳檔案
-- 並驗證上傳成功
+- 取得元素文字
+- 驗證上傳成功
 
-<!--
-
-### 答案
+### 解答
 
 ```py
 from selenium import webdriver
@@ -31,4 +32,4 @@ try:
 finally:
     driver.quit()
 
-``` -->
+```
