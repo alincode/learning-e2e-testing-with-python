@@ -389,7 +389,59 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../waits.html">
+        <li class="chapter " data-level="1.4.1" data-path="week3-1.html">
+            
+                <a href="week3-1.html">
+            
+                    
+                    練習題：Select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../date_picker.html">
+            
+                <a href="../date_picker.html">
+            
+                    
+                    日期選擇器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../alerts_prompts_confirmations.html">
+            
+                <a href="../alerts_prompts_confirmations.html">
+            
+                    
+                    alerts, prompts and confirmations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../tab.html">
+            
+                <a href="../tab.html">
+            
+                    
+                    頁籤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../waits.html">
             
                 <a href="../waits.html">
             
@@ -402,7 +454,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../locating_elements_advanced.html">
+        <li class="chapter " data-level="1.4.6" data-path="../locating_elements_advanced.html">
             
                 <a href="../locating_elements_advanced.html">
             
@@ -415,38 +467,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" >
+        <li class="chapter " data-level="1.4.7" data-path="../assert.html">
             
-                <span>
+                <a href="../assert.html">
             
                     
                     驗證
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" >
+        <li class="chapter " data-level="1.4.8" >
             
                 <span>
             
                     
-                    頁籤
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.5" >
-            
-                <span>
-            
-                    
-                    測試常見的專有名詞
+                    錯誤處理
             
                 </span>
             
@@ -454,14 +493,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" >
+        <li class="chapter " data-level="1.4.9" data-path="week3-2.html">
             
-                <span>
+                <a href="week3-2.html">
             
                     
-                    練習題：學生註冊表格
+                    練習題：Web Tables
             
-                </span>
+                </a>
             
 
             
@@ -491,7 +530,7 @@
                 <span>
             
                     
-                    組織測試專案
+                    測試常見的專有名詞
             
                 </span>
             
@@ -504,7 +543,7 @@
                 <span>
             
                     
-                    與測試框架整合
+                    組織測試專案
             
                 </span>
             
@@ -517,7 +556,7 @@
                 <span>
             
                     
-                    錯誤處理
+                    與測試框架整合
             
                 </span>
             
@@ -662,35 +701,32 @@
                                 <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x4E0A;&#x50B3;&#x6A94;&#x6848;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x4E0A;&#x50B3;&#x6A94;&#x6848;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x4E0A;&#x50B3;&#x6A94;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x4E0A;&#x50B3;&#x6A94;&#x6848;</h1>
 <p><a href="https://the-internet.herokuapp.com/upload" target="_blank">https://the-internet.herokuapp.com/upload</a></p>
 <p><img src="assets/file_uploader.png" alt=""></p>
+<h3 id="&#x7DF4;&#x7FD2;&#x76EE;&#x6A19;"><a name="&#x7DF4;&#x7FD2;&#x76EE;&#x6A19;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x76EE;&#x6A19;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x76EE;&#x6A19;</h3>
 <ul>
 <li>&#x4E0A;&#x50B3;&#x6A94;&#x6848;</li>
-<li>&#x4E26;&#x9A57;&#x8B49;&#x4E0A;&#x50B3;&#x6210;&#x529F;</li>
+<li>&#x53D6;&#x5F97;&#x5143;&#x7D20;&#x6587;&#x5B57;</li>
+<li>&#x9A57;&#x8B49;&#x4E0A;&#x50B3;&#x6210;&#x529F;</li>
 </ul>
-<!--
+<h3 id="&#x89E3;&#x7B54;"><a name="&#x89E3;&#x7B54;" class="plugin-anchor" href="#&#x89E3;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x7B54;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 
-### 答案
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.get(<span class="hljs-string">&quot;https://the-internet.herokuapp.com/upload&quot;</span>)
+<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;The Internet&quot;</span> <span class="hljs-keyword">in</span> driver.title
 
-```py
-from selenium import webdriver
+<span class="hljs-keyword">try</span>:
 
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://the-internet.herokuapp.com/upload")
-assert "The Internet" in driver.title
-
-try:
-
-    file = driver.find_element_by_css_selector("[type='file']")
-    file.send_keys('/Users/alin/PycharmProjects/demo/screenshot.png')
-    submit_button = driver.find_element_by_css_selector("#file-submit")
+    file = driver.find_element_by_css_selector(<span class="hljs-string">&quot;[type=&apos;file&apos;]&quot;</span>)
+    file.send_keys(<span class="hljs-string">&apos;/Users/alin/PycharmProjects/demo/screenshot.png&apos;</span>)
+    submit_button = driver.find_element_by_css_selector(<span class="hljs-string">&quot;#file-submit&quot;</span>)
     submit_button.submit()
 
-    result = driver.find_element_by_css_selector("h3")
-    assert "File Uploaded!" in result.text
+    result = driver.find_element_by_css_selector(<span class="hljs-string">&quot;h3&quot;</span>)
+    <span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;File Uploaded!&quot;</span> <span class="hljs-keyword">in</span> result.text
 
-finally:
+<span class="hljs-keyword">finally</span>:
     driver.quit()
-
-``` -->
+</code></pre>
 
                                 
                                 </section>
@@ -734,7 +770,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：上傳檔案","level":"1.3.6","depth":2,"next":{"title":"導航 (Navigating)","level":"1.3.7","depth":2,"path":"navigating.md","ref":"navigating.md","articles":[]},"previous":{"title":"表單操作","level":"1.3.5","depth":2,"path":"form.md","ref":"form.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week2-2.md","mtime":"2021-03-21T16:24:21.616Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T05:22:08.219Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：上傳檔案","level":"1.3.6","depth":2,"next":{"title":"導航 (Navigating)","level":"1.3.7","depth":2,"path":"navigating.md","ref":"navigating.md","articles":[]},"previous":{"title":"表單操作","level":"1.3.5","depth":2,"path":"form.md","ref":"form.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week2-2.md","mtime":"2021-03-22T16:28:35.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T16:52:12.279Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
