@@ -677,6 +677,73 @@
 </ul>
 <h2 id="&#x986F;&#x5F0F;&#x7B49;&#x5F85;-explicit-waits"><a name="&#x986F;&#x5F0F;&#x7B49;&#x5F85;-explicit-waits" class="plugin-anchor" href="#&#x986F;&#x5F0F;&#x7B49;&#x5F85;-explicit-waits"><i class="fa fa-link" aria-hidden="true"></i></a>&#x986F;&#x5F0F;&#x7B49;&#x5F85; (Explicit Waits)</h2>
 <p>&#x986F;&#x793A;&#x7B49;&#x5F85;&#x662F;&#x6307;&#x660E;&#x78BA;&#x7684;&#x7B49;&#x5230;&#x67D0;&#x500B;&#x5143;&#x7D20;&#x7684;&#x51FA;&#x73FE;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x67D0;&#x500B;&#x5143;&#x7D20;&#x7684;&#x53EF;&#x9EDE;&#x9078;&#x7B49;&#x689D;&#x4EF6;&#x7B26;&#x5408;&#xFF0C;&#x7B49;&#x4E0D;&#x5230;&#x5C31;&#x4E00;&#x76F4;&#x7B49;&#xFF0C;&#x76F4;&#x5230;&#x898F;&#x5B9A;&#x7684;&#x6642;&#x9593;&#x4E4B;&#x5167;&#x90FD;&#x6C92;&#x627E;&#x5230;&#xFF0C;&#x5247;&#x8DF3;&#x51FA; Exception&#x3002;&#x986F;&#x5F0F;&#x7B49;&#x5F85;&#x9700;&#x7B49;&#x7279;&#x5B9A;&#x689D;&#x4EF6;&#x767C;&#x751F;&#x6642;&#xFF0C;&#x5728;&#x57F7;&#x884C;&#x5F8C;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E38;&#x8207; <code>until()</code> &#x548C; <code>until_not()</code> &#x642D;&#x914D;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="until--untilnot"><a name="until--untilnot" class="plugin-anchor" href="#until--untilnot"><i class="fa fa-link" aria-hidden="true"></i></a>until / until_not</h3>
+<p>&#x76F4;&#x5230;&#x8ABF;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x503C;&#x70BA; True</p>
+<p>until(method, message=&apos;&apos;)</p>
+<p>method&#xFF1A;expected_conditions &#x5EAB;&#x4E2D;&#x5B9A;&#x7FA9;&#x7684;&#x65B9;&#x6CD5;</p>
+<h3 id="&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions"><a name="&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions" class="plugin-anchor" href="#&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9810;&#x671F;&#x689D;&#x4EF6; (Expected Conditions)</h3>
+<p>&#x5167;&#x5EFA;&#x7684;&#x6AA2;&#x67E5;&#x689D;&#x4EF6;&#x6709;&#x4EE5;&#x4E0B;&#x5E7E;&#x500B;&#x5167;&#x5EFA;&#x7684;&#x5224;&#x65B7;</p>
+<h4 id="titleis"><a name="titleis" class="plugin-anchor" href="#titleis"><i class="fa fa-link" aria-hidden="true"></i></a>title_is</h4>
+<p>&#x5224;&#x65B7;&#x7576;&#x524D;&#x9801;&#x9762;&#x6A19;&#x984C;&#x662F;&#x5426;&#x70BA; title</p>
+<pre><code class="lang-py">EC.title_is(<span class="hljs-string">&quot;Google&quot;</span>)
+</code></pre>
+<h4 id="titlecontains"><a name="titlecontains" class="plugin-anchor" href="#titlecontains"><i class="fa fa-link" aria-hidden="true"></i></a>title_contains</h4>
+<p>&#x5224;&#x65B7;&#x7576;&#x524D;&#x9801;&#x9762;&#x6A19;&#x984C;&#x662F;&#x5426;&#x5305;&#x542B; title</p>
+<pre><code class="lang-py">EC.title_contains(<span class="hljs-string">&quot;Google&quot;</span>)
+</code></pre>
+<h4 id="presenceofelementlocated"><a name="presenceofelementlocated" class="plugin-anchor" href="#presenceofelementlocated"><i class="fa fa-link" aria-hidden="true"></i></a>presence_of_element_located</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5B58;&#x5728;</p>
+<p>presence_of_all_elements_located(locator)</p>
+<pre><code class="lang-py">EC.presence_of_element_located((By.ID, <span class="hljs-string">&quot;enableAfter&quot;</span>))
+</code></pre>
+<h4 id="urlcontains"><a name="urlcontains" class="plugin-anchor" href="#urlcontains"><i class="fa fa-link" aria-hidden="true"></i></a>url_contains</h4>
+<p>&#x5224;&#x65B7;&#x9801;&#x9762;&#x7DB2;&#x5740;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B; url</p>
+<pre><code class="lang-py">EC.url_contains(url)
+</code></pre>
+<h4 id="urltobe"><a name="urltobe" class="plugin-anchor" href="#urltobe"><i class="fa fa-link" aria-hidden="true"></i></a>url_to_be</h4>
+<p>&#x5224;&#x65B7;&#x9801;&#x9762;&#x7DB2;&#x5740;&#x662F;&#x5426;&#x70BA; url</p>
+<pre><code class="lang-py">EC.url_to_be(url)
+</code></pre>
+<h4 id="urlchangesurl"><a name="urlchangesurl" class="plugin-anchor" href="#urlchangesurl"><i class="fa fa-link" aria-hidden="true"></i></a>url_changes(url)</h4>
+<p>&#x5224;&#x65B7;&#x9801;&#x9762;&#x7DB2;&#x5740;&#x4E0D;&#x662F; url</p>
+<pre><code class="lang-py">EC.url_changes(url)
+</code></pre>
+<h4 id="visibilityofelementlocatedlocator"><a name="visibilityofelementlocatedlocator" class="plugin-anchor" href="#visibilityofelementlocatedlocator"><i class="fa fa-link" aria-hidden="true"></i></a>visibility_of_element_located(locator)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x898B;</p>
+<h4 id="visibilityof"><a name="visibilityof" class="plugin-anchor" href="#visibilityof"><i class="fa fa-link" aria-hidden="true"></i></a>visibility_of</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x898B;</p>
+<h4 id="presenceofallelementslocatedlocator"><a name="presenceofallelementslocatedlocator" class="plugin-anchor" href="#presenceofallelementslocatedlocator"><i class="fa fa-link" aria-hidden="true"></i></a>presence_of_all_elements_located(locator)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x7684;&#x4E00;&#x7D44;&#x5143;&#x7D20;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x500B;&#x53EF;&#x898B;</p>
+<h4 id="visibilityofallelementslocatedlocator"><a name="visibilityofallelementslocatedlocator" class="plugin-anchor" href="#visibilityofallelementslocatedlocator"><i class="fa fa-link" aria-hidden="true"></i></a>visibility_of_all_elements_located(locator)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x7684;&#x4E00;&#x7D44;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x53EF;&#x898B;</p>
+<h4 id="texttobepresentinelementlocator-text"><a name="texttobepresentinelementlocator-text" class="plugin-anchor" href="#texttobepresentinelementlocator-text"><i class="fa fa-link" aria-hidden="true"></i></a>text_to_be_present_in_element(locator, text)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B; text &#x7684;&#x5167;&#x5BB9;</p>
+<h4 id="texttobepresentinelementvaluelocator-text"><a name="texttobepresentinelementvaluelocator-text" class="plugin-anchor" href="#texttobepresentinelementvaluelocator-text"><i class="fa fa-link" aria-hidden="true"></i></a>text_to_be_present_in_element_value(locator, text)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5B9A;&#x4F4D;&#x4E2D;&#x7684; value &#x5C6C;&#x6027;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B; text &#x7684;&#x5167;&#x5BB9;</p>
+<h4 id="frametobeavailableandswitchtoitlocator"><a name="frametobeavailableandswitchtoitlocator" class="plugin-anchor" href="#frametobeavailableandswitchtoitlocator"><i class="fa fa-link" aria-hidden="true"></i></a>frame_to_be_available_and_switch_to_it(locator)</h4>
+<p>&#x5224;&#x65B7;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x70BA; frame&#xFF0C;&#x4E26;&#x76F4;&#x63A5;&#x5207;&#x63DB;&#x5230;&#x9019;&#x500B; frame &#x4E2D;</p>
+<h4 id="invisibilityofelementlocatedlocator"><a name="invisibilityofelementlocatedlocator" class="plugin-anchor" href="#invisibilityofelementlocatedlocator"><i class="fa fa-link" aria-hidden="true"></i></a>invisibility_of_element_located(locator)</h4>
+<p>&#x5224;&#x65B7;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x4E0D;&#x53EF;&#x898B;</p>
+<h4 id="invisibilityofelementelement"><a name="invisibilityofelementelement" class="plugin-anchor" href="#invisibilityofelementelement"><i class="fa fa-link" aria-hidden="true"></i></a>invisibility_of_element(element)</h4>
+<p>&#x5224;&#x65B7;&#x6B64;&#x5143;&#x7D20;&#x662F;&#x5426;&#x4E0D;&#x53EF;&#x898B;</p>
+<h4 id="elementtobeclickablelocator"><a name="elementtobeclickablelocator" class="plugin-anchor" href="#elementtobeclickablelocator"><i class="fa fa-link" aria-hidden="true"></i></a>element_to_be_clickable(locator)</h4>
+<p>&#x5224;&#x65B7;&#x6240;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x898B;&#x4E14;&#x53EF;&#x9EDE;&#x64CA;</p>
+<h4 id="elementtobeselectedelement"><a name="elementtobeselectedelement" class="plugin-anchor" href="#elementtobeselectedelement"><i class="fa fa-link" aria-hidden="true"></i></a>element_to_be_selected(element)</h4>
+<p>&#x5224;&#x65B7;&#x8A72;&#x5143;&#x7D20;&#x662F;&#x5426;&#x88AB;&#x9078;&#x4E2D;</p>
+<h4 id="elementlocatedtobeselectedlocator"><a name="elementlocatedtobeselectedlocator" class="plugin-anchor" href="#elementlocatedtobeselectedlocator"><i class="fa fa-link" aria-hidden="true"></i></a>element_located_to_be_selected(locator)</h4>
+<p>&#x5224;&#x65B7;&#x8A72;&#x5143;&#x7D20;&#x88AB;&#x9078;&#x4E2D;&#x72C0;&#x614B;&#x662F;&#x5426;&#x548C;&#x671F;&#x671B;&#x72C0;&#x614B;&#x76F8;&#x540C;</p>
+<h4 id="elementlocatedselectionstatetobelocatorboolean"><a name="elementlocatedselectionstatetobelocatorboolean" class="plugin-anchor" href="#elementlocatedselectionstatetobelocatorboolean"><i class="fa fa-link" aria-hidden="true"></i></a>element_located_selection_state_to_be(locator,Boolean)</h4>
+<p>&#x5224;&#x65B7;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x88AB;&#x9078;&#x4E2D;&#x72C0;&#x614B;&#x662F;&#x5426;&#x548C;&#x671F;&#x671B;&#x72C0;&#x614B;&#x76F8;&#x540C;</p>
+<h4 id="numberofwindowstobenum"><a name="numberofwindowstobenum" class="plugin-anchor" href="#numberofwindowstobenum"><i class="fa fa-link" aria-hidden="true"></i></a>number_of_windows_to_be(num)</h4>
+<p>&#x5224;&#x65B7;&#x7576;&#x524D;&#x700F;&#x89BD;&#x5668;&#x9801;&#x7C3D;&#x6578;&#x91CF;&#x662F;&#x5426;&#x70BA; num</p>
+<h4 id="newwindowisopenedhandles"><a name="newwindowisopenedhandles" class="plugin-anchor" href="#newwindowisopenedhandles"><i class="fa fa-link" aria-hidden="true"></i></a>new_window_is_opened(handles)</h4>
+<p>&#x5224;&#x65B7;&#x6B64; handles &#x9801;&#x7C3D;&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x6253;&#x958B;&#x7684;&#x9801;&#x7C3D;</p>
+<h4 id="alertispresent"><a name="alertispresent" class="plugin-anchor" href="#alertispresent"><i class="fa fa-link" aria-hidden="true"></i></a>alert_is_present()</h4>
+<p>&#x5224;&#x65B7;&#x662F;&#x5426;&#x6703;&#x51FA;&#x73FE; alert &#x7A97;&#x53E3;&#x8B66;&#x5831;</p>
+<ul>
+<li><a href="https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected_conditions" target="_blank">&#x5B98;&#x65B9; API &#x6587;&#x4EF6;</a></li>
+</ul>
+<h3 id="&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><a name="&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;</h3>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 <span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
 <span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
@@ -694,28 +761,6 @@ driver.get(<span class="hljs-string">&quot;https://demoqa.com/dynamic-properties
     driver.quit()
 </code></pre>
 <p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7BC4;&#x4F8B; Selenium &#x6700;&#x591A;&#x7B49;&#x5F85; 10 &#x79D2;&#xFF0C;&#x82E5;&#x5143;&#x7D20;&#x5247;&#x62CB;&#x51FA; <code>TimeoutException</code>&#x3002;&#x5728;&#x9810;&#x8A2D;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x6BCF; 500 ms &#x6703;&#x6AA2;&#x67E5;&#x4E00;&#x6B21;&#x689D;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F; <code>ExpectedCondition</code> &#x6703;&#x8FD4;&#x56DE; <code>true</code>&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x5247;&#x8FD4;&#x56DE; <code>null</code>&#x3002;</p>
-<h3 id="&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions"><a name="&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions" class="plugin-anchor" href="#&#x9810;&#x671F;&#x689D;&#x4EF6;-expected-conditions"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9810;&#x671F;&#x689D;&#x4EF6; (Expected Conditions)</h3>
-<p>&#x5167;&#x5EFA;&#x7684;&#x6AA2;&#x67E5;&#x689D;&#x4EF6;&#x6709;&#xFF1A;</p>
-<pre><code>title_is
-title_contains
-presence_of_element_located
-visibility_of_element_located
-visibility_of
-presence_of_all_elements_located
-text_to_be_present_in_element
-text_to_be_present_in_element_value
-frame_to_be_available_and_switch_to_it
-invisibility_of_element_located
-element_to_be_clickable
-staleness_of
-element_to_be_selected
-element_located_to_be_selected
-element_selection_state_to_be
-element_located_selection_state_to_be
-alert_is_present
-</code></pre><ul>
-<li><a href="https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected_conditions" target="_blank">&#x5B98;&#x65B9; API &#x6587;&#x4EF6;</a></li>
-</ul>
 <h3 id="&#x81EA;&#x8A02;&#x7B49;&#x5F85;&#x689D;&#x4EF6;"><a name="&#x81EA;&#x8A02;&#x7B49;&#x5F85;&#x689D;&#x4EF6;" class="plugin-anchor" href="#&#x81EA;&#x8A02;&#x7B49;&#x5F85;&#x689D;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x8A02;&#x7B49;&#x5F85;&#x689D;&#x4EF6;</h3>
 <pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">element_has_css_class</span><span class="hljs-params">(object)</span>:</span>
   <span class="hljs-string">&quot;&quot;&quot;An expectation for checking that an element has a particular css class.
@@ -740,6 +785,7 @@ element = wait.until(element_has_css_class((By.ID, <span class="hljs-string">&ap
 </code></pre>
 <h2 id="&#x96B1;&#x5F0F;&#x7B49;&#x5F85;-implicit-waits"><a name="&#x96B1;&#x5F0F;&#x7B49;&#x5F85;-implicit-waits" class="plugin-anchor" href="#&#x96B1;&#x5F0F;&#x7B49;&#x5F85;-implicit-waits"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96B1;&#x5F0F;&#x7B49;&#x5F85; (Implicit Waits)</h2>
 <ul>
+<li>&#x8A2D;&#x7F6E;&#x5168;&#x5C40;&#x5143;&#x7D20;&#x67E5;&#x627E;&#x7684;&#x8D85;&#x6642;&#x6642;&#x9593;</li>
 <li>&#x96B1;&#x5F0F;&#x7B49;&#x5F85;&#x662F;&#x4EE3;&#x8868;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x6700;&#x9577;&#x7B49;&#x5F85;&#x6642;&#x9593;&#xFF0C;&#x9019;&#x500B;&#x65B9;&#x6CD5;&#x662F;&#x5F97;&#x4E0D;&#x5230;&#x67D0;&#x500B;&#x5143;&#x7D20;&#x5C31;&#x7B49;&#x5F85;&#xFF0C;&#x76F4;&#x5230;&#x62FF;&#x5230;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;(&#x5982;&#x679C;&#x4E00;&#x76F4;&#x62FF;&#x4E0D;&#x5230;&#x5C31;&#x7B49;&#x5230;&#x6642;&#x9593;&#x622A;&#x6B62;)&#xFF0C;&#x518D;&#x57F7;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x3002;</li>
 <li>&#x96B1;&#x5F0F;&#x7B49;&#x5F85;&#x5C0D;&#x6574;&#x500B; driver &#x9031;&#x671F;&#x90FD;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x8981;&#x8A2D;&#x5B9A;&#x4E00;&#x6B21;&#x5373;&#x53EF;&#x3002;</li>
 </ul>
@@ -772,6 +818,7 @@ sleep(<span class="hljs-number">3</span>)
 <ul>
 <li><a href="https://selenium-python.readthedocs.io/waits.html" target="_blank">5. Waits</a></li>
 <li><a href="https://huilansame.github.io/huilansame.github.io/archivers/sleep-implicitlywait-wait" target="_blank">Python selenium &#x2014; &#x4E00;&#x5B9A;&#x8981;&#x4F1A;&#x7528; selenium &#x7684;&#x7B49;&#x5F85;&#xFF0C;&#x4E09;&#x7A2E;&#x7B49;&#x5F85;&#x65B9;&#x5F0F;&#x89E3;&#x8B80;</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/143357537" target="_blank">Web &#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#xFF1A;WebDriverWait &#x5143;&#x7D20;&#x7B49;&#x5F85;&#x548C;&#x5168;&#x5C40;&#x8BBE;&#x7F6E;</a></li>
 </ul>
 
                                 
@@ -812,7 +859,7 @@ sleep(<span class="hljs-number">3</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"等待 (Wait)","level":"1.4.1","depth":2,"next":{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},"previous":{"title":"第三週 - WebDriver (下)","level":"1.4","depth":1,"ref":"","articles":[{"title":"等待 (Wait)","level":"1.4.1","depth":2,"path":"waits.md","ref":"waits.md","articles":[]},{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"驗證","level":"1.4.3","depth":2,"ref":"","articles":[]},{"title":"頁籤","level":"1.4.4","depth":2,"ref":"","articles":[]},{"title":"測試常見的專有名詞","level":"1.4.5","depth":2,"ref":"","articles":[]},{"title":"練習題：學生註冊表格","level":"1.4.6","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"waits.md","mtime":"2021-03-21T13:36:49.860Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-21T16:35:17.384Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"等待 (Wait)","level":"1.4.1","depth":2,"next":{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},"previous":{"title":"第三週 - WebDriver (下)","level":"1.4","depth":1,"ref":"","articles":[{"title":"等待 (Wait)","level":"1.4.1","depth":2,"path":"waits.md","ref":"waits.md","articles":[]},{"title":"進階選取元素","level":"1.4.2","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"驗證","level":"1.4.3","depth":2,"ref":"","articles":[]},{"title":"頁籤","level":"1.4.4","depth":2,"ref":"","articles":[]},{"title":"測試常見的專有名詞","level":"1.4.5","depth":2,"ref":"","articles":[]},{"title":"練習題：學生註冊表格","level":"1.4.6","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"waits.md","mtime":"2021-03-22T04:41:45.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T04:41:50.807Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
