@@ -1,4 +1,4 @@
-# 元素
+# 元素的狀態與屬性
 
 ## Get Active Element
 
@@ -74,6 +74,10 @@ driver.get("https://www.example.com")
 # Retrieves the text of the element
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
 ```
+
+## 練習題
+
+<https://the-internet.herokuapp.com/dynamic_controls>
 
 ## 參考文獻
 
