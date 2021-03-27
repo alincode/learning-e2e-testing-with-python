@@ -6,3 +6,4 @@ git add .
 git commit -m 'build'
 git push
 git co master
+git push
