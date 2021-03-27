@@ -6,6 +6,7 @@
 - <http://www.globalsqa.com/demo-site/>
 - <https://opensource-demo.orangehrmlive.com/>
 - <http://the-internet.herokuapp.com/>
+- <http://sahitest.com/demo/>
 - <http://www.way2automation.com/demo.html>
 - <http://juliemr.github.io/protractor-demo/>
 - <http://automationpractice.com/>
