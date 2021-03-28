@@ -108,12 +108,6 @@ Pause all inputs for the specified duration in seconds
 
 發送某個鍵到指定元素
 
-## 練習題
-
-### Range Sliders
-
-- 這個練習題會用到 click_and_hold, move_by_offset, release, perform，這四個動作。
-
 ## 參考文獻
 
 - [7.2. Action Chains](https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains)

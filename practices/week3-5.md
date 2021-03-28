@@ -1,10 +1,11 @@
 # 練習題：訊息框
 
-## 練習題：警告訊息框
-
 - <https://demoqa.com/alerts>
+  - 警告訊息框 (alerts)
+  - 確認訊息框 (confirm)
+  - 提示訊息對話 (prompts)
 
-### 答案
+<!-- ### 答案
 
 ```py
 from selenium import webdriver
@@ -70,4 +71,4 @@ try:
     alert.accept()
 finally:
     driver.quit()
-```
+``` -->
