@@ -11,6 +11,7 @@
 - <https://wordvice.com.tw/citation-generator/webpage/apa7>
 - <http://www.qa-knowhow.com/?p=2531>
 - <https://wastemobile.gitbooks.io/gitbook-chinese/content/format/cover.html>
+- <https://www.lambdatest.com/blog/selenium-webdriver-with-python/>
 
 ## Video
 

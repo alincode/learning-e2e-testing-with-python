@@ -1,13 +1,30 @@
-# 練習題 - Web Tables
+# 練習題：拖拉 Bar
 
-https://demoqa.com/webtables
+![](assets/slider.png)
 
-### Test Case
+- <https://demoqa.com/slider>
+- 會用到的語法
+  - [ActionChains](../action_chains.md)
+    - click_and_hold
+    - move_by_offset
+    - release
+    - perform
 
-- 新增一筆資料
-- 驗證新增成功
-- 測試 filter 功能
-- 測試編輯功能
-- 測試刪除功能
-- 驗證成功刪除
-- 測試分頁功能
+<!--
+### 解答
+
+```py
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/slider")
+assert "ToolsQA" in driver.title
+
+try:
+    input_range = driver.find_element_by_css_selector("[type='range']")
+    move = ActionChains(driver)
+    move.click_and_hold(input_range).move_by_offset(10, 0).release().perform()
+finally:
+    driver.quit()
+``` -->

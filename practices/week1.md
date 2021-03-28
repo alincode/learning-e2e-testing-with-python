@@ -1,6 +1,6 @@
 # 練習題：測試計算機
 
-![](assets/week1.png)
+![](assets/protractor.png)
 
 ### 解答
 

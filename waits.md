@@ -77,10 +77,17 @@ element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 - 隱式等待是代表建立一個最長等待時間，這個方法是得不到某個元素就等待，直到拿到元素位置(如果一直拿不到就等到時間截止)，再執行下一步。
 - 隱式等待對整個 driver 週期都起作用，所以只要設定一次即可。
 
+### 語法
+
+```python
+# 單位是秒
+driver.implicitly_wait(time_to_wait)
+```
+
 ### 範例
 
 ```python
-driver.implicitly_wait(5) # 單位是秒
+driver.implicitly_wait(5)
 element = driver.find_element_by_id("demo")
 ```
 
@@ -91,49 +98,10 @@ from time import sleep
 sleep(3)
 ```
 
-> 盡量不要使用，如果真的使用需小心謹慎。
+### 使用情境
 
-## 練習題
-
-<https://demoqa.com/dynamic-properties>
-
-- 顯式等待
-
-<!--
-```py
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-
-try:
-    element = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "enableAfter"))
-    )
-finally:
-    driver.quit()
-``` -->
-
-- 隱式等待
-
-<!--
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.implicitly_wait(5) # 單位是秒
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-try:
-    element = driver.find_element_by_id("visibleAfter")
-    print(element.text)
-finally:
-    driver.quit()
-``` -->
+- 希望可以讓測試慢一點，方便肉眼看到結果。
+- 若可以用顯示等待或隱式等待，就不要用 sleep。(如果真的使用需小心謹慎)
 
 ## 參考文獻
 

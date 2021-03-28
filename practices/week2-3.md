@@ -2,7 +2,7 @@
 
 <https://demoqa.com/automation-practice-form>
 
-![](assets/week2-3.png)
+![](assets/form.png)
 
 ### 練習目標
 
