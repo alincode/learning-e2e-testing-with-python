@@ -827,69 +827,81 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;</h1>
-<h2 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;</h2>
 <ul>
-<li><a href="https://demoqa.com/alerts" target="_blank">https://demoqa.com/alerts</a></li>
+<li><a href="https://demoqa.com/alerts" target="_blank">https://demoqa.com/alerts</a><ul>
+<li>&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846; (alerts)</li>
+<li>&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846; (confirm)</li>
+<li>&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71; (prompts)</li>
 </ul>
-<h3 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h3>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
-<span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
-<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions
+</li>
+</ul>
+<!-- ### 答案
 
-driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
-driver.get(<span class="hljs-string">&quot;https://demoqa.com/alerts&quot;</span>)
-<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
+```py
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/alerts")
+assert "ToolsQA" in driver.title
 
 driver.maximize_window()
 
-<span class="hljs-keyword">try</span>:
-    driver.find_element_by_id(<span class="hljs-string">&quot;alertButton&quot;</span>).click()
+try:
+    driver.find_element_by_id("alertButton").click()
     alert = driver.switch_to.alert
     text = alert.text
     print(text)
     alert.accept()
 
-    driver.find_element_by_id(<span class="hljs-string">&quot;timerAlertButton&quot;</span>).click()
-    alert2 = WebDriverWait(driver, <span class="hljs-number">6</span>).until(expected_conditions.alert_is_present())
+    driver.find_element_by_id("timerAlertButton").click()
+    alert2 = WebDriverWait(driver, 6).until(expected_conditions.alert_is_present())
     text2 = alert.text
     print(text2)
     alert2.accept()
 
-<span class="hljs-keyword">finally</span>:
+finally:
     driver.quit()
-</code></pre>
-<h2 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;</h2>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+```
 
-driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
-driver.get(<span class="hljs-string">&quot;https://demoqa.com/alerts&quot;</span>)
-<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
+## 練習題：確認訊息框
 
-<span class="hljs-keyword">try</span>:
-    driver.find_element_by_id(<span class="hljs-string">&apos;confirmButton&apos;</span>).click()
+```py
+from selenium import webdriver
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/alerts")
+assert "ToolsQA" in driver.title
+
+try:
+    driver.find_element_by_id('confirmButton').click()
     alert = driver.switch_to.alert
     print(alert.text)
     alert.accept()
-    <span class="hljs-comment"># alert.dismiss()</span>
-<span class="hljs-keyword">finally</span>:
+    # alert.dismiss()
+finally:
     driver.quit()
-</code></pre>
-<h2 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;</h2>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+```
 
-driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
-driver.get(<span class="hljs-string">&quot;https://demoqa.com/alerts&quot;</span>)
-<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
+## 練習題：提示訊息對話
 
-<span class="hljs-keyword">try</span>:
-    driver.find_element_by_id(<span class="hljs-string">&apos;promtButton&apos;</span>).click()
+```py
+from selenium import webdriver
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://demoqa.com/alerts")
+assert "ToolsQA" in driver.title
+
+try:
+    driver.find_element_by_id('promtButton').click()
     alert = driver.switch_to.alert
-    alert.send_keys(<span class="hljs-string">&quot;AILIN LIOU&quot;</span>)
+    alert.send_keys("AILIN LIOU")
     print(alert.text)
     alert.accept()
-<span class="hljs-keyword">finally</span>:
+finally:
     driver.quit()
-</code></pre>
+``` -->
 
                                 
                                 </section>
@@ -929,7 +941,7 @@ driver.get(<span class="hljs-string">&quot;https://demoqa.com/alerts&quot;</span
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：訊息框","level":"1.4.12","depth":2,"next":{"title":"第四週 - 測試專案","level":"1.5","depth":1,"ref":"","articles":[{"title":"練習題：Web Tables","level":"1.5.1","depth":2,"ref":"","articles":[]},{"title":"常見錯誤處理","level":"1.5.2","depth":2,"ref":"","articles":[]},{"title":"basic Auth","level":"1.5.3","depth":2,"ref":"","articles":[]},{"title":"日期選擇器","level":"1.5.4","depth":2,"path":"date_picker.md","ref":"date_picker.md","articles":[]},{"title":"進階選取元素","level":"1.5.5","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"測試常見的專有名詞","level":"1.5.6","depth":2,"ref":"","articles":[]},{"title":"組織測試專案","level":"1.5.7","depth":2,"ref":"","articles":[]},{"title":"與測試框架整合","level":"1.5.8","depth":2,"ref":"","articles":[]},{"title":"測試環境的種類","level":"1.5.9","depth":2,"ref":"","articles":[]},{"title":"POM","level":"1.5.10","depth":2,"ref":"","articles":[]}]},"previous":{"title":"訊息框","level":"1.4.11","depth":2,"path":"alerts_prompts_confirm.md","ref":"alerts_prompts_confirm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week3-5.md","mtime":"2021-03-28T16:22:22.200Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-28T16:22:27.107Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：訊息框","level":"1.4.12","depth":2,"next":{"title":"第四週 - 測試專案","level":"1.5","depth":1,"ref":"","articles":[{"title":"練習題：Web Tables","level":"1.5.1","depth":2,"ref":"","articles":[]},{"title":"常見錯誤處理","level":"1.5.2","depth":2,"ref":"","articles":[]},{"title":"basic Auth","level":"1.5.3","depth":2,"ref":"","articles":[]},{"title":"日期選擇器","level":"1.5.4","depth":2,"path":"date_picker.md","ref":"date_picker.md","articles":[]},{"title":"進階選取元素","level":"1.5.5","depth":2,"path":"locating_elements_advanced.md","ref":"locating_elements_advanced.md","articles":[]},{"title":"測試常見的專有名詞","level":"1.5.6","depth":2,"ref":"","articles":[]},{"title":"組織測試專案","level":"1.5.7","depth":2,"ref":"","articles":[]},{"title":"與測試框架整合","level":"1.5.8","depth":2,"ref":"","articles":[]},{"title":"測試環境的種類","level":"1.5.9","depth":2,"ref":"","articles":[]},{"title":"POM","level":"1.5.10","depth":2,"ref":"","articles":[]}]},"previous":{"title":"訊息框","level":"1.4.11","depth":2,"path":"alerts_prompts_confirm.md","ref":"alerts_prompts_confirm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week3-5.md","mtime":"2021-03-28T16:31:20.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-28T16:31:24.442Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
