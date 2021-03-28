@@ -1,18 +1,37 @@
 # 動作鏈 (action chains)
 
-模擬滑鼠操作
+模擬滑鼠操作，例如點擊左鍵、連擊、點擊右鍵、拖曳等等行為。
 
 ```
 class selenium.webdriver.common.action_chains.ActionChains(driver)
 ```
+
+## 基本用法
+
+有時候我們的行為是有連續性的一連串的動作，希望將命令像鎖鏈一樣排列好，再依照排列的順序依序執行。所以當命令排入 queue 時，並不會立即執行，會等到呼叫 perform() 函式時，才會真的執行。
+
+## 常見使用情境
+
+- [拖拉 bar](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_range)
+- [SortTable](https://demoqa.com/sortable)
+- <https://www.draw.io/>
 
 ## 使用範例
 
 ```py
 menu = driver.find_element(By.CSS_SELECTOR, ".nav")
 hidden_submenu = driver.find_element(By.CSS_SELECTOR, ".nav #submenu1")
+actions = ActionChains(driver)
+actions.move_to_element(menu).click(hidden_submenu).perform()
+```
 
-ActionChains(driver).move_to_element(menu).click(hidden_submenu).perform()
+### 連點
+
+```py
+actions.click(element)
+
+for i for range(10):
+  actions.perform()
 ```
 
 ## API
