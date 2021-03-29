@@ -894,27 +894,23 @@ element_to_be_clickable</li>
 </ul>
 </li>
 </ul>
-<!--
+<h3 id="&#x89E3;&#x7B54;"><a name="&#x89E3;&#x7B54;" class="plugin-anchor" href="#&#x89E3;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x7B54;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+<span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
+<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC
 
-### 解答
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.get(<span class="hljs-string">&quot;https://demoqa.com/dynamic-properties&quot;</span>)
+<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
 
-```py
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-
-try:
-    element = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "enableAfter"))
+<span class="hljs-keyword">try</span>:
+    element = WebDriverWait(driver, <span class="hljs-number">10</span>).until(
+        EC.element_to_be_clickable((By.ID, <span class="hljs-string">&quot;enableAfter&quot;</span>))
     )
-finally:
+<span class="hljs-keyword">finally</span>:
     driver.quit()
-``` -->
+</code></pre>
 <h2 id="&#x96B1;&#x5F0F;&#x7B49;&#x5F85;"><a name="&#x96B1;&#x5F0F;&#x7B49;&#x5F85;" class="plugin-anchor" href="#&#x96B1;&#x5F0F;&#x7B49;&#x5F85;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96B1;&#x5F0F;&#x7B49;&#x5F85;</h2>
 <ul>
 <li><a href="https://demoqa.com/dynamic-properties" target="_blank">https://demoqa.com/dynamic-properties</a></li>
@@ -923,22 +919,19 @@ finally:
 </ul>
 </li>
 </ul>
-<!--
-### 解答
+<h3 id="&#x89E3;&#x7B54;"><a name="&#x89E3;&#x7B54;" class="plugin-anchor" href="#&#x89E3;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x7B54;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.implicitly_wait(5) # 單位是秒
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-try:
-    element = driver.find_element_by_id("visibleAfter")
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.implicitly_wait(<span class="hljs-number">5</span>) <span class="hljs-comment"># &#x55AE;&#x4F4D;&#x662F;&#x79D2;</span>
+driver.get(<span class="hljs-string">&quot;https://demoqa.com/dynamic-properties&quot;</span>)
+<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;ToolsQA&quot;</span> <span class="hljs-keyword">in</span> driver.title
+<span class="hljs-keyword">try</span>:
+    element = driver.find_element_by_id(<span class="hljs-string">&quot;visibleAfter&quot;</span>)
     print(element.text)
-finally:
+<span class="hljs-keyword">finally</span>:
     driver.quit()
-``` -->
+</code></pre>
 
                                 
                                 </section>
@@ -982,7 +975,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：非同步行為","level":"1.4.8","depth":2,"next":{"title":"動作鏈","level":"1.4.9","depth":2,"path":"action_chains.md","ref":"action_chains.md","articles":[]},"previous":{"title":"預期條件","level":"1.4.7","depth":2,"path":"expected_conditions.md","ref":"expected_conditions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week3-4.md","mtime":"2021-03-28T16:22:22.200Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-29T06:47:53.272Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：非同步行為","level":"1.4.8","depth":2,"next":{"title":"動作鏈","level":"1.4.9","depth":2,"path":"action_chains.md","ref":"action_chains.md","articles":[]},"previous":{"title":"預期條件","level":"1.4.7","depth":2,"path":"expected_conditions.md","ref":"expected_conditions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week3-4.md","mtime":"2021-03-29T07:08:14.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-29T07:08:18.373Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
