@@ -9,8 +9,6 @@
   - expected_conditions
     element_to_be_clickable
 
-<!--
-
 ### 解答
 
 ```py
@@ -29,7 +27,7 @@ try:
     )
 finally:
     driver.quit()
-``` -->
+```
 
 ## 隱式等待
 
@@ -37,7 +35,6 @@ finally:
 - 會用到的語法
   - implicitly_wait(time_to_wait)
 
-<!--
 ### 解答
 
 ```py
@@ -52,4 +49,4 @@ try:
     print(element.text)
 finally:
     driver.quit()
-``` -->
+```
