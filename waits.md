@@ -46,7 +46,7 @@ element = WebDriverWait(driver, 10).until(
 
 在上面的範例 Selenium 最多等待 10 秒，若元素則拋出 `TimeoutException`。在預設情況下，每 500 ms 會檢查一次條件，如果成功 `ExpectedCondition` 會返回 `true`，找不到元素，則返回 `null`。
 
-### 自訂等待條件
+### 自訂等待條件 (skip)
 
 ```py
 class element_has_css_class(object):
@@ -73,8 +73,8 @@ element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 
 ## 隱式等待 (Implicit Waits)
 
-- 設置全局元素查找的超時時間
-- 隱式等待是代表建立一個最長等待時間，這個方法是得不到某個元素就等待，直到拿到元素位置(如果一直拿不到就等到時間截止)，再執行下一步。
+- 設置全域的元素查找的超時時間
+- 隱式等待是代表建立一個最長等待時間，若得不到某個元素就等待，直到拿到元素位置，但如果一直拿不到，就等到時間截止，再執行下一步。
 - 隱式等待對整個 driver 週期都起作用，所以只要設定一次即可。
 
 ### 語法

@@ -1,83 +1,100 @@
 # 元素的狀態與屬性
 
-## Get Active Element
+## get_attribute("attr_name")
+
+取得元素指定的屬性值
+
+### 範例
 
 ```py
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.get("https://www.google.com")
+driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
 
-  driver = webdriver.Chrome()
-  driver.get("https://www.google.com")
-  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
-
-  # Get attribute of current active element
-  attr = driver.switch_to.active_element.get_attribute("title")
-  print(attr)
-
+# Get attribute of current active element
+attr = driver.switch_to.active_element.get_attribute("title")
+print(attr)
 ```
 
-## Is Element Enabled
+## isEnabled()
+
+元素是否是 Enable 的狀態，回傳值為 Boolean。
+
+### 範例
 
 ```py
   driver.get("https://www.google.com/");
-
-  //returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
-
 ```
 
-## Is Element Selected
+## is_selected()
+
+元素是否被選取，回傳值為 Boolean。
+
+### 範例
 
 ```py
 driver.get("https://the-internet.herokuapp.com/checkboxes")
-
-# Returns true if element is checked else returns false
 value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
-
 ```
 
-## Get Element TagName
+## tag_name
+
+元素的 tag 名稱
+
+### 範例
 
 ```py
-driver.get("https://www.example.com")
-
-# Returns TagName of the element
 attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
-
+# 結果回傳：h1
 ```
 
-## Get Element Rect
+## rect
+
+取得元素的 height, width, x 和 y 值。
+
+### 範例
 
 ```py
-driver.get("https://www.example.com")
-
-# Returns height, width, x and y coordinates referenced element
-res = driver.find_element(By.CSS_SELECTOR, "h1").rect
+rest = driver.find_element(By.CSS_SELECTOR, "h1").rect
 ```
 
-## Get Element CSS Value
+## value_of_css_property('css_attr_name')
+
+取得元素的 CSS 的屬性值
+
+### 範例
 
 ```py
-# Navigate to Url
-driver.get('https://www.example.com')
-
-# Retrieves the computed style property 'color' of linktext
 cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
 ```
 
-## Get Element Text
+## text
+
+取得元素的文字
+
+### 範例
 
 ```py
-driver.get("https://www.example.com")
-
-# Retrieves the text of the element
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
 ```
 
-## 練習題
+## 補充：判斷元素是否存在
 
-<https://the-internet.herokuapp.com/dynamic_controls>
+> 注意這裡是 `elements`，如果是呼叫 `element` 會丟出 error。
+
+```py
+elements = driver.find_elements_by_css_selector("h4")
+elements_size = len(elements)
+
+if(elements_size > 0):
+  print("元素存在 " + elements.text)
+else:
+   print("元素不存在")
+```
 
 ## 參考文獻
 
