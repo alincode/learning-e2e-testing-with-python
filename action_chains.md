@@ -2,8 +2,8 @@
 
 模擬滑鼠操作，例如點擊左鍵、連擊、點擊右鍵、拖曳等等行為。
 
-```
-class selenium.webdriver.common.action_chains.ActionChains(driver)
+```py
+from selenium.webdriver.common.action_chains import ActionChains
 ```
 
 ## 基本用法
@@ -19,6 +19,12 @@ class selenium.webdriver.common.action_chains.ActionChains(driver)
 ## 使用範例
 
 ```py
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("https://example.com")
+
 menu = driver.find_element(By.CSS_SELECTOR, ".nav")
 hidden_submenu = driver.find_element(By.CSS_SELECTOR, ".nav #submenu1")
 actions = ActionChains(driver)
