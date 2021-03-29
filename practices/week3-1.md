@@ -8,7 +8,6 @@
   - string.split()
   - element.text
 
-<!--
 ### 解答
 
 ```py
@@ -26,5 +25,4 @@ try:
     assert "Contrary to popular belief" in origin_tab_content.text
 finally:
     driver.quit()
-
-``` -->
+```
