@@ -26,8 +26,7 @@ print(attr)
 ### 範例
 
 ```py
-  driver.get("https://www.google.com/");
-  boolean value = driver.findElement(By.name("btnK")).isEnabled();
+is_enable = driver.find_element_by_css_selector("[type='text']").is_enabled()
 ```
 
 ## is_selected()
