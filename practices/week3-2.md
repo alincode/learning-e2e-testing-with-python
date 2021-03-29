@@ -10,7 +10,6 @@
     - release
     - perform
 
-<!--
 ### 解答
 
 ```py
@@ -27,4 +26,4 @@ try:
     move.click_and_hold(input_range).move_by_offset(10, 0).release().perform()
 finally:
     driver.quit()
-``` -->
+```
