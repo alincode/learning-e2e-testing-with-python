@@ -1,58 +1,29 @@
-# 練習題：等待
+# 練習題：拖拉 Bar
 
-```py
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-```
+![](assets/slider.png)
 
-## 顯式等待
-
-- <https://demoqa.com/dynamic-properties>
+- <https://demoqa.com/slider>
 - 會用到的語法
-  - WebDriverWait
-    - until
-  - expected_conditions
-    element_to_be_clickable
+  - [ActionChains](../action_chains.md)
+    - click_and_hold
+    - move_by_offset
+    - release
+    - perform
 
 ### 解答
 
 ```py
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/dynamic-properties")
+driver.get("https://demoqa.com/slider")
 assert "ToolsQA" in driver.title
 
 try:
-    element = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "enableAfter"))
-    )
-finally:
-    driver.quit()
-```
-
-## 隱式等待
-
-- <https://demoqa.com/dynamic-properties>
-- 會用到的語法
-  - implicitly_wait(time_to_wait)
-
-### 解答
-
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.implicitly_wait(5) # 單位是秒
-driver.get("https://demoqa.com/dynamic-properties")
-assert "ToolsQA" in driver.title
-try:
-    element = driver.find_element_by_id("visibleAfter")
-    print(element.text)
+    input_range = driver.find_element_by_css_selector("[type='range']")
+    move = ActionChains(driver)
+    move.click_and_hold(input_range).move_by_offset(10, 0).release().perform()
 finally:
     driver.quit()
 ```
