@@ -4,7 +4,7 @@
 - 會用到的語法
   - is_enabled()
 
-<!-- ## 解答
+## 解答
 
 ```py
 from selenium import webdriver
@@ -19,4 +19,4 @@ try:
     assert False == is_enable
 finally:
     driver.quit()
-``` -->
+```
