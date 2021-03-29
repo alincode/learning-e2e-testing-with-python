@@ -21,6 +21,12 @@ assert_stmt ::=  "assert" expression ["," expression]
 
 ### 元素的數量對不對
 
+### 檢查數值布林值
+
+```py
+assert False == True, '不相等'
+```
+
 ### 檢查數值條件
 
 ```py
