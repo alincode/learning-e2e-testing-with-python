@@ -1,6 +1,6 @@
-# 相關資源
+# 測試相關資源
 
-### 可供測試的網站
+### 可供練習的測試網站
 
 - <http://demoqa.com/>
 - <http://www.globalsqa.com/demo-site/>
