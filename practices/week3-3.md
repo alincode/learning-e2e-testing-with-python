@@ -1,4 +1,4 @@
-# 練習題：等待
+# 練習題：非同步行為
 
 ```py
 from selenium.webdriver.common.by import By
