@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="error.html" />
+    <link rel="next" href="unittest.html" />
     
     
     <link rel="prev" href="practices/week4-2.html" />
@@ -543,7 +543,7 @@
                 <a href="request.html">
             
                     
-                    request
+                    Request
             
                 </a>
             
@@ -603,12 +603,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="error.html">
+        <li class="chapter " data-level="1.5.6" data-path="unittest.html">
             
-                <a href="error.html">
+                <a href="unittest.html">
             
                     
-                    常見錯誤訊息處理
+                    單元測試
             
                 </a>
             
@@ -616,27 +616,27 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" >
+        <li class="chapter " data-level="1.5.7" data-path="error.html">
             
-                <span>
+                <a href="error.html">
             
                     
-                    組織測試專案
+                    常見錯誤處理
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" >
+        <li class="chapter " data-level="1.5.8" data-path="organization.html">
             
-                <span>
+                <a href="organization.html">
             
                     
-                    與測試框架整合
+                    組織測試專案
             
-                </span>
+                </a>
             
 
             
@@ -822,7 +822,7 @@
                 <a href="resource.html">
             
                     
-                    其他相關資源
+                    測試相關資源
             
                 </a>
             
@@ -881,10 +881,36 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="http-&#x57FA;&#x672C;&#x8A8D;&#x8B49;-basic-http-authentication"><a name="http-&#x57FA;&#x672C;&#x8A8D;&#x8B49;-basic-http-authentication" class="plugin-anchor" href="#http-&#x57FA;&#x672C;&#x8A8D;&#x8B49;-basic-http-authentication"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP &#x57FA;&#x672C;&#x8A8D;&#x8B49; (Basic Http Authentication)</h1>
-<p><img src="assets/basic_auth.png" alt=""></p>
 <ul>
 <li>&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x5C07;&#x5E33;&#x865F;&#x5BC6;&#x78BC;&#x900F;&#x904E; URL &#x50B3;&#x905E;&#x4F86;&#x5B8C;&#x6210;&#x8A8D;&#x8B49;&#x7A0B;&#x5E8F;</li>
 </ul>
+<pre><code class="lang-py">driver.get(<span class="hljs-string">&quot;https://&lt;username&gt;:&lt;password&gt;@www.example.com/index.html&quot;</span>)
+</code></pre>
+<h2 id="&#x7DF4;&#x7FD2;&#x984C;"><a name="&#x7DF4;&#x7FD2;&#x984C;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;</h2>
+<p><img src="assets/basic_auth.png" alt=""></p>
+<ul>
+<li><a href="http://the-internet.herokuapp.com/basic_auth" target="_blank">http://the-internet.herokuapp.com/basic_auth</a><ul>
+<li>&#x5E33;&#x865F; admin</li>
+<li>&#x5BC6;&#x78BC; admin</li>
+</ul>
+</li>
+</ul>
+<!--
+### 答案
+
+```py
+from selenium import webdriver
+
+driver = webdriver.Chrome("./chromedriver")
+driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth")
+assert "The Internet" in driver.title
+
+try:
+    result = driver.find_element_by_css_selector('h3')
+    assert "Basic Auth" in result.text
+finally:
+    driver.quit()
+``` -->
 <h3 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h3>
 <ul>
 <li>Basic HTTP Authentication for Selenium tests - BrowserStack: <a href="https://www.browserstack.com/docs/automate/selenium/basic-http-authentication" target="_blank">https://www.browserstack.com/docs/automate/selenium/basic-http-authentication</a></li>
@@ -921,7 +947,7 @@
                 </a>
                 
                 
-                <a href="error.html" class="navigation navigation-next " aria-label="Next page: 常見錯誤訊息處理">
+                <a href="unittest.html" class="navigation navigation-next " aria-label="Next page: 單元測試">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -932,7 +958,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTTP 基本認證","level":"1.5.5","depth":2,"next":{"title":"常見錯誤訊息處理","level":"1.5.6","depth":2,"path":"error.md","ref":"error.md","articles":[]},"previous":{"title":"練習題：訊息框","level":"1.5.4","depth":2,"path":"practices/week4-2.md","ref":"practices/week4-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"basic-http-authentication.md","mtime":"2021-04-23T05:27:22.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T05:27:42.790Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTP 基本認證","level":"1.5.5","depth":2,"next":{"title":"單元測試","level":"1.5.6","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},"previous":{"title":"練習題：訊息框","level":"1.5.4","depth":2,"path":"practices/week4-2.md","ref":"practices/week4-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"basic-http-authentication.md","mtime":"2021-04-23T13:55:09.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T13:55:13.603Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
