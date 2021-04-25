@@ -7,10 +7,11 @@
 unittest 支持物件導向的一些重要的概念，如下所示：
 
 - test fixture：它代表跟測試相關所有的資料或程序，例如建立臨時的測試資料庫或建立一些假的測試用資料。
-  A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process.
 - test case：中文常翻譯為「測試案例」，test case 是一個獨立的測試單元。它會針對特定的輸入跟輸出做檢查。unittest 提供叫 `TestCase` 的基礎的類別，可被使用來建立新的 test case。
 - test suite：中文常翻譯為「測試套件」，一個 test suite 裡可以包含多個 test case，讓這些測試可以一起執行。
 - test runner：test runner 是一個會自動執行測試案例，並產出測試結果的元件，測試結果可以是用文字呈現，也可以用圖形化呈現。
+
+### 參考文獻
 
 英文：<https://docs.python.org/3/library/unittest.html>
 中文：<https://docs.python.org/zh-tw/3/library/unittest.html>
