@@ -37,7 +37,7 @@
   - [Iframe](iframe.md)
   - [訊息框](alerts_prompts_confirm.md)
   - [練習題：訊息框](practices/week4-2.md)
-  - [HTTP 基本認證](basic-http-authentication.md)
+  - [HTTP 基本認證](basic_http_authentication.md)
   - [單元測試](unittest.md)
   - [API 測試](api_testing.md)
 - [第五週 - 測試專案]()
