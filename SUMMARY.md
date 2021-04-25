@@ -39,9 +39,11 @@
   - [訊息框](alerts_prompts_confirm.md)
   - [練習題：訊息框](practices/week4-3.md)
   - [HTTP 基本認證](basic_http_authentication.md)
+- [第五週 - 測試專案]()
   - [單元測試](unittest.md)
   - [API 測試](api_testing.md)
-- [第五週 - 測試專案]()
+  - [測試計畫](test_plan.md)
+  - [POM](pom.md)
 - [第六週 - 進階]()
 - [補充]()
   - [Selenium 官方文件](https://www.selenium.dev/documentation/en/)
@@ -52,7 +54,7 @@
 
 <!--
 - [第六週]()
-  - [測試計畫](test_plan.md)
+
   - [常見錯誤處理](error.md)
   - [組織測試專案](organization.md)
   - [測試環境的種類]()
@@ -60,7 +62,6 @@
   - [練習題：Web Tables]()
   - [進階選取元素](locating_elements_advanced.md)
   - [日期選擇器](date_picker.md)
-  - [撰寫測試計畫]()
   - [WebDriver API](webdriver-api.md)
   - [檔案下載](download.md)
   - [報表](report.md)
