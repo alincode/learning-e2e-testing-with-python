@@ -11,3 +11,8 @@ button = driver.find_element_by_id("gobutton")
 input1.send_keys("1")
 input2.send_keys("2")
 button.send_keys(Keys.ENTER)
+
+result = driver.find_element_by_css_selector(".ng-binding").text
+print('result: ' + result)
+
+driver.quit()
