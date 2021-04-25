@@ -152,3 +152,7 @@ Ran 1 test in 15.566s
 
 OK
 ```
+
+### 延伸閱讀
+
+- [Python Tutorial: Unit Testing Your Code with the unittest Module - YouTube](https://www.youtube.com/watch?v=6tNS--WetLI)
