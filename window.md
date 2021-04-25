@@ -23,13 +23,3 @@ driver.current_window_handle
 ### Quitting the browser at the end of a session
 
 > close vs quit
-
-## Frames 和 IFrames
-
-### Using a WebElement
-
-### Using a name or ID
-
-### Using an index
-
-### Leaving a frame

@@ -34,7 +34,17 @@ def divide(x, y):
     return x / y
 ```
 
-### 測試程式
+## Assert 語法
+
+![](assets/assert.png)
+
+## 練習題：測試程式
+
+testcase 可以透過繼承 `TestCase` 類別來建立，這裡定義了四個獨立的物件方法，名稱皆以 test 開頭，這樣的命名方式能告知 test runner 哪些物件方法為定義的測試。
+
+而每個測試可呼叫 `assertEqual()` 來確認是否為期望的結果，`assertTrue()` 或是 `assertFalse()` 用來驗證一個條件式，`assertRaises()` 則是用來驗證是否觸發一個特定的 exception。使用 assert 相關語法，將能使 test runner 收集所有的測試結果，並產生一個測試報表。
+
+除此之外，透過 `setUp()` 和 `tearDown()` 方法，可以設定測試開始前或結束時要執行的程序。最後可透過執行 `unittest.main()` 方法，來執行測試腳本。
 
 ```py
 # test_calc.py
@@ -48,35 +58,9 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.add(-1, 1), 0)
         self.assertEqual(calc.add(-1, -1), -2)
 
-    def test_subtract(self):
-        self.assertEqual(calc.subtract(10, 5), 5)
-        self.assertEqual(calc.subtract(-1, 1), -2)
-        self.assertEqual(calc.subtract(-1, -1), 0)
-
-    def test_multiply(self):
-        self.assertEqual(calc.multiply(10, 5), 50)
-        self.assertEqual(calc.multiply(-1, 1), -1)
-        self.assertEqual(calc.multiply(-1, -1), 1)
-
-    def test_divide(self):
-        self.assertEqual(calc.divide(10, 5), 2)
-        self.assertEqual(calc.divide(-1, 1), -1)
-        self.assertEqual(calc.divide(-1, -1), 1)
-        self.assertEqual(calc.divide(5, 2), 2.5)
-
-        with self.assertRaises(ValueError):
-            calc.divide(10, 0)
-
-
 if __name__ == '__main__':
     unittest.main()
 ```
-
-testcase 可以透過繼承 `TestCase` 類別來建立，這裡定義了四個獨立的物件方法，名稱皆以 test 開頭，這樣的命名方式能告知 test runner 哪些物件方法為定義的測試。
-
-而每個測試可呼叫 `assertEqual()` 來確認是否為期望的結果，`assertTrue()` 或是 `assertFalse()` 用來驗證一個條件式，`assertRaises()` 則是用來驗證是否觸發一個特定的 exception。使用 assert 相關語法，將能使 test runner 收集所有的測試結果，並產生一個測試報表。
-
-除此之外，透過 `setUp()` 和 `tearDown()` 方法，可以設定測試開始前或結束時要執行的程序。最後可透過執行 `unittest.main()` 方法，來執行測試腳本。
 
 如果執行 `python test_calc.py`，輸出結果如下：
 
@@ -109,10 +93,6 @@ python -m unittest test_module1 test_module2
 python -m unittest test_module.TestClass
 python -m unittest test_module.TestClass.test_method
 ```
-
-## Assert 語法
-
-![](assets/assert.png)
 
 ## 結合 selenium 的完整範例
 
@@ -152,3 +132,7 @@ Ran 1 test in 15.566s
 
 OK
 ```
+
+### 延伸閱讀
+
+- [Python Tutorial: Unit Testing Your Code with the unittest Module - YouTube](https://www.youtube.com/watch?v=6tNS--WetLI)
