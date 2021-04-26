@@ -1,5 +1,19 @@
 # IFrame
 
+- `<iframe>` 標籤用來定義 inline frame，一個 inline frame 嵌入在當前的頁面裡。
+- <https://www.w3schools.com/tags/tag_iframe.ASP>
+
+## 常見使用情境
+
+- 頁面內含外部套件，如下：
+
+  - 社交外掛程式：<https://developers.facebook.com/docs/plugins/embedded-posts/>
+  - editor
+  - map
+
+  ![](assets/embedded1.png)
+  ![](assets/embedded2.png)
+
 ## 切換 Iframe
 
 語法ㄧ：透過 ID
