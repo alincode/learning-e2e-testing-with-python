@@ -34,7 +34,7 @@
 - [第四週 - WebDriver (下)]()
   - [Iframe](iframe.md)
   - [練習題：TinyMCE](practices/week4-1.md)
-  - [訊息框](alerts_prompts_confirm.md)
+  - [訊息框](alert_prompt_confirm.md)
   - [練習題：訊息框](practices/week4-2.md)
   - [HTTP 基本認證](basic_http_authentication.md)
   - [Request](request.md)
