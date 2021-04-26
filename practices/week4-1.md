@@ -1,36 +1,32 @@
-# 練習題：檢查是否有損壞的圖片
+# 練習題：TinyMCE
 
-![](assets/broken_images.png)
+![](assets/TinyMCE.png)
 
-- <http://the-internet.herokuapp.com/broken_images>
-- 會用到的語法
-  - current_url()
-  - element.get_attribute("attr_name")
-  - requests.get(url)
-  - response.status_code
+- <http://the-internet.herokuapp.com/iframe>
+  - driver.switch_to.frame(iframe)
+  - driver.switch_to.default_content()
 
-<!-- ### 解答
+<!-- ### 答案
 
 ```py
 from selenium import webdriver
-import requests
 from time import sleep
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("http://the-internet.herokuapp.com/broken_images")
+driver.get("http://the-internet.herokuapp.com/iframe")
+assert "The Internet" in driver.title
 
 try:
-    base_url = driver.current_url
-    images = driver.find_elements_by_css_selector("img")
-    for img in images:
-        response = requests.get(img.get_attribute('src'))
-        if response.status_code != 200:
-            print(img.get_attribute('outerHTML') + " is broken.")
-        else:
-            print(img.get_attribute('outerHTML') + " is unbroken.")
-    sleep(5)
+    iframe = driver.find_element_by_css_selector('iframe')
+    driver.switch_to.frame(iframe)
+    editor = driver.find_element_by_css_selector('body')
+    editor.clear()
+    editor.send_keys("123")
+    # sleep(5)
+    driver.switch_to.default_content()
+    title = driver.find_element_by_css_selector('h3')
+    assert "An iFrame containing the TinyMCE WYSIWYG Editor" in title.text
 finally:
     driver.quit()
-```
 
--->
+``` -->

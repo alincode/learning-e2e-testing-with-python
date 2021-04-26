@@ -1,98 +1,36 @@
-# 練習題：訊息框
+# 練習題：檢查是否有損壞的圖片
 
-- <https://demoqa.com/alerts>
+![](assets/broken_images.png)
 
-## 警告訊息框 (alerts)
-
-![](assets/alerts.png)
-
+- <http://the-internet.herokuapp.com/broken_images>
 - 會用到的語法
-  - switch_to.alert
-  - expected_conditions.alert_is_present()
-  - alert.text
-  - alert.accept()
+  - current_url()
+  - element.get_attribute("attr_name")
+  - requests.get(url)
+  - response.status_code
 
-## 確認訊息框 (confirm)
-
-![](assets/confirm.png)
-
-- 會用到的語法
-  - driver.switch_to.alert
-  - alert.accept()
-  - alert.dismiss()
-
-## 提示訊息對話 (prompts)
-
-![](assets/prompts.png)
-
-- 會用到的語法
-  - driver.switch_to.alert
-  - alert.send_keys("AILIN LIOU")
-
-<!-- ### 答案
+<!-- ### 解答
 
 ```py
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
+import requests
+from time import sleep
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-driver.maximize_window()
+driver.get("http://the-internet.herokuapp.com/broken_images")
 
 try:
-    driver.find_element_by_id("alertButton").click()
-    alert = driver.switch_to.alert
-    text = alert.text
-    print(text)
-    alert.accept()
-
-    driver.find_element_by_id("timerAlertButton").click()
-    alert2 = WebDriverWait(driver, 6).until(expected_conditions.alert_is_present())
-    text2 = alert.text
-    print(text2)
-    alert2.accept()
-
+    base_url = driver.current_url
+    images = driver.find_elements_by_css_selector("img")
+    for img in images:
+        response = requests.get(img.get_attribute('src'))
+        if response.status_code != 200:
+            print(img.get_attribute('outerHTML') + " is broken.")
+        else:
+            print(img.get_attribute('outerHTML') + " is unbroken.")
+    sleep(5)
 finally:
     driver.quit()
 ```
 
-## 練習題：確認訊息框
-
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-try:
-    driver.find_element_by_id('confirmButton').click()
-    alert = driver.switch_to.alert
-    print(alert.text)
-    alert.accept()
-    # alert.dismiss()
-finally:
-    driver.quit()
-```
-
-## 練習題：提示訊息對話
-
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-try:
-    driver.find_element_by_id('promtButton').click()
-    alert = driver.switch_to.alert
-    alert.send_keys("AILIN LIOU")
-    print(alert.text)
-    alert.accept()
-finally:
-    driver.quit()
-``` -->
+-->
