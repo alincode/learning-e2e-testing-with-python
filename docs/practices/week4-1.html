@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>練習題：檢查是否有損壞的圖片 · 網站自動化測試 for Python</title>
+        <title>練習題：TinyMCE · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../iframe.html" />
+    <link rel="next" href="../alerts_prompts_confirm.md" />
     
     
-    <link rel="prev" href="../request.html" />
+    <link rel="prev" href="../iframe.html" />
     
 
     </head>
@@ -538,33 +538,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../request.html">
-            
-                <a href="../request.html">
-            
-                    
-                    Request
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.5.2" data-path="week4-1.html">
-            
-                <a href="week4-1.html">
-            
-                    
-                    練習題：檢查是否有損壞的圖片
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.3" data-path="../iframe.html">
+        <li class="chapter " data-level="1.5.1" data-path="../iframe.html">
             
                 <a href="../iframe.html">
             
@@ -577,9 +551,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="week4-2.html">
+        <li class="chapter active" data-level="1.5.2" data-path="week4-1.html">
             
-                <a href="week4-2.html">
+                <a href="week4-1.html">
             
                     
                     練習題：TinyMCE
@@ -590,9 +564,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../alerts_prompts_confirm.html">
+        <li class="chapter " data-level="1.5.3" data-path="../alerts_prompts_confirm.md">
             
-                <a href="../alerts_prompts_confirm.html">
+                <span>
             
                     
                     訊息框
@@ -603,9 +577,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="week4-3.html">
+        <li class="chapter " data-level="1.5.4" data-path="week4-2.html">
             
-                <a href="week4-3.html">
+                <a href="week4-2.html">
             
                     
                     練習題：訊息框
@@ -616,12 +590,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../basic_http_authentication.html">
+        <li class="chapter " data-level="1.5.5" data-path="../basic_http_authentication.html">
             
                 <a href="../basic_http_authentication.html">
             
                     
                     HTTP 基本認證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../request.html">
+            
+                <a href="../request.html">
+            
+                    
+                    Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="week4-3.html">
+            
+                <a href="week4-3.html">
+            
+                    
+                    練習題：檢查是否有損壞的圖片
             
                 </a>
             
@@ -832,7 +832,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >練習題：檢查是否有損壞的圖片</a>
+        <a href=".." >練習題：TinyMCE</a>
     </h1>
 </div>
 
@@ -847,43 +847,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;</h1>
-<p><img src="assets/broken_images.png" alt=""></p>
+                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;tinymce"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;tinymce" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;tinymce"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;TinyMCE</h1>
+<p><img src="assets/TinyMCE.png" alt=""></p>
 <ul>
-<li><a href="http://the-internet.herokuapp.com/broken_images" target="_blank">http://the-internet.herokuapp.com/broken_images</a></li>
-<li>&#x6703;&#x7528;&#x5230;&#x7684;&#x8A9E;&#x6CD5;<ul>
-<li>current_url()</li>
-<li>element.get_attribute(&quot;attr_name&quot;)</li>
-<li>requests.get(url)</li>
-<li>response.status_code</li>
+<li><a href="http://the-internet.herokuapp.com/iframe" target="_blank">http://the-internet.herokuapp.com/iframe</a><ul>
+<li>driver.switch_to.frame(iframe)</li>
+<li>driver.switch_to.default_content()</li>
 </ul>
 </li>
 </ul>
-<!-- ### 解答
+<!-- ### 答案
 
 ```py
 from selenium import webdriver
-import requests
 from time import sleep
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("http://the-internet.herokuapp.com/broken_images")
+driver.get("http://the-internet.herokuapp.com/iframe")
+assert "The Internet" in driver.title
 
 try:
-    base_url = driver.current_url
-    images = driver.find_elements_by_css_selector("img")
-    for img in images:
-        response = requests.get(img.get_attribute('src'))
-        if response.status_code != 200:
-            print(img.get_attribute('outerHTML') + " is broken.")
-        else:
-            print(img.get_attribute('outerHTML') + " is unbroken.")
-    sleep(5)
+    iframe = driver.find_element_by_css_selector('iframe')
+    driver.switch_to.frame(iframe)
+    editor = driver.find_element_by_css_selector('body')
+    editor.clear()
+    editor.send_keys("123")
+    # sleep(5)
+    driver.switch_to.default_content()
+    title = driver.find_element_by_css_selector('h3')
+    assert "An iFrame containing the TinyMCE WYSIWYG Editor" in title.text
 finally:
     driver.quit()
-```
 
--->
+``` -->
 
                                 
                                 </section>
@@ -911,12 +907,12 @@ finally:
 
             
                 
-                <a href="../request.html" class="navigation navigation-prev " aria-label="Previous page: Request">
+                <a href="../iframe.html" class="navigation navigation-prev " aria-label="Previous page: Iframe">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../iframe.html" class="navigation navigation-next " aria-label="Next page: Iframe">
+                <a href="../alerts_prompts_confirm.md" class="navigation navigation-next " aria-label="Next page: 訊息框">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -927,7 +923,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：檢查是否有損壞的圖片","level":"1.5.2","depth":2,"next":{"title":"Iframe","level":"1.5.3","depth":2,"path":"iframe.md","ref":"iframe.md","articles":[]},"previous":{"title":"Request","level":"1.5.1","depth":2,"path":"request.md","ref":"request.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-1.md","mtime":"2021-04-23T05:27:22.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-25T16:28:28.968Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：TinyMCE","level":"1.5.2","depth":2,"next":{"title":"訊息框","level":"1.5.3","depth":2,"path":"alerts_prompts_confirm.md","ref":"alerts_prompts_confirm.md","articles":[]},"previous":{"title":"Iframe","level":"1.5.1","depth":2,"path":"iframe.md","ref":"iframe.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-1.md","mtime":"2021-04-26T01:27:59.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-26T01:28:05.556Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

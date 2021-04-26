@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>練習題：訊息框 · 網站自動化測試 for Python</title>
+        <title>練習題：檢查是否有損壞的圖片 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../basic_http_authentication.html" />
     
-    
-    <link rel="prev" href="../alerts_prompts_confirm.html" />
+    <link rel="prev" href="../request.html" />
     
 
     </head>
@@ -538,33 +536,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../request.html">
-            
-                <a href="../request.html">
-            
-                    
-                    Request
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.2" data-path="week4-1.html">
-            
-                <a href="week4-1.html">
-            
-                    
-                    練習題：檢查是否有損壞的圖片
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.3" data-path="../iframe.html">
+        <li class="chapter " data-level="1.5.1" data-path="../iframe.html">
             
                 <a href="../iframe.html">
             
@@ -577,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="week4-2.html">
+        <li class="chapter " data-level="1.5.2" data-path="week4-1.html">
             
-                <a href="week4-2.html">
+                <a href="week4-1.html">
             
                     
                     練習題：TinyMCE
@@ -590,9 +562,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../alerts_prompts_confirm.html">
+        <li class="chapter " data-level="1.5.3" data-path="../alerts_prompts_confirm.md">
             
-                <a href="../alerts_prompts_confirm.html">
+                <span>
             
                     
                     訊息框
@@ -603,9 +575,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.6" data-path="week4-3.html">
+        <li class="chapter " data-level="1.5.4" data-path="week4-2.html">
             
-                <a href="week4-3.html">
+                <a href="week4-2.html">
             
                     
                     練習題：訊息框
@@ -616,12 +588,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../basic_http_authentication.html">
+        <li class="chapter " data-level="1.5.5" data-path="../basic_http_authentication.html">
             
                 <a href="../basic_http_authentication.html">
             
                     
                     HTTP 基本認證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../request.html">
+            
+                <a href="../request.html">
+            
+                    
+                    Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.7" data-path="week4-3.html">
+            
+                <a href="week4-3.html">
+            
+                    
+                    練習題：檢查是否有損壞的圖片
             
                 </a>
             
@@ -832,7 +830,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >練習題：訊息框</a>
+        <a href=".." >練習題：檢查是否有損壞的圖片</a>
     </h1>
 </div>
 
@@ -847,107 +845,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x8A0A;&#x606F;&#x6846;</h1>
+                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x640D;&#x58DE;&#x7684;&#x5716;&#x7247;</h1>
+<p><img src="assets/broken_images.png" alt=""></p>
 <ul>
-<li><a href="https://demoqa.com/alerts" target="_blank">https://demoqa.com/alerts</a></li>
-</ul>
-<h2 id="&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;-alerts"><a name="&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;-alerts" class="plugin-anchor" href="#&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846;-alerts"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8B66;&#x544A;&#x8A0A;&#x606F;&#x6846; (alerts)</h2>
-<p><img src="assets/alerts.png" alt=""></p>
-<ul>
+<li><a href="http://the-internet.herokuapp.com/broken_images" target="_blank">http://the-internet.herokuapp.com/broken_images</a></li>
 <li>&#x6703;&#x7528;&#x5230;&#x7684;&#x8A9E;&#x6CD5;<ul>
-<li>switch_to.alert</li>
-<li>expected_conditions.alert_is_present()</li>
-<li>alert.text</li>
-<li>alert.accept()</li>
+<li>current_url()</li>
+<li>element.get_attribute(&quot;attr_name&quot;)</li>
+<li>requests.get(url)</li>
+<li>response.status_code</li>
 </ul>
 </li>
 </ul>
-<h2 id="&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;-confirm"><a name="&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;-confirm" class="plugin-anchor" href="#&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846;-confirm"><i class="fa fa-link" aria-hidden="true"></i></a>&#x78BA;&#x8A8D;&#x8A0A;&#x606F;&#x6846; (confirm)</h2>
-<p><img src="assets/confirm.png" alt=""></p>
-<ul>
-<li>&#x6703;&#x7528;&#x5230;&#x7684;&#x8A9E;&#x6CD5;<ul>
-<li>driver.switch_to.alert</li>
-<li>alert.accept()</li>
-<li>alert.dismiss()</li>
-</ul>
-</li>
-</ul>
-<h2 id="&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;-prompts"><a name="&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;-prompts" class="plugin-anchor" href="#&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71;-prompts"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D0;&#x793A;&#x8A0A;&#x606F;&#x5C0D;&#x8A71; (prompts)</h2>
-<p><img src="assets/prompts.png" alt=""></p>
-<ul>
-<li>&#x6703;&#x7528;&#x5230;&#x7684;&#x8A9E;&#x6CD5;<ul>
-<li>driver.switch_to.alert</li>
-<li>alert.send_keys(&quot;AILIN LIOU&quot;)</li>
-</ul>
-</li>
-</ul>
-<!-- ### 答案
+<!-- ### 解答
 
 ```py
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
+import requests
+from time import sleep
 
 driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-driver.maximize_window()
+driver.get("http://the-internet.herokuapp.com/broken_images")
 
 try:
-    driver.find_element_by_id("alertButton").click()
-    alert = driver.switch_to.alert
-    text = alert.text
-    print(text)
-    alert.accept()
-
-    driver.find_element_by_id("timerAlertButton").click()
-    alert2 = WebDriverWait(driver, 6).until(expected_conditions.alert_is_present())
-    text2 = alert.text
-    print(text2)
-    alert2.accept()
-
+    base_url = driver.current_url
+    images = driver.find_elements_by_css_selector("img")
+    for img in images:
+        response = requests.get(img.get_attribute('src'))
+        if response.status_code != 200:
+            print(img.get_attribute('outerHTML') + " is broken.")
+        else:
+            print(img.get_attribute('outerHTML') + " is unbroken.")
+    sleep(5)
 finally:
     driver.quit()
 ```
 
-## 練習題：確認訊息框
-
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-try:
-    driver.find_element_by_id('confirmButton').click()
-    alert = driver.switch_to.alert
-    print(alert.text)
-    alert.accept()
-    # alert.dismiss()
-finally:
-    driver.quit()
-```
-
-## 練習題：提示訊息對話
-
-```py
-from selenium import webdriver
-
-driver = webdriver.Chrome("./chromedriver")
-driver.get("https://demoqa.com/alerts")
-assert "ToolsQA" in driver.title
-
-try:
-    driver.find_element_by_id('promtButton').click()
-    alert = driver.switch_to.alert
-    alert.send_keys("AILIN LIOU")
-    print(alert.text)
-    alert.accept()
-finally:
-    driver.quit()
-``` -->
+-->
 
                                 
                                 </section>
@@ -975,14 +909,10 @@ finally:
 
             
                 
-                <a href="../alerts_prompts_confirm.html" class="navigation navigation-prev " aria-label="Previous page: 訊息框">
+                <a href="../request.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Request">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../basic_http_authentication.html" class="navigation navigation-next " aria-label="Next page: HTTP 基本認證">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -991,7 +921,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：訊息框","level":"1.5.6","depth":2,"next":{"title":"HTTP 基本認證","level":"1.5.7","depth":2,"path":"basic_http_authentication.md","ref":"basic_http_authentication.md","articles":[]},"previous":{"title":"訊息框","level":"1.5.5","depth":2,"path":"alerts_prompts_confirm.md","ref":"alerts_prompts_confirm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-3.md","mtime":"2021-04-25T16:14:21.560Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-25T16:28:28.968Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：檢查是否有損壞的圖片","level":"1.5.7","depth":2,"next":{"title":"第五週 - 測試專案","level":"1.6","depth":1,"ref":"","articles":[{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},{"title":"測試計畫","level":"1.6.3","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},{"title":"POM","level":"1.6.4","depth":2,"path":"pom.md","ref":"pom.md","articles":[]}]},"previous":{"title":"Request","level":"1.5.6","depth":2,"path":"request.md","ref":"request.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-3.md","mtime":"2021-04-26T01:27:59.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-26T01:28:05.556Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
