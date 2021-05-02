@@ -6,6 +6,8 @@
 1. 建立 feature 檔案，例如 `login.feature`。
 1. 執行 `behave`
 
+![](assets/login_feature.png)
+
 <!--
 ````
 Feature: OrangeHRM Login
