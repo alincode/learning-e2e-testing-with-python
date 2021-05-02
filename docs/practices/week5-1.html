@@ -789,7 +789,7 @@
                 <span>
             
                     
-                    軟體測試的路線圖
+                    軟體測試路線圖
             
                 </span>
             
@@ -936,6 +936,42 @@
 <li>&#x6D88;&#x8CBB;&#x6EFF;&#x4E00;&#x5343;&#xFF0C;&#x6253;&#x4E5D;&#x6298;&#x3002;</li>
 <li>&#x82E5;&#x662F; VIP &#x5BA2;&#x6236;&#xFF0C;&#x5728;&#x6253; 95 &#x6298;&#x3002;</li>
 </ul>
+<pre><code class="lang-py"><span class="hljs-comment"># order.py</span>
+max_range = <span class="hljs-number">1000</span>
+vip_discount = <span class="hljs-number">0.95</span>
+rebate_discount = <span class="hljs-number">0.9</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_order</span><span class="hljs-params">(original_amount, is_vip)</span>:</span>
+    amount = original_amount
+    <span class="hljs-keyword">if</span> original_amount &gt; max_range:
+        <span class="hljs-keyword">if</span> is_vip:
+            amount = original_amount * rebate_discount * vip_discount
+        <span class="hljs-keyword">else</span>:
+            amount = original_amount * rebate_discount
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">if</span> is_vip:
+            amount = original_amount * vip_discount
+    <span class="hljs-keyword">return</span> amount
+</code></pre>
+<!--
+### 答案
+
+```py
+import unittest
+import order
+
+class TestOrder(unittest.TestCase):
+    def test_calculate_order_not_vip(self):
+        self.assertEqual(order.calculate_order(100, False), 100)
+        self.assertEqual(order.calculate_order(1100, False), 990)
+
+    def test_calculate_order_vip(self):
+        self.assertEqual(order.calculate_order(100, True), 95)
+        self.assertEqual(order.calculate_order(1100, True), 940.5)
+
+if __name__ == '__main__':
+    unittest.main()
+``` -->
 
                                 
                                 </section>
@@ -979,7 +1015,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：單元測試","level":"1.6.2","depth":2,"next":{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},"previous":{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-1.md","mtime":"2021-05-02T06:29:38.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T06:29:43.075Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：單元測試","level":"1.6.2","depth":2,"next":{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},"previous":{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-1.md","mtime":"2021-05-02T08:04:10.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T08:04:47.130Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

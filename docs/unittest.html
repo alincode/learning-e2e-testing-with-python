@@ -787,7 +787,7 @@
                 <span>
             
                     
-                    軟體測試的路線圖
+                    軟體測試路線圖
             
                 </span>
             
@@ -961,12 +961,15 @@
 </tr>
 </tbody>
 </table>
+<h3 id="assert-&#x8A9E;&#x6CD5;"><a name="assert-&#x8A9E;&#x6CD5;" class="plugin-anchor" href="#assert-&#x8A9E;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Assert &#x8A9E;&#x6CD5;</h3>
+<p><img src="assets/assert.png" alt=""></p>
 <h3 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h3>
 <ul>
 <li>&#x82F1;&#x6587;&#xFF1A;<a href="https://docs.python.org/3/library/unittest.html" target="_blank">https://docs.python.org/3/library/unittest.html</a></li>
 <li>&#x4E2D;&#x6587;&#xFF1A;<a href="https://docs.python.org/zh-tw/3/library/unittest.html" target="_blank">https://docs.python.org/zh-tw/3/library/unittest.html</a></li>
 </ul>
-<h2 id="&#x4E58;&#x9664;&#x6A21;&#x7D44;"><a name="&#x4E58;&#x9664;&#x6A21;&#x7D44;" class="plugin-anchor" href="#&#x4E58;&#x9664;&#x6A21;&#x7D44;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E58;&#x9664;&#x6A21;&#x7D44;</h2>
+<h2 id="&#x5B8C;&#x6574;&#x7A0B;&#x5F0F;&#x7BC4;&#x4F8B;"><a name="&#x5B8C;&#x6574;&#x7A0B;&#x5F0F;&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#&#x5B8C;&#x6574;&#x7A0B;&#x5F0F;&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x7A0B;&#x5F0F;&#x7BC4;&#x4F8B;</h2>
+<p>&#x8A08;&#x7B97;&#x6A21;&#x7D44;</p>
 <pre><code class="lang-py"><span class="hljs-comment"># calc.py</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(x, y)</span>:</span>
     <span class="hljs-keyword">return</span> x + y
@@ -982,12 +985,6 @@
         <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;Can not divide by zero!&apos;</span>)
     <span class="hljs-keyword">return</span> x / y
 </code></pre>
-<h2 id="assert-&#x8A9E;&#x6CD5;"><a name="assert-&#x8A9E;&#x6CD5;" class="plugin-anchor" href="#assert-&#x8A9E;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Assert &#x8A9E;&#x6CD5;</h2>
-<p><img src="assets/assert.png" alt=""></p>
-<h2 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;</h2>
-<p>&#x6E2C;&#x8A66;&#x6848;&#x4F8B;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x7E7C;&#x627F; <code>TestCase</code> &#x985E;&#x5225;&#x4F86;&#x5EFA;&#x7ACB;&#xFF0C;&#x9019;&#x88E1;&#x5B9A;&#x7FA9;&#x4E86;&#x56DB;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x7269;&#x4EF6;&#x65B9;&#x6CD5;&#xFF0C;&#x540D;&#x7A31;&#x7686;&#x4EE5; test &#x958B;&#x982D;&#xFF0C;&#x9019;&#x6A23;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x80FD;&#x544A;&#x77E5; test runner &#x54EA;&#x4E9B;&#x7269;&#x4EF6;&#x65B9;&#x6CD5;&#x70BA;&#x5B9A;&#x7FA9;&#x7684;&#x6E2C;&#x8A66;&#x3002;</p>
-<p>&#x800C;&#x6BCF;&#x500B;&#x6E2C;&#x8A66;&#x53EF;&#x547C;&#x53EB; <code>assertEqual()</code> &#x4F86;&#x78BA;&#x8A8D;&#x662F;&#x5426;&#x70BA;&#x671F;&#x671B;&#x7684;&#x7D50;&#x679C;&#xFF0C;<code>assertTrue()</code> &#x6216;&#x662F; <code>assertFalse()</code> &#x7528;&#x4F86;&#x9A57;&#x8B49;&#x4E00;&#x500B;&#x689D;&#x4EF6;&#x5F0F;&#xFF0C;<code>assertRaises()</code> &#x5247;&#x662F;&#x7528;&#x4F86;&#x9A57;&#x8B49;&#x662F;&#x5426;&#x89F8;&#x767C;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684; exception&#x3002;&#x4F7F;&#x7528; assert &#x76F8;&#x95DC;&#x8A9E;&#x6CD5;&#xFF0C;&#x5C07;&#x80FD;&#x4F7F; test runner &#x6536;&#x96C6;&#x6240;&#x6709;&#x7684;&#x6E2C;&#x8A66;&#x7D50;&#x679C;&#xFF0C;&#x4E26;&#x7522;&#x751F;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x5831;&#x8868;&#x3002;</p>
-<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x900F;&#x904E; <code>setUp()</code> &#x548C; <code>tearDown()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8A2D;&#x5B9A;&#x6E2C;&#x8A66;&#x958B;&#x59CB;&#x524D;&#x6216;&#x7D50;&#x675F;&#x6642;&#x8981;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x6700;&#x5F8C;&#x53EF;&#x900F;&#x904E;&#x57F7;&#x884C; <code>unittest.main()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F86;&#x57F7;&#x884C;&#x6E2C;&#x8A66;&#x8173;&#x672C;&#x3002;</p>
 <pre><code class="lang-py"><span class="hljs-comment"># test_calc.py</span>
 <span class="hljs-keyword">import</span> unittest
 <span class="hljs-keyword">import</span> calc
@@ -999,16 +996,41 @@
         self.assertEqual(calc.add(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>), <span class="hljs-number">0</span>)
         self.assertEqual(calc.add(<span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), <span class="hljs-number">-2</span>)
 
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_subtract</span><span class="hljs-params">(self)</span>:</span>
+        self.assertEqual(calc.subtract(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>), <span class="hljs-number">5</span>)
+        self.assertEqual(calc.subtract(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>), <span class="hljs-number">-2</span>)
+        self.assertEqual(calc.subtract(<span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), <span class="hljs-number">0</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_multiply</span><span class="hljs-params">(self)</span>:</span>
+        self.assertEqual(calc.multiply(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>), <span class="hljs-number">50</span>)
+        self.assertEqual(calc.multiply(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>), <span class="hljs-number">-1</span>)
+        self.assertEqual(calc.multiply(<span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), <span class="hljs-number">1</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_divide</span><span class="hljs-params">(self)</span>:</span>
+        self.assertEqual(calc.divide(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>), <span class="hljs-number">2</span>)
+        self.assertEqual(calc.divide(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>), <span class="hljs-number">-1</span>)
+        self.assertEqual(calc.divide(<span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>), <span class="hljs-number">1</span>)
+        self.assertEqual(calc.divide(<span class="hljs-number">5</span>, <span class="hljs-number">2</span>), <span class="hljs-number">2.5</span>)
+
+        <span class="hljs-keyword">with</span> self.assertRaises(ValueError):
+            calc.divide(<span class="hljs-number">10</span>, <span class="hljs-number">0</span>)
+
+
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
     unittest.main()
 </code></pre>
-<p>&#x5982;&#x679C;&#x57F7;&#x884C; <code>python test_calc.py</code>&#xFF0C;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x57F7;&#x884C; <code>python test_calc.py</code>&#xFF0C;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <pre><code>....
 ----------------------------------------------------------------------
 Ran 4 tests in 0.001s
 
 OK
-</code></pre><p>&#x900F;&#x904E; v &#x53C3;&#x6578;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x66F4;&#x591A;&#x7684;&#x6E2C;&#x8A66;&#x7D50;&#x679C;&#x7D30;&#x7BC0;&#xFF0C;&#x4F8B;&#x5982; <code>python -m unittest -v test_calc.py</code>&#xFF0C;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+</code></pre><h3 id="&#x8AAA;&#x660E;"><a name="&#x8AAA;&#x660E;" class="plugin-anchor" href="#&#x8AAA;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8AAA;&#x660E;</h3>
+<p>&#x6E2C;&#x8A66;&#x6848;&#x4F8B;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x7E7C;&#x627F; <code>TestCase</code> &#x985E;&#x5225;&#x4F86;&#x5EFA;&#x7ACB;&#xFF0C;&#x9019;&#x88E1;&#x5B9A;&#x7FA9;&#x4E86;&#x56DB;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x7269;&#x4EF6;&#x65B9;&#x6CD5;&#xFF0C;&#x540D;&#x7A31;&#x7686;&#x4EE5; test &#x958B;&#x982D;&#xFF0C;&#x9019;&#x6A23;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x80FD;&#x544A;&#x77E5; test runner &#x54EA;&#x4E9B;&#x7269;&#x4EF6;&#x65B9;&#x6CD5;&#x70BA;&#x5B9A;&#x7FA9;&#x7684;&#x6E2C;&#x8A66;&#x3002;</p>
+<p>&#x800C;&#x6BCF;&#x500B;&#x6E2C;&#x8A66;&#x53EF;&#x547C;&#x53EB; <code>assertEqual()</code> &#x4F86;&#x78BA;&#x8A8D;&#x662F;&#x5426;&#x70BA;&#x671F;&#x671B;&#x7684;&#x7D50;&#x679C;&#xFF0C;<code>assertTrue()</code> &#x6216;&#x662F; <code>assertFalse()</code> &#x7528;&#x4F86;&#x9A57;&#x8B49;&#x4E00;&#x500B;&#x689D;&#x4EF6;&#x5F0F;&#xFF0C;<code>assertRaises()</code> &#x5247;&#x662F;&#x7528;&#x4F86;&#x9A57;&#x8B49;&#x662F;&#x5426;&#x89F8;&#x767C;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684; exception&#x3002;&#x4F7F;&#x7528; assert &#x76F8;&#x95DC;&#x8A9E;&#x6CD5;&#xFF0C;&#x5C07;&#x80FD;&#x4F7F; test runner &#x6536;&#x96C6;&#x6240;&#x6709;&#x7684;&#x6E2C;&#x8A66;&#x7D50;&#x679C;&#xFF0C;&#x4E26;&#x7522;&#x751F;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x5831;&#x8868;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x900F;&#x904E; <code>setUp()</code> &#x548C; <code>tearDown()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8A2D;&#x5B9A;&#x6E2C;&#x8A66;&#x958B;&#x59CB;&#x524D;&#x6216;&#x7D50;&#x675F;&#x6642;&#x8981;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x6700;&#x5F8C;&#x53EF;&#x900F;&#x904E;&#x57F7;&#x884C; <code>unittest.main()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F86;&#x57F7;&#x884C;&#x6E2C;&#x8A66;&#x8173;&#x672C;&#x3002;</p>
+<h2 id="&#x88DC;&#x5145;"><a name="&#x88DC;&#x5145;" class="plugin-anchor" href="#&#x88DC;&#x5145;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88DC;&#x5145;</h2>
+<p>&#x900F;&#x904E; v &#x53C3;&#x6578;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x66F4;&#x591A;&#x7684;&#x6E2C;&#x8A66;&#x7D50;&#x679C;&#x7D30;&#x7BC0;&#xFF0C;&#x4F8B;&#x5982; <code>python -m unittest -v test_calc.py</code>&#xFF0C;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>test_add (test_calc.TestCalc) ... ok
 test_divide (test_calc.TestCalc) ... ok
 test_multiply (test_calc.TestCalc) ... ok
@@ -1022,40 +1044,7 @@ OK
 <pre><code>python -m unittest test_module1 test_module2
 python -m unittest test_module.TestClass
 python -m unittest test_module.TestClass.test_method
-</code></pre><h2 id="&#x7D50;&#x5408;-selenium-&#x7684;&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><a name="&#x7D50;&#x5408;-selenium-&#x7684;&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#&#x7D50;&#x5408;-selenium-&#x7684;&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7D50;&#x5408; selenium &#x7684;&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;</h2>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> unittest
-<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
-<span class="hljs-keyword">from</span> selenium.webdriver.common.keys <span class="hljs-keyword">import</span> Keys
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PythonOrgSearch</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setUp</span><span class="hljs-params">(self)</span>:</span>
-        self.driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_search_in_python_org</span><span class="hljs-params">(self)</span>:</span>
-        driver = self.driver
-        driver.get(<span class="hljs-string">&quot;http://www.python.org&quot;</span>)
-        self.assertIn(<span class="hljs-string">&quot;Python&quot;</span>, driver.title)
-        elem = driver.find_element_by_name(<span class="hljs-string">&quot;q&quot;</span>)
-        elem.send_keys(<span class="hljs-string">&quot;pycon&quot;</span>)
-        elem.send_keys(Keys.RETURN)
-        <span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;No results found.&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> driver.page_source
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tearDown</span><span class="hljs-params">(self)</span>:</span>
-        self.driver.close()
-
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
-    unittest.main()
-</code></pre>
-<p>&#x8F38;&#x51FA;&#x7684;&#x7D50;&#x679C;</p>
-<pre><code class="lang-python">python test_python_org_search.py
-.
-----------------------------------------------------------------------
-Ran <span class="hljs-number">1</span> test <span class="hljs-keyword">in</span> <span class="hljs-number">15.566</span>s
-
-OK
-</code></pre>
-<h3 id="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><a name="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;" class="plugin-anchor" href="#&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5EF6;&#x4F38;&#x95B1;&#x8B80;</h3>
+</code></pre><h3 id="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><a name="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;" class="plugin-anchor" href="#&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5EF6;&#x4F38;&#x95B1;&#x8B80;</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=6tNS--WetLI" target="_blank">Python Tutorial: Unit Testing Your Code with the unittest Module - YouTube</a></li>
 </ul>
@@ -1098,7 +1087,7 @@ OK
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"單元測試","level":"1.6.1","depth":2,"next":{"title":"練習題：單元測試","level":"1.6.2","depth":2,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]},"previous":{"title":"第五週 - 測試專案","level":"1.6","depth":1,"ref":"","articles":[{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},{"title":"練習題：單元測試","level":"1.6.2","depth":2,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]},{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},{"title":"練習題：API 測試","level":"1.6.4","depth":2,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]},{"title":"測試計畫","level":"1.6.5","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},{"title":"練習題：撰寫測試計畫","level":"1.6.6","depth":2,"path":"practices/week5-3.md","ref":"practices/week5-3.md","articles":[]},{"title":"POM","level":"1.6.7","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},{"title":"練習題：POM","level":"1.6.8","depth":2,"path":"practices/week5-4.md","ref":"practices/week5-4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"unittest.md","mtime":"2021-05-02T06:29:38.823Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T06:29:43.075Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"單元測試","level":"1.6.1","depth":2,"next":{"title":"練習題：單元測試","level":"1.6.2","depth":2,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]},"previous":{"title":"第五週 - 測試專案","level":"1.6","depth":1,"ref":"","articles":[{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},{"title":"練習題：單元測試","level":"1.6.2","depth":2,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]},{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},{"title":"練習題：API 測試","level":"1.6.4","depth":2,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]},{"title":"測試計畫","level":"1.6.5","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},{"title":"練習題：撰寫測試計畫","level":"1.6.6","depth":2,"path":"practices/week5-3.md","ref":"practices/week5-3.md","articles":[]},{"title":"POM","level":"1.6.7","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},{"title":"練習題：POM","level":"1.6.8","depth":2,"path":"practices/week5-4.md","ref":"practices/week5-4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"unittest.md","mtime":"2021-05-02T08:04:10.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T08:04:47.130Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
