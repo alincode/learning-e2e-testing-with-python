@@ -50,7 +50,7 @@
   - [練習題：POM](practices/week5-4.md)
 - [第六週 - 進階]()
   - [經驗談分享]()
-  - [軟體測試的路線圖]()
+  - [軟體測試路線圖]()
 - [補充]()
   - [Selenium 官方文件](https://www.selenium.dev/documentation/en/)
   - [非官方文件 for Python](https://selenium-python.readthedocs.io/)

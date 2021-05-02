@@ -39,9 +39,16 @@ class ApiTest(unittest.TestCase):
         res = requests.get(url)
         self.assertEqual(res.status_code, 200)
         body = res.json()
-        # data = body["data"]
-        self.assertEqual(body["data"]["id"], 2)
 
+        for body_key in body.keys():
+            self.assertIn(body_key, ['data', 'support'])
+        for data_key in body["data"]:
+            self.assertIn(data_key, ['id', 'email', 'first_name', 'last_name', 'avatar'])
+        for support_key in body["support"]:
+            self.assertIn(support_key, ['url', 'text'])
+
+        self.assertIsInstance(body["data"]["id"], int)
+        self.assertEqual(body["data"]["id"], 2)
 
 if __name__ == '__main__':
     unittest.main()
