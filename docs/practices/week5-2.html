@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../test_plan.html" />
+    <link rel="next" href="../living_document.html" />
     
     
     <link rel="prev" href="../api_testing.html" />
@@ -700,12 +700,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="../test_plan.html">
+        <li class="chapter " data-level="1.6.5" data-path="../living_document.html">
             
-                <a href="../test_plan.html">
+                <a href="../living_document.html">
             
                     
-                    測試計畫
+                    活文件
             
                 </a>
             
@@ -713,20 +713,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="week5-3.html">
-            
-                <a href="week5-3.html">
-            
-                    
-                    練習題：撰寫測試計畫
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.7" data-path="../pom.html">
+        <li class="chapter " data-level="1.6.6" data-path="../pom.html">
             
                 <a href="../pom.html">
             
@@ -739,9 +726,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="week5-4.md">
+        <li class="chapter " data-level="1.6.7" data-path="week5-4.html">
             
-                <span>
+                <a href="week5-4.html">
             
                     
                     練習題：POM
@@ -990,6 +977,35 @@
   }
 }
 </code></pre>
+<!-- ### 答案
+
+```py
+import unittest
+import requests
+
+class ApiTest(unittest.TestCase):
+
+    def test_get_users(self):
+        url = "https://reqres.in/api/users?page=1"
+        res = requests.get(url)
+        self.assertEqual(res.status_code, 200)
+        body = res.json()
+
+        for body_key in body.keys():
+            self.assertIn(body_key, ['page', 'per_page', 'total', 'total_pages', 'data', 'support'])
+        for support_key in body["support"]:
+            self.assertIn(support_key, ['url', 'text'])
+
+        self.assertEqual(len(body["data"]), 6)
+        row = body["data"][1]
+        for row_key in row:
+            self.assertIn(row_key, ['id', 'email', 'first_name', 'last_name', 'avatar'])
+        self.assertIsInstance(row["id"], int)
+        self.assertEqual(row["id"], 2)
+
+if __name__ == '__main__':
+    unittest.main()
+``` -->
 
                                 
                                 </section>
@@ -1022,7 +1038,7 @@
                 </a>
                 
                 
-                <a href="../test_plan.html" class="navigation navigation-next " aria-label="Next page: 測試計畫">
+                <a href="../living_document.html" class="navigation navigation-next " aria-label="Next page: 活文件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1033,7 +1049,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：API 測試","level":"1.6.4","depth":2,"next":{"title":"測試計畫","level":"1.6.5","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},"previous":{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-2.md","mtime":"2021-05-02T06:29:38.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T08:04:47.130Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：API 測試","level":"1.6.4","depth":2,"next":{"title":"活文件","level":"1.6.5","depth":2,"path":"living_document.md","ref":"living_document.md","articles":[]},"previous":{"title":"API 測試","level":"1.6.3","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-2.md","mtime":"2021-05-02T13:36:29.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T13:36:34.753Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
