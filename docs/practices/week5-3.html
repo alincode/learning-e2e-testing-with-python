@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>練習題：behave · 網站自動化測試 for Python</title>
+        <title>練習題：LOGO · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../pom.html" />
+    <link rel="next" href="week5-4.html" />
     
     
     <link rel="prev" href="../behave.html" />
@@ -731,7 +731,7 @@
                 <a href="week5-3.html">
             
                     
-                    練習題：behave
+                    練習題：LOGO
             
                 </a>
             
@@ -739,25 +739,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../pom.html">
-            
-                <a href="../pom.html">
-            
-                    
-                    POM
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.9" data-path="week5-4.html">
+        <li class="chapter " data-level="1.6.8" data-path="week5-4.html">
             
                 <a href="week5-4.html">
             
                     
-                    練習題：POM
+                    練習題：登入
             
                 </a>
             
@@ -784,7 +771,33 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" >
+        <li class="chapter " data-level="1.7.1" data-path="../pom.html">
+            
+                <a href="../pom.html">
+            
+                    
+                    POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="week5-5.html">
+            
+                <a href="week5-5.html">
+            
+                    
+                    練習題：POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
             
                 <span>
             
@@ -797,7 +810,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" >
+        <li class="chapter " data-level="1.7.4" >
             
                 <span>
             
@@ -929,7 +942,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >練習題：behave</a>
+        <a href=".." >練習題：LOGO</a>
     </h1>
 </div>
 
@@ -944,7 +957,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-behave"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-behave" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-behave"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A; behave</h1>
+                                <h1 id="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-logo"><a name="&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-logo" class="plugin-anchor" href="#&#x7DF4;&#x7FD2;&#x984C;&#xFF1A;-logo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x984C;&#xFF1A; LOGO</h1>
 <h2 id="step1"><a name="step1" class="plugin-anchor" href="#step1"><i class="fa fa-link" aria-hidden="true"></i></a>Step1</h2>
 <ol>
 <li>&#x5EFA;&#x7ACB; <code>features/</code> &#x548C; <code>features/steps/</code> &#x8CC7;&#x6599;&#x593E;</li>
@@ -956,10 +969,10 @@
 Feature: OrangeHRM Logo
 
   Scenario: Logo presence on OrangeHRM home page
-     Given launch chrome browser
-      When open orange hrm homepage
-      Then verify that the logo present on page
-      And close browser
+    Given launch chrome browser
+    When open orange hrm homepage
+    Then verify that the logo present on page
+    And close browser
 ``` -->
 <h2 id="step2"><a name="step2" class="plugin-anchor" href="#step2"><i class="fa fa-link" aria-hidden="true"></i></a>Step2</h2>
 <ol>
@@ -969,6 +982,7 @@ Feature: OrangeHRM Logo
 <h2 id="step3"><a name="step3" class="plugin-anchor" href="#step3"><i class="fa fa-link" aria-hidden="true"></i></a>Step3</h2>
 <ol>
 <li>&#x5BE6;&#x4F5C; <code>logo.py</code> &#x7D30;&#x7BC0;</li>
+<li>&#x57F7;&#x884C; <code>behave</code></li>
 </ol>
 <!--
 ```py
@@ -994,6 +1008,22 @@ def step_impl(context):
 @then(u'close browser')
 def step_impl(context):
     context.driver.close()
+
+``` -->
+<h2 id="step4"><a name="step4" class="plugin-anchor" href="#step4"><i class="fa fa-link" aria-hidden="true"></i></a>Step4</h2>
+<ol>
+<li>&#x5BE6;&#x4F5C;&#x6AA2;&#x67E5; forget your password link</li>
+</ol>
+<!-- ```py
+from behave import *
+
+@then(u'verify that the link present on page')
+def step_impl(context):
+    forgot_password_link = context.driver.find_element_by_css_selector("#forgotPasswordLink a")
+    context.forgot_password_link = forgot_password_link
+    status = forgot_password_link.is_displayed()
+    print(status)
+    assert status is True
 
 ``` -->
 
@@ -1028,7 +1058,7 @@ def step_impl(context):
                 </a>
                 
                 
-                <a href="../pom.html" class="navigation navigation-next " aria-label="Next page: POM">
+                <a href="week5-4.html" class="navigation navigation-next " aria-label="Next page: 練習題：登入">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1039,7 +1069,7 @@ def step_impl(context):
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：behave","level":"1.6.7","depth":2,"next":{"title":"POM","level":"1.6.8","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},"previous":{"title":"behave","level":"1.6.6","depth":2,"path":"behave.md","ref":"behave.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-3.md","mtime":"2021-05-02T21:24:57.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T21:25:02.168Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：LOGO","level":"1.6.7","depth":2,"next":{"title":"練習題：登入","level":"1.6.8","depth":2,"path":"practices/week5-4.md","ref":"practices/week5-4.md","articles":[]},"previous":{"title":"behave","level":"1.6.6","depth":2,"path":"behave.md","ref":"behave.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-3.md","mtime":"2021-05-02T22:20:58.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T22:21:02.512Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
