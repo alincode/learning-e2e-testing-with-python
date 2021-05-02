@@ -1,8 +1,4 @@
-# select
+# 練習題：單元測試
 
-<https://demoqa.com/select-menu>
-
-## 練習目標
-
-- 單選
-- 多選
+- 消費滿一千，打九折。
+- 若是 VIP 客戶，在打 95 折。

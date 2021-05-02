@@ -1,16 +1,27 @@
 # POM (Page Object Model)
 
+POM (Page Object Model) 是一種設計模式。
+
+> 設計模式（design pattern）: 在軟體工程中，設計模式是對軟體設計中普遍存在的各種問題，所提出的解決方案。
+
+### 好處
+
+- 易於閱讀的測試案例
+- 建立在多個測試案例之間共享，且可重複使用的程式碼。
+- 減少重複程式碼的數量
+- 如果 UI 發生改變，則僅需在一個位置進行更改程式碼。
+
 ![](assets/pom_mindmap.png)
 
-### 步驟
+### 設計思維
 
 1. 然後再想測試步驟
 1. 然後想要切分成幾個 Page
 1. 最後在抽出 element 跟 locators 的細節
 
-### 測試案例 (Test case)
+## 測試案例 (Test case)
 
-執行測試的進入點
+這是一個測試案例，是執行測試的進入點，它在 Python 官網上搜尋一個關鍵字，並取得搜尋結果。
 
 ```py
 # demo.py
@@ -70,7 +81,7 @@ class SearchResultsPage(BasePage):
         return "No results found." not in self.driver.page_source
 ```
 
-### 頁面元素
+## 頁面元素
 
 ```py
 # element.py
@@ -94,7 +105,7 @@ class BasePageElement(object):
         return element.get_attribute("value")
 ```
 
-### Locators
+## 定位 (Locators)
 
 ```py
 # locators.py
@@ -108,8 +119,6 @@ class SearchResultsPageLocators(object):
 
 ```
 
-- Page Object Model
-- Page Factory Framework
-- Data Driven Framework
+#### 參考文獻
 
-[6. Page Objects](https://selenium-python.readthedocs.io/page-objects.html#)
+- [6. Page Objects](https://selenium-python.readthedocs.io/page-objects.html#)
