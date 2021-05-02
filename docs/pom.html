@@ -846,18 +846,105 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="pom-page-object-model"><a name="pom-page-object-model" class="plugin-anchor" href="#pom-page-object-model"><i class="fa fa-link" aria-hidden="true"></i></a>POM (Page Object Model)</h1>
+<p><img src="assets/pom_mindmap.png" alt=""></p>
+<h3 id="&#x6B65;&#x9A5F;"><a name="&#x6B65;&#x9A5F;" class="plugin-anchor" href="#&#x6B65;&#x9A5F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9A5F;</h3>
+<ol>
+<li>&#x7136;&#x5F8C;&#x518D;&#x60F3;&#x6E2C;&#x8A66;&#x6B65;&#x9A5F;</li>
+<li>&#x7136;&#x5F8C;&#x60F3;&#x8981;&#x5207;&#x5206;&#x6210;&#x5E7E;&#x500B; Page</li>
+<li>&#x6700;&#x5F8C;&#x5728;&#x62BD;&#x51FA; element &#x8DDF; locators &#x7684;&#x7D30;&#x7BC0;</li>
+</ol>
+<h3 id="&#x6E2C;&#x8A66;&#x6848;&#x4F8B;-test-case"><a name="&#x6E2C;&#x8A66;&#x6848;&#x4F8B;-test-case" class="plugin-anchor" href="#&#x6E2C;&#x8A66;&#x6848;&#x4F8B;-test-case"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E2C;&#x8A66;&#x6848;&#x4F8B; (Test case)</h3>
+<p>&#x57F7;&#x884C;&#x6E2C;&#x8A66;&#x7684;&#x9032;&#x5165;&#x9EDE;</p>
+<pre><code class="lang-py"><span class="hljs-comment"># demo.py</span>
+<span class="hljs-keyword">import</span> unittest
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">import</span> page
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PythonOrgSearch</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setUp</span><span class="hljs-params">(self)</span>:</span>
+        self.driver = webdriver.Chrome(<span class="hljs-string">&quot;../chromedriver&quot;</span>)
+        self.driver.get(<span class="hljs-string">&quot;http://www.python.org&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_search_in_python_org</span><span class="hljs-params">(self)</span>:</span>
+        main_page = page.MainPage(self.driver)
+        <span class="hljs-keyword">assert</span> main_page.is_title_matches(), <span class="hljs-string">&quot;python.org title doesn&apos;t match.&quot;</span>
+        main_page.search_text_element = <span class="hljs-string">&quot;pycon&quot;</span>
+        main_page.click_go_button()
+        search_results_page = page.SearchResultsPage(self.driver)
+        <span class="hljs-keyword">assert</span> search_results_page.is_results_found(), <span class="hljs-string">&quot;No results found.&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tearDown</span><span class="hljs-params">(self)</span>:</span>
+        self.driver.close()
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    unittest.main()
+</code></pre>
+<h3 id="&#x9801;&#x9762;&#x7269;&#x4EF6;&#x985E;&#x5225;-page-object-class"><a name="&#x9801;&#x9762;&#x7269;&#x4EF6;&#x985E;&#x5225;-page-object-class" class="plugin-anchor" href="#&#x9801;&#x9762;&#x7269;&#x4EF6;&#x985E;&#x5225;-page-object-class"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9801;&#x9762;&#x7269;&#x4EF6;&#x985E;&#x5225; (Page Object Class)</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># page.py</span>
+<span class="hljs-keyword">from</span> element <span class="hljs-keyword">import</span> BasePageElement
+<span class="hljs-keyword">from</span> locators <span class="hljs-keyword">import</span> MainPageLocators
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SearchTextElement</span><span class="hljs-params">(BasePageElement)</span>:</span>
+    locator = <span class="hljs-string">&apos;q&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BasePage</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, driver)</span>:</span>
+        self.driver = driver
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainPage</span><span class="hljs-params">(BasePage)</span>:</span>
+    search_text_element = SearchTextElement()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_title_matches</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Python&quot;</span> <span class="hljs-keyword">in</span> self.driver.title
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_go_button</span><span class="hljs-params">(self)</span>:</span>
+        element = self.driver.find_element(*MainPageLocators.GO_BUTTON)
+        element.click()
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SearchResultsPage</span><span class="hljs-params">(BasePage)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_results_found</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;No results found.&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> self.driver.page_source
+</code></pre>
+<h3 id="&#x9801;&#x9762;&#x5143;&#x7D20;"><a name="&#x9801;&#x9762;&#x5143;&#x7D20;" class="plugin-anchor" href="#&#x9801;&#x9762;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9801;&#x9762;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># element.py</span>
+<span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BasePageElement</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__set__</span><span class="hljs-params">(self, obj, value)</span>:</span>
+        driver = obj.driver
+        WebDriverWait(driver, <span class="hljs-number">100</span>).until(
+            <span class="hljs-keyword">lambda</span> driver: driver.find_element_by_name(self.locator))
+        driver.find_element_by_name(self.locator).clear()
+        driver.find_element_by_name(self.locator).send_keys(value)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__get__</span><span class="hljs-params">(self, obj, owner)</span>:</span>
+        driver = obj.driver
+        WebDriverWait(driver, <span class="hljs-number">100</span>).until(
+            <span class="hljs-keyword">lambda</span> driver: driver.find_element_by_name(self.locator))
+        element = driver.find_element_by_name(self.locator)
+        <span class="hljs-keyword">return</span> element.get_attribute(<span class="hljs-string">&quot;value&quot;</span>)
+</code></pre>
+<h3 id="locators"><a name="locators" class="plugin-anchor" href="#locators"><i class="fa fa-link" aria-hidden="true"></i></a>Locators</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># locators.py</span>
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainPageLocators</span><span class="hljs-params">(object)</span>:</span>
+    GO_BUTTON = (By.ID, <span class="hljs-string">&apos;submit&apos;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SearchResultsPageLocators</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</code></pre>
 <ul>
 <li>Page Object Model</li>
 <li>Page Factory Framework</li>
 <li>Data Driven Framework</li>
 </ul>
 <p><a href="https://selenium-python.readthedocs.io/page-objects.html#" target="_blank">6. Page Objects</a></p>
-<ul>
-<li><a href="https://selenium-python.readthedocs.io/page-objects.html#test-case" target="_blank">6.1. Test case</a></li>
-<li><a href="https://selenium-python.readthedocs.io/page-objects.html#page-object-classes" target="_blank">6.2. Page object classes</a></li>
-<li><a href="https://selenium-python.readthedocs.io/page-objects.html#page-elements" target="_blank">6.3. Page elements</a></li>
-<li><a href="https://selenium-python.readthedocs.io/page-objects.html#locators" target="_blank">6.4. Locators</a></li>
-</ul>
 
                                 
                                 </section>
@@ -897,7 +984,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"POM","level":"1.6.4","depth":2,"next":{"title":"第六週 - 進階","level":"1.7","depth":1,"ref":"","articles":[]},"previous":{"title":"測試計畫","level":"1.6.3","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"pom.md","mtime":"2021-03-05T11:13:59.942Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-26T06:09:49.404Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"POM","level":"1.6.4","depth":2,"next":{"title":"第六週 - 進階","level":"1.7","depth":1,"ref":"","articles":[]},"previous":{"title":"測試計畫","level":"1.6.3","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"pom.md","mtime":"2021-05-02T03:59:06.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T03:59:11.665Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

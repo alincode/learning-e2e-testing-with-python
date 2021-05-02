@@ -857,31 +857,27 @@
 </ul>
 </li>
 </ul>
-<!-- ### 解答
+<h3 id="&#x89E3;&#x7B54;"><a name="&#x89E3;&#x7B54;" class="plugin-anchor" href="#&#x89E3;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x7B54;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep
 
-```py
-from selenium import webdriver
-import requests
-from time import sleep
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.get(<span class="hljs-string">&quot;http://the-internet.herokuapp.com/broken_images&quot;</span>)
 
-driver = webdriver.Chrome("./chromedriver")
-driver.get("http://the-internet.herokuapp.com/broken_images")
-
-try:
+<span class="hljs-keyword">try</span>:
     base_url = driver.current_url
-    images = driver.find_elements_by_css_selector("img")
-    for img in images:
-        response = requests.get(img.get_attribute('src'))
-        if response.status_code != 200:
-            print(img.get_attribute('outerHTML') + " is broken.")
-        else:
-            print(img.get_attribute('outerHTML') + " is unbroken.")
-    sleep(5)
-finally:
+    images = driver.find_elements_by_css_selector(<span class="hljs-string">&quot;img&quot;</span>)
+    <span class="hljs-keyword">for</span> img <span class="hljs-keyword">in</span> images:
+        response = requests.get(img.get_attribute(<span class="hljs-string">&apos;src&apos;</span>))
+        <span class="hljs-keyword">if</span> response.status_code != <span class="hljs-number">200</span>:
+            print(img.get_attribute(<span class="hljs-string">&apos;outerHTML&apos;</span>) + <span class="hljs-string">&quot; is broken.&quot;</span>)
+        <span class="hljs-keyword">else</span>:
+            print(img.get_attribute(<span class="hljs-string">&apos;outerHTML&apos;</span>) + <span class="hljs-string">&quot; is unbroken.&quot;</span>)
+    sleep(<span class="hljs-number">5</span>)
+<span class="hljs-keyword">finally</span>:
     driver.quit()
-```
-
--->
+</code></pre>
 
                                 
                                 </section>
@@ -921,7 +917,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題：檢查是否有損壞的圖片","level":"1.5.7","depth":2,"next":{"title":"第五週 - 測試專案","level":"1.6","depth":1,"ref":"","articles":[{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},{"title":"測試計畫","level":"1.6.3","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},{"title":"POM","level":"1.6.4","depth":2,"path":"pom.md","ref":"pom.md","articles":[]}]},"previous":{"title":"Request","level":"1.5.6","depth":2,"path":"request.md","ref":"request.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-3.md","mtime":"2021-04-26T01:27:59.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-26T06:09:49.404Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題：檢查是否有損壞的圖片","level":"1.5.7","depth":2,"next":{"title":"第五週 - 測試專案","level":"1.6","depth":1,"ref":"","articles":[{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[]},{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[]},{"title":"測試計畫","level":"1.6.3","depth":2,"path":"test_plan.md","ref":"test_plan.md","articles":[]},{"title":"POM","level":"1.6.4","depth":2,"path":"pom.md","ref":"pom.md","articles":[]}]},"previous":{"title":"Request","level":"1.5.6","depth":2,"path":"request.md","ref":"request.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week4-3.md","mtime":"2021-05-02T03:59:06.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T03:59:11.665Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

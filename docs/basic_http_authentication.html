@@ -862,22 +862,19 @@
 </ul>
 </li>
 </ul>
-<!--
-### 答案
+<h3 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
 
-```py
-from selenium import webdriver
+driver = webdriver.Chrome(<span class="hljs-string">&quot;./chromedriver&quot;</span>)
+driver.get(<span class="hljs-string">&quot;http://admin:admin@the-internet.herokuapp.com/basic_auth&quot;</span>)
+<span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;The Internet&quot;</span> <span class="hljs-keyword">in</span> driver.title
 
-driver = webdriver.Chrome("./chromedriver")
-driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth")
-assert "The Internet" in driver.title
-
-try:
-    result = driver.find_element_by_css_selector('h3')
-    assert "Basic Auth" in result.text
-finally:
+<span class="hljs-keyword">try</span>:
+    result = driver.find_element_by_css_selector(<span class="hljs-string">&apos;h3&apos;</span>)
+    <span class="hljs-keyword">assert</span> <span class="hljs-string">&quot;Basic Auth&quot;</span> <span class="hljs-keyword">in</span> result.text
+<span class="hljs-keyword">finally</span>:
     driver.quit()
-``` -->
+</code></pre>
 <h3 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h3>
 <ul>
 <li>Basic HTTP Authentication for Selenium tests - BrowserStack: <a href="https://www.browserstack.com/docs/automate/selenium/basic-http-authentication" target="_blank">https://www.browserstack.com/docs/automate/selenium/basic-http-authentication</a></li>
@@ -925,7 +922,7 @@ finally:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTTP 基本認證","level":"1.5.5","depth":2,"next":{"title":"Request","level":"1.5.6","depth":2,"path":"request.md","ref":"request.md","articles":[]},"previous":{"title":"練習題：訊息框","level":"1.5.4","depth":2,"path":"practices/week4-2.md","ref":"practices/week4-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"basic_http_authentication.md","mtime":"2021-04-25T15:16:19.304Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-26T06:09:49.404Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTP 基本認證","level":"1.5.5","depth":2,"next":{"title":"Request","level":"1.5.6","depth":2,"path":"request.md","ref":"request.md","articles":[]},"previous":{"title":"練習題：訊息框","level":"1.5.4","depth":2,"path":"practices/week4-2.md","ref":"practices/week4-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"basic_http_authentication.md","mtime":"2021-05-02T03:59:06.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T03:59:11.665Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
