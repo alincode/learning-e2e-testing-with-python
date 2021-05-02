@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pom.html" />
+    <link rel="next" href="behave.html" />
     
     
     <link rel="prev" href="practices/week5-2.html" />
@@ -713,7 +713,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="pom.html">
+        <li class="chapter " data-level="1.6.6" data-path="behave.html">
+            
+                <a href="behave.html">
+            
+                    
+                    behave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="practices/week5-3.html">
+            
+                <a href="practices/week5-3.html">
+            
+                    
+                    練習題：behave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="pom.html">
             
                 <a href="pom.html">
             
@@ -726,7 +752,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="practices/week5-4.html">
+        <li class="chapter " data-level="1.6.9" data-path="practices/week5-4.html">
             
                 <a href="practices/week5-4.html">
             
@@ -938,40 +964,9 @@
 </ul>
 <p><img src="assets/given-when-then-example.png" alt=""></p>
 <p><img src="assets/given-when-then-example-cn.png" alt=""></p>
-<h2 id="behave"><a name="behave" class="plugin-anchor" href="#behave"><i class="fa fa-link" aria-hidden="true"></i></a>behave</h2>
-<pre><code>pip install behave
-pip install behave2cucumber
-</code></pre><!-- ```
-behave --lang-list
-behave --lang-help zh-TW
-``` -->
-<p><code>/features/tutorial.feature</code></p>
-<pre><code>Feature: showing off behave
-
-  Scenario: run a simple test
-     Given we have behave installed
-      When we implement a test
-      Then behave will test it for us!
-</code></pre><p><code>features/steps/tutorial.py</code></p>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> *
-
-<span class="hljs-meta">@given(&apos;we have behave installed&apos;)</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_given</span><span class="hljs-params">(context)</span>:</span>
-    <span class="hljs-keyword">pass</span>
-
-<span class="hljs-meta">@when(&apos;we implement a test&apos;)</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_when</span><span class="hljs-params">(context)</span>:</span>
-    <span class="hljs-keyword">assert</span> <span class="hljs-keyword">True</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">False</span>
-
-<span class="hljs-meta">@then(&apos;behave will test it for us!&apos;)</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_then</span><span class="hljs-params">(context)</span>:</span>
-    <span class="hljs-keyword">assert</span> context.failed <span class="hljs-keyword">is</span> <span class="hljs-keyword">False</span>
-</code></pre>
-<p><img src="assets/behave.png" alt=""></p>
 <h2 id="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><a name="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;" class="plugin-anchor" href="#&#x5EF6;&#x4F38;&#x95B1;&#x8B80;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5EF6;&#x4F38;&#x95B1;&#x8B80;</h2>
 <ul>
 <li><a href="https://martinfowler.com/bliki/GivenWhenThen.html" target="_blank">GivenWhenThen | Martin Fowler</a></li>
-<li><a href="https://www.youtube.com/results?search_query=python+cucumber" target="_blank">https://www.youtube.com/results?search_query=python+cucumber</a></li>
 <li><a href="https://www.jianshu.com/p/196a540dc35b" target="_blank">&#x884C;&#x4E3A;&#x9A71;&#x52A8;&#x5F00;&#x53D1;&#xFF1A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x5E26;&#x4F60;&#x7528; Python &#x73A9;&#x8F6C; BDD</a></li>
 <li><a href="https://www.tenlong.com.tw/products/9789862019481" target="_blank">https://www.tenlong.com.tw/products/9789862019481</a></li>
 </ul>
@@ -1008,7 +1003,7 @@ behave --lang-help zh-TW
                 </a>
                 
                 
-                <a href="pom.html" class="navigation navigation-next " aria-label="Next page: POM">
+                <a href="behave.html" class="navigation navigation-next " aria-label="Next page: behave">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1019,7 +1014,7 @@ behave --lang-help zh-TW
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"活文件","level":"1.6.5","depth":2,"next":{"title":"POM","level":"1.6.6","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},"previous":{"title":"練習題：API 測試","level":"1.6.4","depth":2,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"living_document.md","mtime":"2021-05-02T14:59:17.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T14:59:22.236Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"活文件","level":"1.6.5","depth":2,"next":{"title":"behave","level":"1.6.6","depth":2,"path":"behave.md","ref":"behave.md","articles":[]},"previous":{"title":"練習題：API 測試","level":"1.6.4","depth":2,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"living_document.md","mtime":"2021-05-02T21:24:57.281Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T21:25:02.168Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
