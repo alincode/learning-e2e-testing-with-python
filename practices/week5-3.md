@@ -6,6 +6,8 @@
 1. 建立 feature 檔案，例如 `logo.feature`。
 1. 執行 `behave`
 
+![](assets/logo_feature.png)
+
 <!--
 ````
 Feature: OrangeHRM Logo
@@ -54,11 +56,12 @@ def step_impl(context):
 
 ``` -->
 
+<!--
 ## Step4
 
 1. 實作檢查 forget your password link
 
-<!-- ```py
+```py
 from behave import *
 
 @then(u'verify that the link present on page')
