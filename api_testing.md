@@ -1,5 +1,33 @@
 # API 測試
 
+## API 範例
+
+<https://reqres.in/api/users/2>
+
+```json
+{
+  "data": {
+    "id": 2,
+    "email": "janet.weaver@reqres.in",
+    "first_name": "Janet",
+    "last_name": "Weaver",
+    "avatar": "https://reqres.in/img/faces/2-image.jpg"
+  },
+  "support": {
+    "url": "https://reqres.in/#support-heading",
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+  }
+}
+```
+
+### 測試應該驗證什麼？
+
+- 結構
+- 資料型別
+- 值的正確性
+
+## 完整的測試程式
+
 ```py
 import unittest
 import requests
@@ -19,9 +47,11 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-## 練習題
+### 測試程式邏輯說明
 
-- 測試 `https://reqres.in/api/users?page=2` API
+1. 首先繼承 unittest 模組的 TestCase 類別
+1. 然後再使用 test 作為前置命名，例如 test_1, test_2。
+1. 最後在實作測試細節
 
 ### 延伸閱讀
 

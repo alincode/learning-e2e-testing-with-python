@@ -12,23 +12,6 @@
   - alert.text
   - alert.accept()
 
-## 確認訊息框 (confirm)
-
-![](assets/confirm.png)
-
-- 會用到的語法
-  - driver.switch_to.alert
-  - alert.accept()
-  - alert.dismiss()
-
-## 提示訊息對話 (prompt)
-
-![](assets/prompt.png)
-
-- 會用到的語法
-  - driver.switch_to.alert
-  - alert.send_keys("AILIN LIOU")
-
 ### 答案
 
 ```py
@@ -59,7 +42,16 @@ finally:
     driver.quit()
 ```
 
-## 練習題：確認訊息框
+## 確認訊息框 (confirm)
+
+![](assets/confirm.png)
+
+- 會用到的語法
+  - driver.switch_to.alert
+  - alert.accept()
+  - alert.dismiss()
+
+### 答案
 
 ```py
 from selenium import webdriver
@@ -78,7 +70,15 @@ finally:
     driver.quit()
 ```
 
-## 練習題：提示訊息對話
+## 提示訊息對話 (prompt)
+
+![](assets/prompt.png)
+
+- 會用到的語法
+  - driver.switch_to.alert
+  - alert.send_keys("AILIN LIOU")
+
+### 答案
 
 ```py
 from selenium import webdriver
