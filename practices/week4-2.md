@@ -29,7 +29,7 @@
   - driver.switch_to.alert
   - alert.send_keys("AILIN LIOU")
 
-<!-- ### 答案
+### 答案
 
 ```py
 from selenium import webdriver
@@ -95,4 +95,4 @@ try:
     alert.accept()
 finally:
     driver.quit()
-``` -->
+```

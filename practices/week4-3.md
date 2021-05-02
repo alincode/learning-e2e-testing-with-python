@@ -9,7 +9,7 @@
   - requests.get(url)
   - response.status_code
 
-<!-- ### 解答
+### 解答
 
 ```py
 from selenium import webdriver
@@ -32,5 +32,3 @@ try:
 finally:
     driver.quit()
 ```
-
--->
