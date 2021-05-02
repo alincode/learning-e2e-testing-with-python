@@ -1,4 +1,4 @@
-# 練習題： behave
+# 練習題： LOGO
 
 ## Step1
 
@@ -11,10 +11,10 @@
 Feature: OrangeHRM Logo
 
   Scenario: Logo presence on OrangeHRM home page
-     Given launch chrome browser
-      When open orange hrm homepage
-      Then verify that the logo present on page
-      And close browser
+    Given launch chrome browser
+    When open orange hrm homepage
+    Then verify that the logo present on page
+    And close browser
 ``` -->
 
 ## Step2
@@ -25,6 +25,7 @@ Feature: OrangeHRM Logo
 ## Step3
 
 1. 實作 `logo.py` 細節
+1. 執行 `behave`
 
 <!--
 ```py
@@ -50,5 +51,22 @@ def step_impl(context):
 @then(u'close browser')
 def step_impl(context):
     context.driver.close()
+
+``` -->
+
+## Step4
+
+1. 實作檢查 forget your password link
+
+<!-- ```py
+from behave import *
+
+@then(u'verify that the link present on page')
+def step_impl(context):
+    forgot_password_link = context.driver.find_element_by_css_selector("#forgotPasswordLink a")
+    context.forgot_password_link = forgot_password_link
+    status = forgot_password_link.is_displayed()
+    print(status)
+    assert status is True
 
 ``` -->

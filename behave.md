@@ -46,6 +46,7 @@ def step_then(context):
 
 ```
 behave
+behave /features/tutorial.feature
 ```
 
 <!-- ```
