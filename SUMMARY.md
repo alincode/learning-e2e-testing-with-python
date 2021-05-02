@@ -45,6 +45,8 @@
   - [API 測試](api_testing.md)
   - [練習題：API 測試](practices/week5-2.md)
   - [活文件](living_document.md)
+  - [behave](behave.md)
+  - [練習題：behave](practices/week5-3.md)
   - [POM](pom.md)
   - [練習題：POM](practices/week5-4.md)
 - [第六週 - 進階]()
