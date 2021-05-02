@@ -9,11 +9,29 @@
 - cucumber: <https://cucumber.io/>
 - ...
 
+## Given When Then
+
+每個 scenario 可以分為三個部分：
+
+- Given: 測試的前置條件
+- When: 執行某些操作
+- Then: 預期的行為
+
+![](assets/given-when-then-example.png)
+
+![](assets/given-when-then-example-cn.png)
+
 ## behave
 
 ```
-pip install git+https://github.com/behave/behave
+pip install behave
+pip install behave2cucumber
 ```
+
+<!-- ```
+behave --lang-list
+behave --lang-help zh-TW
+``` -->
 
 `/features/tutorial.feature`
 
@@ -32,15 +50,15 @@ Feature: showing off behave
 from behave import *
 
 @given('we have behave installed')
-def step_impl(context):
+def step_given(context):
     pass
 
 @when('we implement a test')
-def step_impl(context):
+def step_when(context):
     assert True is not False
 
 @then('behave will test it for us!')
-def step_impl(context):
+def step_then(context):
     assert context.failed is False
 ```
 
@@ -48,7 +66,9 @@ def step_impl(context):
 
 ## 延伸閱讀
 
+- [GivenWhenThen | Martin Fowler](https://martinfowler.com/bliki/GivenWhenThen.html)
 - <https://www.youtube.com/results?search_query=python+cucumber>
+- [行为驱动开发：一篇文章带你用 Python 玩转 BDD](https://www.jianshu.com/p/196a540dc35b)
 - <https://www.tenlong.com.tw/products/9789862019481>
 
 ![](assets/spec_by_example.png)
