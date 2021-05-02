@@ -44,8 +44,7 @@
   - [練習題：單元測試](practices/week5-1.md)
   - [API 測試](api_testing.md)
   - [練習題：API 測試](practices/week5-2.md)
-  - [測試計畫](test_plan.md)
-  - [練習題：撰寫測試計畫](practices/week5-3.md)
+  - [活文件](living_document.md)
   - [POM](pom.md)
   - [練習題：POM](practices/week5-4.md)
 - [第六週 - 進階]()
@@ -74,4 +73,6 @@
   - [經驗談](experience-talks.md)
   - [軟體測試的路線圖](road-map.md)
   - [手動測試末日？](is-manual-testing-dying.md)
+  - [測試計畫](test_plan.md)
+  - [練習題：撰寫測試計畫](practices/week5-3.md)
  -->

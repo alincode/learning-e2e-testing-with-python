@@ -3,6 +3,7 @@
 ### 可供練習的測試網站
 
 - <http://demoqa.com/>
+- <https://example.testproject.io/web/>
 - <http://www.globalsqa.com/demo-site/>
 - <https://opensource-demo.orangehrmlive.com/>
 - <http://the-internet.herokuapp.com/>
