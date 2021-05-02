@@ -14,7 +14,6 @@ driver.get("https://<username>:<password>@www.example.com/index.html")
   - 帳號 admin
   - 密碼 admin
 
-<!--
 ### 答案
 
 ```py
@@ -29,7 +28,7 @@ try:
     assert "Basic Auth" in result.text
 finally:
     driver.quit()
-``` -->
+```
 
 ### 參考文獻
 

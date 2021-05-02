@@ -13,8 +13,8 @@ unittest 支持物件導向的一些重要的概念，如下所示：
 
 ### 參考文獻
 
-英文：<https://docs.python.org/3/library/unittest.html>
-中文：<https://docs.python.org/zh-tw/3/library/unittest.html>
+- 英文：<https://docs.python.org/3/library/unittest.html>
+- 中文：<https://docs.python.org/zh-tw/3/library/unittest.html>
 
 ## 乘除模組
 
