@@ -70,6 +70,22 @@ def step_then(context):
 
 - context: 可以用來...
 
+```
+Feature: Scenario Outline
+ Scenario Outline: Blenders
+    Given I put <thing> in a blender
+    When I switch the blender on
+    Then it should transform into <other thing>
+  Examples: Amphibians
+    | thing         | other thing |
+    | Red Tree Frog | mush        |
+    | apples        | apple juice |
+  Examples: Consumer Electronics
+    | thing         | other thing |
+    | iPhone        | toxic waste |
+    | Galaxy Nexus  | toxic waste |
+```
+
 ### 執行
 
 ```
@@ -96,6 +112,34 @@ When Enter first name "AILIN" and last name "LIOU"
 def step_impl(context, first_name, last_name):
 ```
 
+## Environmental Controls
+
+<https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls>
+
+```py
+# -- FILE: features/environment.py
+from behave import fixture, use_fixture
+from behave4my_project.fixtures import wsgi_server
+from selenium import webdriver
+
+@fixture
+def selenium_browser_chrome(context):
+    # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
+    context.browser = webdriver.Chrome()
+    yield context.browser
+    # -- CLEANUP-FIXTURE PART:
+    context.browser.quit()
+
+def before_all(context):
+    use_fixture(wsgi_server, context, port=8000)
+    use_fixture(selenium_browser_chrome, context)
+    # -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
+
+def before_feature(context, feature):
+    model.init(environment='test')
+```
+
 ## 參考文獻
 
 - [Part 1: Selenium with Python Behave (BDD) Introduction - YouTube](https://www.youtube.com/watch?v=JIyvAFBx2Fw)
+- [behave.example](https://github.com/behave/behave.example/tree/master/features)
