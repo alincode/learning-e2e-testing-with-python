@@ -1,0 +1,1158 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>behave · 網站自動化測試 for Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="AILIN LIOU <alin.code@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="practices/week5-3.html" />
+    
+    
+    <link rel="prev" href="testing_dev_flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1ADinTuSL-FzdJCXh1wtYPzYPkB0oz7Ar2gUSbsNC79Y/edit?usp=sharing">
+            
+                    
+                    關於我
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="career_example.html">
+            
+                <a href="career_example.html">
+            
+                    
+                    職缺範例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第一週 - 測試快速入門
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1egb5fterPeKqgL3vDc-EFQFZrBk_2A8DkmkR5rUvQ7U/edit?usp=sharing">
+            
+                    
+                    關於測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing">
+            
+                    
+                    關於 Selenium
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    準備開發環境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    快速入門
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="locating_elements.html">
+            
+                <a href="locating_elements.html">
+            
+                    
+                    定位元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="repl.html">
+            
+                <a href="repl.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="practices/week1.html">
+            
+                <a href="practices/week1.html">
+            
+                    
+                    練習題：測試計算機
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    第二週 - WebDriver (上)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing">
+            
+                    
+                    測試組成元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="keyboard.html">
+            
+                <a href="keyboard.html">
+            
+                    
+                    鍵盤操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="set_window_position.html">
+            
+                <a href="set_window_position.html">
+            
+                    
+                    設定視窗位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="practices/week2-1.html">
+            
+                <a href="practices/week2-1.html">
+            
+                    
+                    練習題：登入練習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="form.html">
+            
+                <a href="form.html">
+            
+                    
+                    表單操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="practices/week2-2.html">
+            
+                <a href="practices/week2-2.html">
+            
+                    
+                    練習題：上傳檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="navigating.html">
+            
+                <a href="navigating.html">
+            
+                    
+                    導航 (Navigating)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="practices/week2-3.html">
+            
+                <a href="practices/week2-3.html">
+            
+                    
+                    練習題：學生註冊表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第三週 - WebDriver (中)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1wB5iSF2NihFT6ZVbMm1XQtburXA75vSArYtKuvOygRg/edit?usp=sharing">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="web_element.html">
+            
+                <a href="web_element.html">
+            
+                    
+                    元素的狀態與屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="assert.html">
+            
+                <a href="assert.html">
+            
+                    
+                    斷言檢查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="practices/week3-1.html">
+            
+                <a href="practices/week3-1.html">
+            
+                    
+                    練習題：檢查 Tab 是否可以正常切換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="practices/week3-2.html">
+            
+                <a href="practices/week3-2.html">
+            
+                    
+                    練習題：檢查欄位是否能被輸入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="waits.html">
+            
+                <a href="waits.html">
+            
+                    
+                    等待 (Wait)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="expected_conditions.html">
+            
+                <a href="expected_conditions.html">
+            
+                    
+                    預期條件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="practices/week3-3.html">
+            
+                <a href="practices/week3-3.html">
+            
+                    
+                    練習題：非同步行為
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="action_chains.html">
+            
+                <a href="action_chains.html">
+            
+                    
+                    動作鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="practices/week3-4.html">
+            
+                <a href="practices/week3-4.html">
+            
+                    
+                    練習題：拖拉 Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第四週 - WebDriver (下)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="iframe.html">
+            
+                <a href="iframe.html">
+            
+                    
+                    Iframe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="practices/week4-1.html">
+            
+                <a href="practices/week4-1.html">
+            
+                    
+                    練習題：TinyMCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="alert_prompt_confirm.html">
+            
+                <a href="alert_prompt_confirm.html">
+            
+                    
+                    訊息框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="practices/week4-2.html">
+            
+                <a href="practices/week4-2.html">
+            
+                    
+                    練習題：訊息框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="basic_http_authentication.html">
+            
+                <a href="basic_http_authentication.html">
+            
+                    
+                    HTTP 基本認證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="request.html">
+            
+                <a href="request.html">
+            
+                    
+                    Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="practices/week4-3.html">
+            
+                <a href="practices/week4-3.html">
+            
+                    
+                    練習題：檢查是否有損壞的圖片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第五週 - 測試專案
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                    單元測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="practices/week5-1.html">
+            
+                <a href="practices/week5-1.html">
+            
+                    
+                    練習題：單元測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="api_testing.html">
+            
+                <a href="api_testing.html">
+            
+                    
+                    API 測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="practices/week5-2.html">
+            
+                <a href="practices/week5-2.html">
+            
+                    
+                    練習題：API 測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="living_document.html">
+            
+                <a href="living_document.html">
+            
+                    
+                    活文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="testing_dev_flow.html">
+            
+                <a href="testing_dev_flow.html">
+            
+                    
+                    常見開發流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.7" data-path="behave.html">
+            
+                <a href="behave.html">
+            
+                    
+                    behave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="practices/week5-3.html">
+            
+                <a href="practices/week5-3.html">
+            
+                    
+                    練習題：LOGO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="practices/week5-4.html">
+            
+                <a href="practices/week5-4.html">
+            
+                    
+                    練習題：登入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第六週 - 進階
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="pom.html">
+            
+                <a href="pom.html">
+            
+                    
+                    POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="practices/week6-1.html">
+            
+                <a href="practices/week6-1.html">
+            
+                    
+                    練習題：POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    經驗談分享
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    軟體測試路線圖
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    補充
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <a target="_blank" href="https://www.selenium.dev/documentation/en/">
+            
+                    
+                    Selenium 官方文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <a target="_blank" href="https://selenium-python.readthedocs.io/">
+            
+                    
+                    非官方文件 for Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <a target="_blank" href="https://www.w3.org/TR/webdriver1/">
+            
+                    
+                    W3C Webdriver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="cheat_sheet.html">
+            
+                <a href="cheat_sheet.html">
+            
+                    
+                    Python Cheat Sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="resource.html">
+            
+                <a href="resource.html">
+            
+                    
+                    測試相關資源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >behave</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="behave"><a name="behave" class="plugin-anchor" href="#behave"><i class="fa fa-link" aria-hidden="true"></i></a>behave</h1>
+<p>&#x5B98;&#x65B9;&#x6587;&#x4EF6;&#xFF1A;<a href="https://behave.readthedocs.io/en/stable/" target="_blank">https://behave.readthedocs.io/en/stable/</a></p>
+<h2 id="&#x5B89;&#x88DD;"><a name="&#x5B89;&#x88DD;" class="plugin-anchor" href="#&#x5B89;&#x88DD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88DD;</h2>
+<pre><code>pip install behave
+pip install behave2cucumber
+</code></pre><h2 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h2>
+<h3 id="&#x6700;&#x4F4E;&#x9650;&#x5236;"><a name="&#x6700;&#x4F4E;&#x9650;&#x5236;" class="plugin-anchor" href="#&#x6700;&#x4F4E;&#x9650;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6700;&#x4F4E;&#x9650;&#x5236;</h3>
+<pre><code>features/
+features/everything.feature
+features/steps/
+features/steps/steps.py
+</code></pre><h3 id="&#x66F4;&#x8907;&#x96DC;&#x7684;&#x4F8B;&#x5B50;"><a name="&#x66F4;&#x8907;&#x96DC;&#x7684;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x66F4;&#x8907;&#x96DC;&#x7684;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x8907;&#x96DC;&#x7684;&#x4F8B;&#x5B50;</h3>
+<pre><code>features/
+features/signup.feature
+features/login.feature
+features/account_details.feature
+features/environment.py
+features/steps/
+features/steps/website.py
+features/steps/utils.py
+</code></pre><h2 id="&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><a name="&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;</h2>
+<h3 id="feature-&#x7BC4;&#x4F8B;"><a name="feature-&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#feature-&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>feature &#x7BC4;&#x4F8B;</h3>
+<p><code>/features/tutorial.feature</code></p>
+<pre><code>Feature: showing off behave
+
+  Scenario: run a simple test
+     Given we have behave installed
+      When we implement a test
+      Then behave will test it for us!
+</code></pre><h3 id="step-&#x7BC4;&#x4F8B;"><a name="step-&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#step-&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>step &#x7BC4;&#x4F8B;</h3>
+<p><code>features/steps/tutorial.py</code></p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> *
+
+<span class="hljs-meta">@given(&apos;we have behave installed&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_given</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-meta">@when(&apos;we implement a test&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_when</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-keyword">assert</span> <span class="hljs-keyword">True</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">False</span>
+
+<span class="hljs-meta">@then(&apos;behave will test it for us!&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_then</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-keyword">assert</span> context.failed <span class="hljs-keyword">is</span> <span class="hljs-keyword">False</span>
+</code></pre>
+<ul>
+<li>context: &#x53EF;&#x4EE5;&#x7528;&#x4F86;...</li>
+</ul>
+<pre><code>Feature: Scenario Outline
+ Scenario Outline: Blenders
+    Given I put &lt;thing&gt; in a blender
+    When I switch the blender on
+    Then it should transform into &lt;other thing&gt;
+  Examples: Amphibians
+    | thing         | other thing |
+    | Red Tree Frog | mush        |
+    | apples        | apple juice |
+  Examples: Consumer Electronics
+    | thing         | other thing |
+    | iPhone        | toxic waste |
+    | Galaxy Nexus  | toxic waste |
+</code></pre><h3 id="&#x57F7;&#x884C;"><a name="&#x57F7;&#x884C;" class="plugin-anchor" href="#&#x57F7;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57F7;&#x884C;</h3>
+<pre><code>behave
+behave /features/tutorial.feature
+</code></pre><!-- ```
+behave --lang-list
+behave --lang-help zh-TW
+``` -->
+<p><img src="assets/behave.png" alt=""></p>
+<h2 id="step-&#x53C3;&#x6578;"><a name="step-&#x53C3;&#x6578;" class="plugin-anchor" href="#step-&#x53C3;&#x6578;"><i class="fa fa-link" aria-hidden="true"></i></a>step &#x53C3;&#x6578;</h2>
+<pre><code># feature
+When Enter first name &quot;AILIN&quot; and last name &quot;LIOU&quot;
+</code></pre><pre><code>@when(u&apos;Enter first name &quot;{first_name}&quot; and last name &quot;{last_name}&quot;&apos;)
+def step_impl(context, first_name, last_name):
+</code></pre><h2 id="environmental-controls"><a name="environmental-controls" class="plugin-anchor" href="#environmental-controls"><i class="fa fa-link" aria-hidden="true"></i></a>Environmental Controls</h2>
+<p><a href="https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls" target="_blank">https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls</a></p>
+<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: features/environment.py</span>
+<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture, use_fixture
+<span class="hljs-keyword">from</span> behave4my_project.fixtures <span class="hljs-keyword">import</span> wsgi_server
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+<span class="hljs-meta">@fixture</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selenium_browser_chrome</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-comment"># -- HINT: @behave.fixture is similar to @contextlib.contextmanager</span>
+    context.browser = webdriver.Chrome()
+    <span class="hljs-keyword">yield</span> context.browser
+    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
+    context.browser.quit()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_all</span><span class="hljs-params">(context)</span>:</span>
+    use_fixture(wsgi_server, context, port=<span class="hljs-number">8000</span>)
+    use_fixture(selenium_browser_chrome, context)
+    <span class="hljs-comment"># -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    model.init(environment=<span class="hljs-string">&apos;test&apos;</span>)
+</code></pre>
+<h2 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=JIyvAFBx2Fw" target="_blank">Part 1: Selenium with Python Behave (BDD) Introduction - YouTube</a></li>
+<li><a href="https://github.com/behave/behave.example/tree/master/features" target="_blank">behave.example</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="testing_dev_flow.html" class="navigation navigation-prev " aria-label="Previous page: 常見開發流程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="practices/week5-3.html" class="navigation navigation-next " aria-label="Next page: 練習題：LOGO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"behave","level":"1.6.7","depth":2,"next":{"title":"練習題：LOGO","level":"1.6.8","depth":2,"path":"practices/week5-3.md","ref":"practices/week5-3.md","articles":[]},"previous":{"title":"常見開發流程","level":"1.6.6","depth":2,"path":"testing_dev_flow.md","ref":"testing_dev_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"behave.md","mtime":"2021-05-03T04:52:20.578Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T05:17:43.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

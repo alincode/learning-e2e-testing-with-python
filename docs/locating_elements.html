@@ -1,0 +1,1153 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>定位元素 · 網站自動化測試 for Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="AILIN LIOU <alin.code@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="repl.html" />
+    
+    
+    <link rel="prev" href="getting_started.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1ADinTuSL-FzdJCXh1wtYPzYPkB0oz7Ar2gUSbsNC79Y/edit?usp=sharing">
+            
+                    
+                    關於我
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="career_example.html">
+            
+                <a href="career_example.html">
+            
+                    
+                    職缺範例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第一週 - 測試快速入門
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1egb5fterPeKqgL3vDc-EFQFZrBk_2A8DkmkR5rUvQ7U/edit?usp=sharing">
+            
+                    
+                    關於測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1iwx2zT80WqPcM0Ocp85b16RTmh9rEVPK9ibY3lI7lO0/edit?usp=sharing">
+            
+                    
+                    關於 Selenium
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    準備開發環境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    快速入門
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="locating_elements.html">
+            
+                <a href="locating_elements.html">
+            
+                    
+                    定位元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="repl.html">
+            
+                <a href="repl.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="practices/week1.html">
+            
+                <a href="practices/week1.html">
+            
+                    
+                    練習題：測試計算機
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    第二週 - WebDriver (上)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1AIACdZOigiMX4VmOcXEG_TIfAE6j80CUElF8ZiVHRk0/edit?usp=sharing">
+            
+                    
+                    測試組成元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="keyboard.html">
+            
+                <a href="keyboard.html">
+            
+                    
+                    鍵盤操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="set_window_position.html">
+            
+                <a href="set_window_position.html">
+            
+                    
+                    設定視窗位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="practices/week2-1.html">
+            
+                <a href="practices/week2-1.html">
+            
+                    
+                    練習題：登入練習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="form.html">
+            
+                <a href="form.html">
+            
+                    
+                    表單操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="practices/week2-2.html">
+            
+                <a href="practices/week2-2.html">
+            
+                    
+                    練習題：上傳檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="navigating.html">
+            
+                <a href="navigating.html">
+            
+                    
+                    導航 (Navigating)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="practices/week2-3.html">
+            
+                <a href="practices/week2-3.html">
+            
+                    
+                    練習題：學生註冊表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第三週 - WebDriver (中)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <a target="_blank" href="https://docs.google.com/presentation/d/1wB5iSF2NihFT6ZVbMm1XQtburXA75vSArYtKuvOygRg/edit?usp=sharing">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="web_element.html">
+            
+                <a href="web_element.html">
+            
+                    
+                    元素的狀態與屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="assert.html">
+            
+                <a href="assert.html">
+            
+                    
+                    斷言檢查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="practices/week3-1.html">
+            
+                <a href="practices/week3-1.html">
+            
+                    
+                    練習題：檢查 Tab 是否可以正常切換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="practices/week3-2.html">
+            
+                <a href="practices/week3-2.html">
+            
+                    
+                    練習題：檢查欄位是否能被輸入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="waits.html">
+            
+                <a href="waits.html">
+            
+                    
+                    等待 (Wait)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="expected_conditions.html">
+            
+                <a href="expected_conditions.html">
+            
+                    
+                    預期條件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="practices/week3-3.html">
+            
+                <a href="practices/week3-3.html">
+            
+                    
+                    練習題：非同步行為
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="action_chains.html">
+            
+                <a href="action_chains.html">
+            
+                    
+                    動作鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="practices/week3-4.html">
+            
+                <a href="practices/week3-4.html">
+            
+                    
+                    練習題：拖拉 Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第四週 - WebDriver (下)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="iframe.html">
+            
+                <a href="iframe.html">
+            
+                    
+                    Iframe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="practices/week4-1.html">
+            
+                <a href="practices/week4-1.html">
+            
+                    
+                    練習題：TinyMCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="alert_prompt_confirm.html">
+            
+                <a href="alert_prompt_confirm.html">
+            
+                    
+                    訊息框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="practices/week4-2.html">
+            
+                <a href="practices/week4-2.html">
+            
+                    
+                    練習題：訊息框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="basic_http_authentication.html">
+            
+                <a href="basic_http_authentication.html">
+            
+                    
+                    HTTP 基本認證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="request.html">
+            
+                <a href="request.html">
+            
+                    
+                    Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="practices/week4-3.html">
+            
+                <a href="practices/week4-3.html">
+            
+                    
+                    練習題：檢查是否有損壞的圖片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第五週 - 測試專案
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                    單元測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="practices/week5-1.html">
+            
+                <a href="practices/week5-1.html">
+            
+                    
+                    練習題：單元測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="api_testing.html">
+            
+                <a href="api_testing.html">
+            
+                    
+                    API 測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="practices/week5-2.html">
+            
+                <a href="practices/week5-2.html">
+            
+                    
+                    練習題：API 測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="living_document.html">
+            
+                <a href="living_document.html">
+            
+                    
+                    活文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="testing_dev_flow.html">
+            
+                <a href="testing_dev_flow.html">
+            
+                    
+                    常見開發流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="behave.html">
+            
+                <a href="behave.html">
+            
+                    
+                    behave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="practices/week5-3.html">
+            
+                <a href="practices/week5-3.html">
+            
+                    
+                    練習題：LOGO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="practices/week5-4.html">
+            
+                <a href="practices/week5-4.html">
+            
+                    
+                    練習題：登入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第六週 - 進階
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="pom.html">
+            
+                <a href="pom.html">
+            
+                    
+                    POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="practices/week6-1.html">
+            
+                <a href="practices/week6-1.html">
+            
+                    
+                    練習題：POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    經驗談分享
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    軟體測試路線圖
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    補充
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <a target="_blank" href="https://www.selenium.dev/documentation/en/">
+            
+                    
+                    Selenium 官方文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <a target="_blank" href="https://selenium-python.readthedocs.io/">
+            
+                    
+                    非官方文件 for Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <a target="_blank" href="https://www.w3.org/TR/webdriver1/">
+            
+                    
+                    W3C Webdriver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="cheat_sheet.html">
+            
+                <a href="cheat_sheet.html">
+            
+                    
+                    Python Cheat Sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="resource.html">
+            
+                <a href="resource.html">
+            
+                    
+                    測試相關資源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >定位元素</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B9A;&#x4F4D;&#x5143;&#x7D20;-locating-elements"><a name="&#x5B9A;&#x4F4D;&#x5143;&#x7D20;-locating-elements" class="plugin-anchor" href="#&#x5B9A;&#x4F4D;&#x5143;&#x7D20;-locating-elements"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x4F4D;&#x5143;&#x7D20; (Locating Elements)</h1>
+<p>&#x6709;&#x591A;&#x7A2E;&#x7B56;&#x7565;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8DDF;&#x81EA;&#x5DF1;&#x7684;&#x60C5;&#x6CC1;&#x9078;&#x64C7;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="&#x55AE;&#x4E00;&#x5143;&#x7D20;"><a name="&#x55AE;&#x4E00;&#x5143;&#x7D20;" class="plugin-anchor" href="#&#x55AE;&#x4E00;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x55AE;&#x4E00;&#x5143;&#x7D20;</h2>
+<p>&#x5373;&#x4F7F;&#x6709;&#x591A;&#x500B;&#x4E5F;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x500B;</p>
+<pre><code>find_element_by_id
+find_element_by_name
+find_element_by_xpath
+find_element_by_link_text
+find_element_by_partial_link_text
+find_element_by_tag_name
+find_element_by_class_name
+find_element_by_css_selector
+</code></pre><h2 id="&#x591A;&#x500B;&#x5143;&#x7D20;"><a name="&#x591A;&#x500B;&#x5143;&#x7D20;" class="plugin-anchor" href="#&#x591A;&#x500B;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x500B;&#x5143;&#x7D20;</h2>
+<p>&#x5982;&#x679C;&#x662F;&#x8981;&#x4E00;&#x6B21;&#x53D6;&#x591A;&#x500B;&#x5143;&#x7D20;&#xFF0C;&#x5247;&#x8981;&#x52A0; <code>s</code>&#x3002;</p>
+<pre><code>find_elements_by_name
+find_elements_by_xpath
+find_elements_by_link_text
+find_elements_by_partial_link_text
+find_elements_by_tag_name
+find_elements_by_class_name
+find_elements_by_css_selector
+</code></pre><h3 id="&#x53E6;&#x4E00;&#x7A2E;&#x5BEB;&#x6CD5;"><a name="&#x53E6;&#x4E00;&#x7A2E;&#x5BEB;&#x6CD5;" class="plugin-anchor" href="#&#x53E6;&#x4E00;&#x7A2E;&#x5BEB;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53E6;&#x4E00;&#x7A2E;&#x5BEB;&#x6CD5;</h3>
+<pre><code>find_element
+find_elements
+</code></pre><h3 id="&#x4F7F;&#x7528;&#x7BC4;&#x4F8B;"><a name="&#x4F7F;&#x7528;&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x7BC4;&#x4F8B;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+
+driver.find_element(By.XPATH, <span class="hljs-string">&apos;//button[text()=&quot;Some text&quot;]&apos;</span>)
+driver.find_elements(By.XPATH, <span class="hljs-string">&apos;//button&apos;</span>)
+</code></pre>
+<pre><code>ID = &quot;id&quot;
+XPATH = &quot;xpath&quot;
+LINK_TEXT = &quot;link text&quot;
+PARTIAL_LINK_TEXT = &quot;partial link text&quot;
+NAME = &quot;name&quot;
+TAG_NAME = &quot;tag name&quot;
+CLASS_NAME = &quot;class name&quot;
+CSS_SELECTOR = &quot;css selector&quot;
+</code></pre><h2 id="&#x900F;&#x904E;-id-&#x4F86;&#x9078;&#x53D6;"><a name="&#x900F;&#x904E;-id-&#x4F86;&#x9078;&#x53D6;" class="plugin-anchor" href="#&#x900F;&#x904E;-id-&#x4F86;&#x9078;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x900F;&#x904E; ID &#x4F86;&#x9078;&#x53D6;</h2>
+<p>&#x5E38;&#x898B;&#x65BC;&#x9078;&#x53D6;&#x552F;&#x4E00;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;loginForm&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;continue&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Login&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-python">login_form = driver.find_element_by_id(<span class="hljs-string">&apos;loginForm&apos;</span>)
+</code></pre>
+<h2 id="&#x900F;&#x904E;-class-name-&#x4F86;&#x9078;&#x53D6;"><a name="&#x900F;&#x904E;-class-name-&#x4F86;&#x9078;&#x53D6;" class="plugin-anchor" href="#&#x900F;&#x904E;-class-name-&#x4F86;&#x9078;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x900F;&#x904E; Class Name &#x4F86;&#x9078;&#x53D6;</h2>
+<p>&#x6BD4;&#x8F03;&#x5E38;&#x898B;&#x65BC;&#x4E00;&#x6B21;&#x9078;&#x53D6;&#x591A;&#x500B;&#x5143;&#x7D20;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>Site content goes here.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-python">content = driver.find_element_by_class_name(<span class="hljs-string">&apos;content&apos;</span>)
+</code></pre>
+<h2 id="&#x900F;&#x904E;-name-&#x4F86;&#x9078;&#x53D6;"><a name="&#x900F;&#x904E;-name-&#x4F86;&#x9078;&#x53D6;" class="plugin-anchor" href="#&#x900F;&#x904E;-name-&#x4F86;&#x9078;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x900F;&#x904E; Name &#x4F86;&#x9078;&#x53D6;</h2>
+<p>&#x5E38;&#x898B;&#x65BC;&#x9078;&#x53D6;&#x8868;&#x55AE;&#x5143;&#x7D20;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;loginForm&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;continue&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Login&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;continue&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Clear&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-python">username = driver.find_element_by_name(<span class="hljs-string">&apos;username&apos;</span>)
+password = driver.find_element_by_name(<span class="hljs-string">&apos;password&apos;</span>)
+</code></pre>
+<h2 id="&#x900F;&#x904E;-cssselector-&#x4F86;&#x9078;&#x53D6;"><a name="&#x900F;&#x904E;-cssselector-&#x4F86;&#x9078;&#x53D6;" class="plugin-anchor" href="#&#x900F;&#x904E;-cssselector-&#x4F86;&#x9078;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x900F;&#x904E; CSS_SELECTOR &#x4F86;&#x9078;&#x53D6;</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>Site content goes here.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-python">content = driver.find_element_by_css_selector(<span class="hljs-string">&apos;p.content&apos;</span>)
+</code></pre>
+<ul>
+<li><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS Selectors Reference</a></li>
+<li><a href="https://flukeout.github.io/" target="_blank">CSS Diner &#x5C0F;&#x904A;&#x6232;</a></li>
+</ul>
+<h2 id="&#x7E3D;&#x7D50;"><a name="&#x7E3D;&#x7D50;" class="plugin-anchor" href="#&#x7E3D;&#x7D50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7E3D;&#x7D50;</h2>
+<ul>
+<li>&#x6709;&#x9019;&#x9EBC;&#x591A;&#x7A2E;&#xFF0C;&#x5230;&#x5E95;&#x8A72;&#x7528;&#x54EA;&#x4E00;&#x7A2E;&#xFF1F;</li>
+<li>&#x5982;&#x679C; selector &#x898F;&#x5247;&#x5F88;&#x8907;&#x96DC;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x6709;&#x6C92;&#x6709;&#x5176;&#x4ED6;&#x8B8A;&#x901A;&#x65B9;&#x5F0F;&#xFF1F;</li>
+<li>&#x5176;&#x4ED6;&#x4E0D;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x4E0B;&#x9031;&#x518D;&#x8AAA;&#x660E;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="getting_started.html" class="navigation navigation-prev " aria-label="Previous page: 快速入門">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="repl.html" class="navigation navigation-next " aria-label="Next page: REPL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"定位元素","level":"1.2.5","depth":2,"next":{"title":"REPL","level":"1.2.6","depth":2,"path":"repl.md","ref":"repl.md","articles":[]},"previous":{"title":"快速入門","level":"1.2.4","depth":2,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"locating_elements.md","mtime":"2021-03-21T09:40:18.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T05:17:43.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
