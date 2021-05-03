@@ -3,12 +3,6 @@
 - 所謂的活文件 Living Document 意思是說，文件的會隨著時間、處境而跟著改變的。
 - 在軟體上；一份活的文件或動態文件就是一份不斷修改和更新的文件。
 
-### 支援活文件的框架
-
-- behave: <https://behave.readthedocs.io/en/stable/>
-- cucumber: <https://cucumber.io/>
-- ...
-
 ## Given When Then
 
 每個 scenario 可以分為三個部分：
