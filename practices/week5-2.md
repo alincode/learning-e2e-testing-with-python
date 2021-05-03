@@ -1,6 +1,6 @@
 # 練習題：API 測試
 
-- 測試 `https://reqres.in/api/users?page=1` API
+- 測試 GET `https://reqres.in/api/users?page=1` API
 
 ```json
 {
@@ -84,6 +84,37 @@ class ApiTest(unittest.TestCase):
             self.assertIn(row_key, ['id', 'email', 'first_name', 'last_name', 'avatar'])
         self.assertIsInstance(row["id"], int)
         self.assertEqual(row["id"], 2)
+
+if __name__ == '__main__':
+    unittest.main()
+``` -->
+
+- 測試 POST `https://reqres.in/api/login` API
+
+<!--
+### 解答
+
+```py
+import unittest
+import requests
+
+class ApiTest(unittest.TestCase):
+
+    def test_login(self):
+        url = "https://reqres.in/api/login"
+        req_body = {
+            "email": "eve.holt@reqres.in",
+            "password": "cityslicka"
+        }
+        res = requests.post(url, req_body)
+        self.assertEqual(res.status_code, 200)
+        body = res.json()
+        print(body)
+
+        for body_key in body.keys():
+            self.assertIn(body_key, ['token'])
+
+        self.assertIsInstance(body['token'], str)
 
 if __name__ == '__main__':
     unittest.main()
