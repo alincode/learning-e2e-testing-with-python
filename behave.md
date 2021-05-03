@@ -1,5 +1,7 @@
 # behave
 
+官方文件：<https://behave.readthedocs.io/en/stable/>
+
 ## 安裝
 
 ```
@@ -7,7 +9,33 @@ pip install behave
 pip install behave2cucumber
 ```
 
-## feature 範例
+## 配置
+
+### 最低限制
+
+```
+features/
+features/everything.feature
+features/steps/
+features/steps/steps.py
+```
+
+### 更複雜的例子
+
+```
+features/
+features/signup.feature
+features/login.feature
+features/account_details.feature
+features/environment.py
+features/steps/
+features/steps/website.py
+features/steps/utils.py
+```
+
+## 完整範例
+
+### feature 範例
 
 `/features/tutorial.feature`
 
@@ -20,7 +48,7 @@ Feature: showing off behave
       Then behave will test it for us!
 ```
 
-## step 範例
+### step 範例
 
 `features/steps/tutorial.py`
 
@@ -42,7 +70,7 @@ def step_then(context):
 
 - context: 可以用來...
 
-## 執行
+### 執行
 
 ```
 behave
@@ -55,6 +83,18 @@ behave --lang-help zh-TW
 ``` -->
 
 ![](assets/behave.png)
+
+## step 參數
+
+```
+# feature
+When Enter first name "AILIN" and last name "LIOU"
+```
+
+```
+@when(u'Enter first name "{first_name}" and last name "{last_name}"')
+def step_impl(context, first_name, last_name):
+```
 
 ## 參考文獻
 

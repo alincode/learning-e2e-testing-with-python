@@ -35,6 +35,8 @@
 - 這份規格並不是單純的敘述軟體的功能，而是一份「可以被執行的規格」，也就是可以被轉成自動化測試。
 - BDD 框架皆支援 Gherkin 語法，這是一種簡單易懂的語言，使用關鍵字來定義系統特徵和測試。
 
+<https://behave.readthedocs.io/en/stable/gherkin.html>
+
 ### BDD 常見的熱門框架
 
 - behave: <https://behave.readthedocs.io/en/stable/>
