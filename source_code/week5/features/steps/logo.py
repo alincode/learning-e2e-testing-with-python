@@ -1,6 +1,7 @@
 from behave import *
 from selenium import webdriver
 
+
 @given(u'launch chrome browser')
 def step_impl(context):
     context.driver = webdriver.Chrome("../chromedriver")
@@ -13,7 +14,8 @@ def step_impl(context):
 
 @then(u'verify that the logo present on page')
 def step_impl(context):
-    status = context.driver.find_element_by_css_selector("#divLogo img").is_displayed()
+    status = context.driver.find_element_by_css_selector(
+        "#divLogo img").is_displayed()
     assert status is True
 
 

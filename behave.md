@@ -6,7 +6,6 @@
 
 ```
 pip install behave
-pip install behave2cucumber
 ```
 
 ## 配置
@@ -143,3 +142,4 @@ def before_feature(context, feature):
 
 - [Part 1: Selenium with Python Behave (BDD) Introduction - YouTube](https://www.youtube.com/watch?v=JIyvAFBx2Fw)
 - [behave.example](https://github.com/behave/behave.example/tree/master/features)
+- [behave Examples and Tutorials](https://jenisys.github.io/behave.example/index.html)
