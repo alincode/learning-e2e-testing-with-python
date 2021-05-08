@@ -11,7 +11,7 @@ rebate_discount = 0.9
 
 def calculate_order(original_amount, is_vip):
     amount = original_amount
-    if original_amount > max_range:
+    if original_amount >= max_range:
         if is_vip:
             amount = original_amount * rebate_discount * vip_discount
         else:
