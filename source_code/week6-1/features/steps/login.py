@@ -1,6 +1,7 @@
 from behave import *
 from selenium import webdriver
 
+
 @given(u'I launch Chrome browser')
 def step_impl(context):
     context.driver = webdriver.Chrome("../chromedriver")
@@ -11,9 +12,9 @@ def step_impl(context):
     context.driver.get("https://opensource-demo.orangehrmlive.com/")
 
 
-@when(u'Enter username "{user}" and password "{password}"')
-def step_impl(context, user, password):
-    context.driver.find_element_by_id("txtUsername").send_keys(user)
+@when(u'Enter username "{username}" and password "{password}"')
+def step_impl(context, username, password):
+    context.driver.find_element_by_id("txtUsername").send_keys(username)
     context.driver.find_element_by_id("txtPassword").send_keys(password)
 
 

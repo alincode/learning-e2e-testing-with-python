@@ -1,8 +1,6 @@
 # POM (Page Object Model)
 
-POM (Page Object Model) 是一種設計模式。
-
-POM 的好處，如下所示：
+POM (Page Object Model) 是一種設計模式，好處有：
 
 - 易於閱讀的測試案例
 - 建立在多個測試案例之間共享，且可重複使用的程式碼。

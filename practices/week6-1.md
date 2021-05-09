@@ -8,8 +8,7 @@
 
 ![](assets/login_feature.png)
 
-<!--
-````
+```
 Feature: OrangeHRM Login
 
   Scenario: Login to OrangeHRM with valid parameters
@@ -18,7 +17,7 @@ Feature: OrangeHRM Login
     And Enter username "admin" and password "admin123"
     And Click on login button
     Then User must successfully login to the Dashboard Page
-``` -->
+```
 
 ## Step2
 
