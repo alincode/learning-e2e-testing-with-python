@@ -67,23 +67,7 @@ def step_then(context):
     assert context.failed is False
 ```
 
-- context: 可以用來...
-
-```
-Feature: Scenario Outline
- Scenario Outline: Blenders
-    Given I put <thing> in a blender
-    When I switch the blender on
-    Then it should transform into <other thing>
-  Examples: Amphibians
-    | thing         | other thing |
-    | Red Tree Frog | mush        |
-    | apples        | apple juice |
-  Examples: Consumer Electronics
-    | thing         | other thing |
-    | iPhone        | toxic waste |
-    | Galaxy Nexus  | toxic waste |
-```
+context 是一個全域物件，可以存放共同使用的物件。
 
 ### 執行
 
