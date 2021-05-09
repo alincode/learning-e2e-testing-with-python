@@ -49,20 +49,40 @@ behave --junit
 
 ## Allure 報表
 
-執行以下指令會產生一個 json 格式的檔案
+### Step1: 安裝 allure-behave
+
+```
+pip install allure-behave
+```
+
+### Step2：執行以下指令會產生一個 json 格式的檔案
 
 ```
 behave -f allure_behave.formatter:AllureFormatter -o allure_data
 ```
 
-在 MAC 上安裝 Allure
+### Step3: 安裝 Allure
+
+for Mace
 
 ```
-brew tap qameta/allure
 brew install allure
 ```
 
+### Step4:將 json 轉成 html 報告
+
+```
+allure generate allure_data -o allure_html
+```
+
+![](assets/allure2-real.png)
+
 ![](assets/allure2.png)
+
+## 練習題
+
+- 產生 Junit 報表
+- 產生 Allure json 檔
 
 ### 參考文獻
 
