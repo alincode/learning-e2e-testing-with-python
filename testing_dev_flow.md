@@ -30,12 +30,29 @@
 
 ### 什麼是 BDD？
 
+- BDD 想解決的問題是鼓勵技術人員跟非技術人員，一同參與測試計畫的定義。
+- BDD 框架皆支援 Gherkin 語法，這是一種簡單易懂的語言，使用關鍵字來定義系統特徵和測試。
 - TDD 是實作前先寫測試，BDD 比 TDD 更進一步在寫測試前，還要先寫測試規格。
 - 這份測試規格會用更接近人類語意的方式描述軟體功能和測試案例
 - 這份規格並不是單純的敘述軟體的功能，而是一份「可以被執行的規格」，也就是可以被轉成自動化測試。
-- BDD 框架皆支援 Gherkin 語法，這是一種簡單易懂的語言，使用關鍵字來定義系統特徵和測試。
 
 <https://behave.readthedocs.io/en/stable/gherkin.html>
+
+### Gherkin 語法
+
+```
+             And: * , 而且, 並且, 同時
+      Background: 背景
+             But: * , 但是
+        Examples: 例子
+         Feature: 功能
+           Given: * , 假如, 假設, 假定
+            Rule: Rule
+        Scenario: 場景, 劇本
+Scenario Outline: 場景大綱, 劇本大綱
+            Then: * , 那麼
+            When: * , 當
+```
 
 ### BDD 常見的熱門框架
 

@@ -46,3 +46,30 @@ behave --junit
 ![](assets/junit1.png)
 
 ![](assets/junit2.png)
+
+## Allure 報表
+
+執行以下指令會產生一個 json 格式的檔案
+
+```
+behave -f allure_behave.formatter:AllureFormatter -o allure_data
+```
+
+在 MAC 上安裝 Allure
+
+```
+brew tap qameta/allure
+brew install allure
+```
+
+![](assets/allure2.png)
+
+### 參考文獻
+
+- <https://github.com/behave/behave>
+- <https://docs.qameta.io/allure/#_installing_a_commandline>
+- <https://docs.qameta.io/allure/#_behave>
+
+## 補充：通知
+
+除此之外，產出報表通常也會一併發送測試的通知結果。可以透過 CI 工具，例如 [Jenkins](https://www.jenkins.io/) 來達到排程執行和發送通知結果。

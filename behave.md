@@ -92,12 +92,29 @@ behave
 behave /features/tutorial.feature
 ```
 
-<!-- ```
+![](assets/behave.png)
+
+### 支援其他語言
+
+```
 behave --lang-list
 behave --lang-help zh-TW
-``` -->
+```
 
-![](assets/behave.png)
+```
+Translations for Chinese traditional / 繁體中文
+             And: * , 而且, 並且, 同時
+      Background: 背景
+             But: * , 但是
+        Examples: 例子
+         Feature: 功能
+           Given: * , 假如, 假設, 假定
+            Rule: Rule
+        Scenario: 場景, 劇本
+Scenario Outline: 場景大綱, 劇本大綱
+            Then: * , 那麼
+            When: * , 當
+```
 
 ## step 參數
 
@@ -110,36 +127,3 @@ When Enter first name "AILIN" and last name "LIOU"
 @when(u'Enter first name "{first_name}" and last name "{last_name}"')
 def step_impl(context, first_name, last_name):
 ```
-
-## Environmental Controls
-
-<https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls>
-
-```py
-# -- FILE: features/environment.py
-from behave import fixture, use_fixture
-from behave4my_project.fixtures import wsgi_server
-from selenium import webdriver
-
-@fixture
-def selenium_browser_chrome(context):
-    # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
-    context.browser = webdriver.Chrome()
-    yield context.browser
-    # -- CLEANUP-FIXTURE PART:
-    context.browser.quit()
-
-def before_all(context):
-    use_fixture(wsgi_server, context, port=8000)
-    use_fixture(selenium_browser_chrome, context)
-    # -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
-
-def before_feature(context, feature):
-    model.init(environment='test')
-```
-
-## 參考文獻
-
-- [Part 1: Selenium with Python Behave (BDD) Introduction - YouTube](https://www.youtube.com/watch?v=JIyvAFBx2Fw)
-- [behave.example](https://github.com/behave/behave.example/tree/master/features)
-- [behave Examples and Tutorials](https://jenisys.github.io/behave.example/index.html)
