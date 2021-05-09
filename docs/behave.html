@@ -349,7 +349,7 @@
                 <a href="navigating.html">
             
                     
-                    導航 (Navigating)
+                    導航
             
                 </a>
             
@@ -784,20 +784,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" >
-            
-                <span>
-            
-                    
-                    通知
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.3" data-path="practices/week6-1.html">
+        <li class="chapter " data-level="1.7.2" data-path="practices/week6-1.html">
             
                 <a href="practices/week6-1.html">
             
@@ -810,7 +797,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="organization.html">
+        <li class="chapter " data-level="1.7.3" data-path="organization.html">
             
                 <a href="organization.html">
             
@@ -823,7 +810,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="pom.html">
+        <li class="chapter " data-level="1.7.4" data-path="pom.html">
             
                 <a href="pom.html">
             
@@ -836,7 +823,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="practices/week6-2.html">
+        <li class="chapter " data-level="1.7.5" data-path="practices/week6-2.html">
             
                 <a href="practices/week6-2.html">
             
@@ -849,7 +836,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.7" data-path="experience-talks.html">
+        <li class="chapter " data-level="1.7.6" data-path="experience-talks.html">
             
                 <a href="experience-talks.html">
             
@@ -862,7 +849,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.8" data-path="road-map.md">
+        <li class="chapter " data-level="1.7.7" data-path="road-map.md">
             
                 <span>
             
@@ -875,7 +862,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.9" data-path="download.html">
+        <li class="chapter " data-level="1.7.8" data-path="download.html">
             
                 <a href="download.html">
             
@@ -1085,46 +1072,28 @@ features/steps/utils.py
 </code></pre><h3 id="&#x57F7;&#x884C;"><a name="&#x57F7;&#x884C;" class="plugin-anchor" href="#&#x57F7;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57F7;&#x884C;</h3>
 <pre><code>behave
 behave /features/tutorial.feature
-</code></pre><!-- ```
-behave --lang-list
+</code></pre><p><img src="assets/behave.png" alt=""></p>
+<h3 id="&#x652F;&#x63F4;&#x5176;&#x4ED6;&#x8A9E;&#x8A00;"><a name="&#x652F;&#x63F4;&#x5176;&#x4ED6;&#x8A9E;&#x8A00;" class="plugin-anchor" href="#&#x652F;&#x63F4;&#x5176;&#x4ED6;&#x8A9E;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x652F;&#x63F4;&#x5176;&#x4ED6;&#x8A9E;&#x8A00;</h3>
+<pre><code>behave --lang-list
 behave --lang-help zh-TW
-``` -->
-<p><img src="assets/behave.png" alt=""></p>
-<h2 id="step-&#x53C3;&#x6578;"><a name="step-&#x53C3;&#x6578;" class="plugin-anchor" href="#step-&#x53C3;&#x6578;"><i class="fa fa-link" aria-hidden="true"></i></a>step &#x53C3;&#x6578;</h2>
+</code></pre><pre><code>Translations for Chinese traditional / &#x7E41;&#x9AD4;&#x4E2D;&#x6587;
+             And: * , &#x800C;&#x4E14;, &#x4E26;&#x4E14;, &#x540C;&#x6642;
+      Background: &#x80CC;&#x666F;
+             But: * , &#x4F46;&#x662F;
+        Examples: &#x4F8B;&#x5B50;
+         Feature: &#x529F;&#x80FD;
+           Given: * , &#x5047;&#x5982;, &#x5047;&#x8A2D;, &#x5047;&#x5B9A;
+            Rule: Rule
+        Scenario: &#x5834;&#x666F;, &#x5287;&#x672C;
+Scenario Outline: &#x5834;&#x666F;&#x5927;&#x7DB1;, &#x5287;&#x672C;&#x5927;&#x7DB1;
+            Then: * , &#x90A3;&#x9EBC;
+            When: * , &#x7576;
+</code></pre><h2 id="step-&#x53C3;&#x6578;"><a name="step-&#x53C3;&#x6578;" class="plugin-anchor" href="#step-&#x53C3;&#x6578;"><i class="fa fa-link" aria-hidden="true"></i></a>step &#x53C3;&#x6578;</h2>
 <pre><code># feature
 When Enter first name &quot;AILIN&quot; and last name &quot;LIOU&quot;
 </code></pre><pre><code>@when(u&apos;Enter first name &quot;{first_name}&quot; and last name &quot;{last_name}&quot;&apos;)
 def step_impl(context, first_name, last_name):
-</code></pre><h2 id="environmental-controls"><a name="environmental-controls" class="plugin-anchor" href="#environmental-controls"><i class="fa fa-link" aria-hidden="true"></i></a>Environmental Controls</h2>
-<p><a href="https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls" target="_blank">https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls</a></p>
-<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: features/environment.py</span>
-<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture, use_fixture
-<span class="hljs-keyword">from</span> behave4my_project.fixtures <span class="hljs-keyword">import</span> wsgi_server
-<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
-
-<span class="hljs-meta">@fixture</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selenium_browser_chrome</span><span class="hljs-params">(context)</span>:</span>
-    <span class="hljs-comment"># -- HINT: @behave.fixture is similar to @contextlib.contextmanager</span>
-    context.browser = webdriver.Chrome()
-    <span class="hljs-keyword">yield</span> context.browser
-    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
-    context.browser.quit()
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_all</span><span class="hljs-params">(context)</span>:</span>
-    use_fixture(wsgi_server, context, port=<span class="hljs-number">8000</span>)
-    use_fixture(selenium_browser_chrome, context)
-    <span class="hljs-comment"># -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.</span>
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
-    model.init(environment=<span class="hljs-string">&apos;test&apos;</span>)
 </code></pre>
-<h2 id="&#x53C3;&#x8003;&#x6587;&#x737B;"><a name="&#x53C3;&#x8003;&#x6587;&#x737B;" class="plugin-anchor" href="#&#x53C3;&#x8003;&#x6587;&#x737B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C3;&#x8003;&#x6587;&#x737B;</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=JIyvAFBx2Fw" target="_blank">Part 1: Selenium with Python Behave (BDD) Introduction - YouTube</a></li>
-<li><a href="https://github.com/behave/behave.example/tree/master/features" target="_blank">behave.example</a></li>
-<li><a href="https://jenisys.github.io/behave.example/index.html" target="_blank">behave Examples and Tutorials</a></li>
-</ul>
-
                                 
                                 </section>
                             
@@ -1167,7 +1136,7 @@ def step_impl(context, first_name, last_name):
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"behave","level":"1.6.7","depth":2,"next":{"title":"練習題：LOGO","level":"1.6.8","depth":2,"path":"practices/week5-3.md","ref":"practices/week5-3.md","articles":[]},"previous":{"title":"常見開發流程","level":"1.6.6","depth":2,"path":"testing_dev_flow.md","ref":"testing_dev_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"behave.md","mtime":"2021-05-08T00:51:04.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T00:51:13.030Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"behave","level":"1.6.7","depth":2,"next":{"title":"練習題：LOGO","level":"1.6.8","depth":2,"path":"practices/week5-3.md","ref":"practices/week5-3.md","articles":[]},"previous":{"title":"常見開發流程","level":"1.6.6","depth":2,"path":"testing_dev_flow.md","ref":"testing_dev_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"behave.md","mtime":"2021-05-09T02:03:39.379Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T02:03:45.132Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
