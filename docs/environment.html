@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>REPL · 網站自動化測試 for Python</title>
+        <title>environment 模組 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="practices/week1.html" />
+    <link rel="next" href="fixture.html" />
     
     
-    <link rel="prev" href="locating_elements.html" />
+    <link rel="prev" href="organization.html" />
     
 
     </head>
@@ -221,7 +221,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="repl.html">
+        <li class="chapter " data-level="1.2.6" data-path="repl.html">
             
                 <a href="repl.html">
             
@@ -816,7 +816,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.2.1" data-path="environment.html">
+        <li class="chapter active" data-level="1.7.2.1" data-path="environment.html">
             
                 <a href="environment.html">
             
@@ -1057,7 +1057,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >REPL</a>
+        <a href="." >environment 模組</a>
     </h1>
 </div>
 
@@ -1072,15 +1072,91 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="repl"><a name="repl" class="plugin-anchor" href="#repl"><i class="fa fa-link" aria-hidden="true"></i></a>REPL</h1>
-<p>Read-Eval-Print Loop &#x7C21;&#x7A31; <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>&#xFF0C;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x958B;&#x767C;&#x74B0;&#x5883;&#xFF0C;&#x5E38;&#x4F7F;&#x7528;&#x65BC;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x8A9E;&#x6CD5;&#x6E2C;&#x8A66;&#x6216; debug&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x8F38;&#x5165; <code>python</code> &#x958B;&#x59CB;&#x5B83;&#x3002;</p>
-<pre><code>% python
+                                <h1 id="environment-&#x6A21;&#x7D44;"><a name="environment-&#x6A21;&#x7D44;" class="plugin-anchor" href="#environment-&#x6A21;&#x7D44;"><i class="fa fa-link" aria-hidden="true"></i></a>environment &#x6A21;&#x7D44;</h1>
+<p>environment &#x6A21;&#x7D44;&#x9867;&#x540D;&#x601D;&#x7FA9;&#x5C31;&#x662F;&#x96C6;&#x4E2D;&#x5B9A;&#x7FA9;&#x7279;&#x5B9A;&#x74B0;&#x5883;&#x884C;&#x70BA;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5E38;&#x4F7F;&#x7528;&#x65BC;&#x5728;&#x57F7;&#x884C;&#x6E2C;&#x8A66;&#x4E4B;&#x524D;&#x6216;&#x4E4B;&#x5F8C;&#x7684;&#xFF0C;&#x9810;&#x8F09;&#x6216;&#x5378;&#x9664;&#x3002;&#x6B64;&#x6A21;&#x7D44;&#x4E3B;&#x8981;&#x662F;&#x5B9A;&#x7FA9;&#x6E2C;&#x8A66;&#x8DD1;&#x4E4B;&#x524D;&#x6216;&#x4E4B;&#x5F8C;&#x7684;&#x7279;&#x5B9A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<ul>
+<li>before_step(context, step), after_step(context, step)</li>
+<li>before_scenario(context, scenario), after_scenario(context, scenario)</li>
+<li>before_feature(context, feature), after_feature(context, feature)</li>
+<li>before_tag(context, tag), after_tag(context, tag)</li>
+<li>before_all(context), after_all(context)</li>
+</ul>
+<h3 id="&#x7BC4;&#x4F8B;&#x4E00;"><a name="&#x7BC4;&#x4F8B;&#x4E00;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E00;</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># features/environment.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_all</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;=====Before ALL=====&apos;</span>)
 
-Python 3.8.5 (default, Jul 21 2020, 10:42:08)
-[Clang 11.0.0 (clang-1100.0.33.17)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_all</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;=====After ALL=====&apos;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;Decorators feature 2&apos;</span> <span class="hljs-keyword">in</span> str(feature):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;====Before Feature====&apos;</span> + str(feature))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;Decorators feature 2&apos;</span> <span class="hljs-keyword">in</span> str(feature):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;====After Feature====&apos;</span> + str(feature))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_scenario</span><span class="hljs-params">(context, scenario)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;Decorators check case 4&apos;</span> <span class="hljs-keyword">in</span> str(scenario):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;===Before Scenario===&apos;</span> + str(scenario))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_scenario</span><span class="hljs-params">(context, scenario)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;Decorators check case 4&apos;</span> <span class="hljs-keyword">in</span> str(scenario):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;===After Scenario===&apos;</span> + str(scenario))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_step</span><span class="hljs-params">(context, step)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;I start decorators check case 2&apos;</span> <span class="hljs-keyword">in</span> str(step):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;==Before Step==&apos;</span> + str(step))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_step</span><span class="hljs-params">(context, step)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;I start decorators check case 2&apos;</span> <span class="hljs-keyword">in</span> str(step):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;==After Step==&apos;</span> + str(step))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_tag</span><span class="hljs-params">(context, tag)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;tag1&apos;</span> <span class="hljs-keyword">in</span> str(tag):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;=Before Tag=&apos;</span> + str(tag))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_tag</span><span class="hljs-params">(context, tag)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;tag1&apos;</span> <span class="hljs-keyword">in</span> str(tag):
+        <span class="hljs-keyword">print</span> (<span class="hljs-string">&apos;=After Tag=&apos;</span> + str(tag))
 </code></pre>
+<h3 id="&#x7BC4;&#x4F8B;&#x4E8C;"><a name="&#x7BC4;&#x4F8B;&#x4E8C;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E8C;</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: features/environment.py</span>
+<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture, use_fixture
+<span class="hljs-keyword">from</span> behave4my_project.fixtures <span class="hljs-keyword">import</span> wsgi_server
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+<span class="hljs-meta">@fixture</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selenium_browser_chrome</span><span class="hljs-params">(context)</span>:</span>
+    <span class="hljs-comment"># -- HINT: @behave.fixture is similar to @contextlib.contextmanager</span>
+    context.browser = webdriver.Chrome()
+    <span class="hljs-keyword">yield</span> context.browser
+    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
+    context.browser.quit()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_all</span><span class="hljs-params">(context)</span>:</span>
+    use_fixture(wsgi_server, context, port=<span class="hljs-number">8000</span>)
+    use_fixture(selenium_browser_chrome, context)
+    <span class="hljs-comment"># -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    model.init(environment=<span class="hljs-string">&apos;test&apos;</span>)
+</code></pre>
+<ul>
+<li><a href="https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls" target="_blank">https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls</a></li>
+<li><a href="https://github.com/behave/behave.example/blob/master/features/environment.py" target="_blank">environment.py</a></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -1107,12 +1183,12 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
             
                 
-                <a href="locating_elements.html" class="navigation navigation-prev " aria-label="Previous page: 定位元素">
+                <a href="organization.html" class="navigation navigation-prev " aria-label="Previous page: 組織測試專案">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="practices/week1.html" class="navigation navigation-next " aria-label="Next page: 練習題：測試計算機">
+                <a href="fixture.html" class="navigation navigation-next " aria-label="Next page: fixture 模組">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1123,7 +1199,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REPL","level":"1.2.6","depth":2,"next":{"title":"練習題：測試計算機","level":"1.2.7","depth":2,"path":"practices/week1.md","ref":"practices/week1.md","articles":[]},"previous":{"title":"定位元素","level":"1.2.5","depth":2,"path":"locating_elements.md","ref":"locating_elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"repl.md","mtime":"2021-03-19T15:38:09.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"environment 模組","level":"1.7.2.1","depth":3,"next":{"title":"fixture 模組","level":"1.7.2.2","depth":3,"path":"fixture.md","ref":"fixture.md","articles":[]},"previous":{"title":"組織測試專案","level":"1.7.2","depth":2,"path":"organization.md","ref":"organization.md","articles":[{"title":"environment 模組","level":"1.7.2.1","depth":3,"path":"environment.md","ref":"environment.md","articles":[]},{"title":"fixture 模組","level":"1.7.2.2","depth":3,"path":"fixture.md","ref":"fixture.md","articles":[]},{"title":"Scenario Outline","level":"1.7.2.3","depth":3,"path":"outline.md","ref":"outline.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"environment.md","mtime":"2021-05-09T07:22:35.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

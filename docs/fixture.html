@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>REPL · 網站自動化測試 for Python</title>
+        <title>fixture 模組 · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="practices/week1.html" />
+    <link rel="next" href="outline.html" />
     
     
-    <link rel="prev" href="locating_elements.html" />
+    <link rel="prev" href="environment.html" />
     
 
     </head>
@@ -221,7 +221,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="repl.html">
+        <li class="chapter " data-level="1.2.6" data-path="repl.html">
             
                 <a href="repl.html">
             
@@ -829,7 +829,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.2" data-path="fixture.html">
+        <li class="chapter active" data-level="1.7.2.2" data-path="fixture.html">
             
                 <a href="fixture.html">
             
@@ -1057,7 +1057,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >REPL</a>
+        <a href="." >fixture 模組</a>
     </h1>
 </div>
 
@@ -1072,15 +1072,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="repl"><a name="repl" class="plugin-anchor" href="#repl"><i class="fa fa-link" aria-hidden="true"></i></a>REPL</h1>
-<p>Read-Eval-Print Loop &#x7C21;&#x7A31; <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>&#xFF0C;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x958B;&#x767C;&#x74B0;&#x5883;&#xFF0C;&#x5E38;&#x4F7F;&#x7528;&#x65BC;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x8A9E;&#x6CD5;&#x6E2C;&#x8A66;&#x6216; debug&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x8F38;&#x5165; <code>python</code> &#x958B;&#x59CB;&#x5B83;&#x3002;</p>
-<pre><code>% python
+                                <h1 id="fixture-&#x6A21;&#x7D44;"><a name="fixture-&#x6A21;&#x7D44;" class="plugin-anchor" href="#fixture-&#x6A21;&#x7D44;"><i class="fa fa-link" aria-hidden="true"></i></a>fixture &#x6A21;&#x7D44;</h1>
+<p>fixture &#x6A21;&#x7D44;&#xFF0C;&#x5E38;&#x4F7F;&#x7528;&#x65BC;&#x653E;&#x7F6E;&#x56FA;&#x5B9A;&#x914D;&#x7F6E;&#x3001;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#xFF0C;&#x4F8B;&#x5982;&#x555F;&#x52D5; API Server&#x3001;&#x9023;&#x63A5; DB&#x3001;&#x8F09;&#x5165;&#x5047;&#x8CC7;&#x6599;&#x7B49;&#x7B49;&#x3002;</p>
+<h3 id="&#x7BC4;&#x4F8B;&#x4E00;"><a name="&#x7BC4;&#x4F8B;&#x4E00;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E00;</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: behave4my_project/fixtures.py  (or in: features/environment.py)</span>
+<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture
+<span class="hljs-keyword">from</span> somewhere.browser.firefox <span class="hljs-keyword">import</span> FirefoxBrowser
 
-Python 3.8.5 (default, Jul 21 2020, 10:42:08)
-[Clang 11.0.0 (clang-1100.0.33.17)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
+<span class="hljs-comment"># -- FIXTURE: Use generator-function</span>
+<span class="hljs-meta">@fixture</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">browser_firefox</span><span class="hljs-params">(context, timeout=<span class="hljs-number">30</span>, **kwargs)</span>:</span>
+    <span class="hljs-comment"># -- SETUP-FIXTURE PART:</span>
+    context.browser = FirefoxBrowser(timeout, **kwargs)
+    <span class="hljs-keyword">yield</span> context.browser
+    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
+    context.browser.shutdown()
 </code></pre>
+<h3 id="&#x7BC4;&#x4F8B;&#x4E8C;"><a name="&#x7BC4;&#x4F8B;&#x4E8C;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E8C;</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: behave4my_project/fixtures.py</span>
+<span class="hljs-comment"># ALTERNATIVE: Place fixture in &quot;features/environment.py&quot; (but reuse is harder)</span>
+<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture
+<span class="hljs-keyword">import</span> threading
+<span class="hljs-keyword">from</span> wsgiref <span class="hljs-keyword">import</span> simple_server
+<span class="hljs-keyword">from</span> my_application <span class="hljs-keyword">import</span> model
+<span class="hljs-keyword">from</span> my_application <span class="hljs-keyword">import</span> web_app
+
+<span class="hljs-meta">@fixture</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wsgi_server</span><span class="hljs-params">(context, port=<span class="hljs-number">8000</span>)</span>:</span>
+    context.server = simple_server.WSGIServer((<span class="hljs-string">&apos;&apos;</span>, port))
+    context.server.set_app(web_app.main(environment=<span class="hljs-string">&apos;test&apos;</span>))
+    context.thread = threading.Thread(target=context.server.serve_forever)
+    context.thread.start()
+    <span class="hljs-keyword">yield</span> context.server
+    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
+    context.server.shutdown()
+    context.thread.join()
+</code></pre>
+<ul>
+<li><a href="https://behave.readthedocs.io/en/stable/fixtures.html#docid-fixtures" target="_blank">https://behave.readthedocs.io/en/stable/fixtures.html#docid-fixtures</a></li>
+</ul>
+<h2 id="controlling-things-with-tags"><a name="controlling-things-with-tags" class="plugin-anchor" href="#controlling-things-with-tags"><i class="fa fa-link" aria-hidden="true"></i></a>Controlling Things With Tags</h2>
+<p>steps/testutil.py</p>
+<pre><code class="lang-py"><span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+Test utility support.
+&quot;&quot;&quot;</span>
+
+<span class="hljs-comment"># @mark.test_support</span>
+<span class="hljs-comment"># ----------------------------------------------------------------------------</span>
+<span class="hljs-comment"># TEST SUPPORT:</span>
+<span class="hljs-comment"># ----------------------------------------------------------------------------</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NamedNumber</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Map named numbers into numbers.&quot;&quot;&quot;</span>
+    MAP = {
+        <span class="hljs-string">&quot;one&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;two&quot;</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;three&quot;</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">&quot;four&quot;</span>:  <span class="hljs-number">4</span>,
+        <span class="hljs-string">&quot;five&quot;</span>:  <span class="hljs-number">5</span>,
+        <span class="hljs-string">&quot;six&quot;</span>:   <span class="hljs-number">6</span>,
+    }
+
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">from_string</span><span class="hljs-params">(cls, named_number)</span>:</span>
+        name = named_number.strip().lower()
+        <span class="hljs-keyword">return</span> cls.MAP[name]
+</code></pre>
+
                                 
                                 </section>
                             
@@ -1107,12 +1165,12 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
             
                 
-                <a href="locating_elements.html" class="navigation navigation-prev " aria-label="Previous page: 定位元素">
+                <a href="environment.html" class="navigation navigation-prev " aria-label="Previous page: environment 模組">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="practices/week1.html" class="navigation navigation-next " aria-label="Next page: 練習題：測試計算機">
+                <a href="outline.html" class="navigation navigation-next " aria-label="Next page: Scenario Outline">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1123,7 +1181,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REPL","level":"1.2.6","depth":2,"next":{"title":"練習題：測試計算機","level":"1.2.7","depth":2,"path":"practices/week1.md","ref":"practices/week1.md","articles":[]},"previous":{"title":"定位元素","level":"1.2.5","depth":2,"path":"locating_elements.md","ref":"locating_elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"repl.md","mtime":"2021-03-19T15:38:09.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"fixture 模組","level":"1.7.2.2","depth":3,"next":{"title":"Scenario Outline","level":"1.7.2.3","depth":3,"path":"outline.md","ref":"outline.md","articles":[]},"previous":{"title":"environment 模組","level":"1.7.2.1","depth":3,"path":"environment.md","ref":"environment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"fixture.md","mtime":"2021-05-09T07:22:35.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

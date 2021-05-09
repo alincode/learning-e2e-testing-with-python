@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>REPL · 網站自動化測試 for Python</title>
+        <title>Scenario Outline · 網站自動化測試 for Python</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="practices/week1.html" />
+    <link rel="next" href="pom.html" />
     
     
-    <link rel="prev" href="locating_elements.html" />
+    <link rel="prev" href="fixture.html" />
     
 
     </head>
@@ -221,7 +221,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="repl.html">
+        <li class="chapter " data-level="1.2.6" data-path="repl.html">
             
                 <a href="repl.html">
             
@@ -842,7 +842,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.3" data-path="outline.html">
+        <li class="chapter active" data-level="1.7.2.3" data-path="outline.html">
             
                 <a href="outline.html">
             
@@ -1057,7 +1057,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >REPL</a>
+        <a href="." >Scenario Outline</a>
     </h1>
 </div>
 
@@ -1072,14 +1072,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="repl"><a name="repl" class="plugin-anchor" href="#repl"><i class="fa fa-link" aria-hidden="true"></i></a>REPL</h1>
-<p>Read-Eval-Print Loop &#x7C21;&#x7A31; <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>&#xFF0C;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x958B;&#x767C;&#x74B0;&#x5883;&#xFF0C;&#x5E38;&#x4F7F;&#x7528;&#x65BC;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x8A9E;&#x6CD5;&#x6E2C;&#x8A66;&#x6216; debug&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x8F38;&#x5165; <code>python</code> &#x958B;&#x59CB;&#x5B83;&#x3002;</p>
-<pre><code>% python
+                                <h1 id="scenario-outline"><a name="scenario-outline" class="plugin-anchor" href="#scenario-outline"><i class="fa fa-link" aria-hidden="true"></i></a>Scenario Outline</h1>
+<pre><code>Feature: Demo2for various keywords used in Behave
 
-Python 3.8.5 (default, Jul 21 2020, 10:42:08)
-[Clang 11.0.0 (clang-1100.0.33.17)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
+ Scenario: Normal test case stages with And But keywords
+    Given Some precondition specific to this scenario
+     When I perform some action
+      And I perform additional action
+     Then Expected results should be shown
+      But Unwanted results should not be shown
+
+ Scenario Outline: Search product using mobile system with Examples
+    Given Consider mobile device with OS type as &quot;&lt;os_type&gt;&quot;
+     When I perform mobile os specific action
+     Then Respective os specific &quot;&lt;preferred_browser&gt;&quot; browser should be launched
+
+   Examples:
+   | os_type | preferred_browser    |
+   | android | chrome               |
+   | ios     | safari               |
+   | windows | internet_explorer    |
 </code></pre>
                                 
                                 </section>
@@ -1107,12 +1119,12 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
             
                 
-                <a href="locating_elements.html" class="navigation navigation-prev " aria-label="Previous page: 定位元素">
+                <a href="fixture.html" class="navigation navigation-prev " aria-label="Previous page: fixture 模組">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="practices/week1.html" class="navigation navigation-next " aria-label="Next page: 練習題：測試計算機">
+                <a href="pom.html" class="navigation navigation-next " aria-label="Next page: POM">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1123,7 +1135,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REPL","level":"1.2.6","depth":2,"next":{"title":"練習題：測試計算機","level":"1.2.7","depth":2,"path":"practices/week1.md","ref":"practices/week1.md","articles":[]},"previous":{"title":"定位元素","level":"1.2.5","depth":2,"path":"locating_elements.md","ref":"locating_elements.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"repl.md","mtime":"2021-03-19T15:38:09.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scenario Outline","level":"1.7.2.3","depth":3,"next":{"title":"POM","level":"1.7.3","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},"previous":{"title":"fixture 模組","level":"1.7.2.2","depth":3,"path":"fixture.md","ref":"fixture.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"outline.md","mtime":"2021-05-09T07:22:35.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

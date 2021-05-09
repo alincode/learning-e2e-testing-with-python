@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pom.html" />
+    <link rel="next" href="environment.html" />
     
     
-    <link rel="prev" href="practices/week6-1.html" />
+    <link rel="prev" href="report.html" />
     
 
     </head>
@@ -659,14 +659,15 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.6.2" data-path="practices/week5-1.html">
+        <li class="chapter " data-level="1.6.1.1" data-path="practices/week5-1.html">
             
                 <a href="practices/week5-1.html">
             
                     
-                    練習題：單元測試
+                    練習題
             
                 </a>
             
@@ -674,7 +675,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="api_testing.html">
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="api_testing.html">
             
                 <a href="api_testing.html">
             
@@ -685,14 +691,15 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.6.4" data-path="practices/week5-2.html">
+        <li class="chapter " data-level="1.6.2.1" data-path="practices/week5-2.html">
             
                 <a href="practices/week5-2.html">
             
                     
-                    練習題：API 測試
+                    練習題
             
                 </a>
             
@@ -700,7 +707,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="living_document.html">
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="living_document.html">
             
                 <a href="living_document.html">
             
@@ -713,7 +725,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="testing_dev_flow.html">
+        <li class="chapter " data-level="1.6.4" data-path="testing_dev_flow.html">
             
                 <a href="testing_dev_flow.html">
             
@@ -726,7 +738,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="behave.html">
+        <li class="chapter " data-level="1.6.5" data-path="behave.html">
             
                 <a href="behave.html">
             
@@ -737,9 +749,10 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.6.8" data-path="practices/week5-3.html">
+        <li class="chapter " data-level="1.6.5.1" data-path="practices/week5-3.html">
             
                 <a href="practices/week5-3.html">
             
@@ -749,6 +762,11 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -784,20 +802,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="practices/week6-1.html">
-            
-                <a href="practices/week6-1.html">
-            
-                    
-                    練習題：登入
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.7.3" data-path="organization.html">
+        <li class="chapter active" data-level="1.7.2" data-path="organization.html">
             
                 <a href="organization.html">
             
@@ -808,14 +813,72 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    environment 模組
+            
+                </a>
+            
+
+            
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="pom.html">
+        <li class="chapter " data-level="1.7.2.2" data-path="fixture.html">
+            
+                <a href="fixture.html">
+            
+                    
+                    fixture 模組
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="outline.html">
+            
+                <a href="outline.html">
+            
+                    
+                    Scenario Outline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="pom.html">
             
                 <a href="pom.html">
             
                     
                     POM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="practices/week6-1.html">
+            
+                <a href="practices/week6-1.html">
+            
+                    
+                    練習題：登入
             
                 </a>
             
@@ -1025,112 +1088,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="environment"><a name="environment" class="plugin-anchor" href="#environment"><i class="fa fa-link" aria-hidden="true"></i></a>environment</h2>
-<p><code>environment.py</code> &#x6A21;&#x7D44;&#x4E3B;&#x8981;&#x662F;&#x5B9A;&#x7FA9;&#x6E2C;&#x8A66;&#x8DD1;&#x4E4B;&#x524D;&#x6216;&#x4E4B;&#x5F8C;&#x7684;&#x7279;&#x5B9A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<ul>
-<li>before_step(context, step), after_step(context, step)</li>
-<li>before_scenario(context, scenario), after_scenario(context, scenario)</li>
-<li>before_feature(context, feature), after_feature(context, feature)</li>
-<li>before_tag(context, tag), after_tag(context, tag)</li>
-<li>before_all(context), after_all(context)</li>
-</ul>
-<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: features/environment.py</span>
-<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> *
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_tag</span><span class="hljs-params">(context, tag)</span>:</span>
-</code></pre>
-<h3 id="environment-&#x7BC4;&#x4F8B;"><a name="environment-&#x7BC4;&#x4F8B;" class="plugin-anchor" href="#environment-&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>environment &#x7BC4;&#x4F8B;</h3>
-<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: features/environment.py</span>
-<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture, use_fixture
-<span class="hljs-keyword">from</span> behave4my_project.fixtures <span class="hljs-keyword">import</span> wsgi_server
-<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
-
-<span class="hljs-meta">@fixture</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selenium_browser_chrome</span><span class="hljs-params">(context)</span>:</span>
-    <span class="hljs-comment"># -- HINT: @behave.fixture is similar to @contextlib.contextmanager</span>
-    context.browser = webdriver.Chrome()
-    <span class="hljs-keyword">yield</span> context.browser
-    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
-    context.browser.quit()
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_all</span><span class="hljs-params">(context)</span>:</span>
-    use_fixture(wsgi_server, context, port=<span class="hljs-number">8000</span>)
-    use_fixture(selenium_browser_chrome, context)
-    <span class="hljs-comment"># -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.</span>
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
-    model.init(environment=<span class="hljs-string">&apos;test&apos;</span>)
-</code></pre>
-<ul>
-<li><a href="https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls" target="_blank">https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls</a></li>
-<li><a href="https://github.com/behave/behave.example/blob/master/features/environment.py" target="_blank">environment.py</a></li>
-</ul>
-<h2 id="fixtures"><a name="fixtures" class="plugin-anchor" href="#fixtures"><i class="fa fa-link" aria-hidden="true"></i></a>Fixtures</h2>
-<h3 id="&#x7BC4;&#x4F8B;&#x4E00;"><a name="&#x7BC4;&#x4F8B;&#x4E00;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E00;</h3>
-<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: behave4my_project/fixtures.py  (or in: features/environment.py)</span>
-<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture
-<span class="hljs-keyword">from</span> somewhere.browser.firefox <span class="hljs-keyword">import</span> FirefoxBrowser
-
-<span class="hljs-comment"># -- FIXTURE: Use generator-function</span>
-<span class="hljs-meta">@fixture</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">browser_firefox</span><span class="hljs-params">(context, timeout=<span class="hljs-number">30</span>, **kwargs)</span>:</span>
-    <span class="hljs-comment"># -- SETUP-FIXTURE PART:</span>
-    context.browser = FirefoxBrowser(timeout, **kwargs)
-    <span class="hljs-keyword">yield</span> context.browser
-    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
-    context.browser.shutdown()
-</code></pre>
-<h3 id="&#x7BC4;&#x4F8B;&#x4E8C;"><a name="&#x7BC4;&#x4F8B;&#x4E8C;" class="plugin-anchor" href="#&#x7BC4;&#x4F8B;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BC4;&#x4F8B;&#x4E8C;</h3>
-<pre><code class="lang-py"><span class="hljs-comment"># -- FILE: behave4my_project/fixtures.py</span>
-<span class="hljs-comment"># ALTERNATIVE: Place fixture in &quot;features/environment.py&quot; (but reuse is harder)</span>
-<span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> fixture
-<span class="hljs-keyword">import</span> threading
-<span class="hljs-keyword">from</span> wsgiref <span class="hljs-keyword">import</span> simple_server
-<span class="hljs-keyword">from</span> my_application <span class="hljs-keyword">import</span> model
-<span class="hljs-keyword">from</span> my_application <span class="hljs-keyword">import</span> web_app
-
-<span class="hljs-meta">@fixture</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wsgi_server</span><span class="hljs-params">(context, port=<span class="hljs-number">8000</span>)</span>:</span>
-    context.server = simple_server.WSGIServer((<span class="hljs-string">&apos;&apos;</span>, port))
-    context.server.set_app(web_app.main(environment=<span class="hljs-string">&apos;test&apos;</span>))
-    context.thread = threading.Thread(target=context.server.serve_forever)
-    context.thread.start()
-    <span class="hljs-keyword">yield</span> context.server
-    <span class="hljs-comment"># -- CLEANUP-FIXTURE PART:</span>
-    context.server.shutdown()
-    context.thread.join()
-</code></pre>
-<ul>
-<li><a href="https://behave.readthedocs.io/en/stable/fixtures.html#docid-fixtures" target="_blank">https://behave.readthedocs.io/en/stable/fixtures.html#docid-fixtures</a></li>
-</ul>
-<h2 id="controlling-things-with-tags"><a name="controlling-things-with-tags" class="plugin-anchor" href="#controlling-things-with-tags"><i class="fa fa-link" aria-hidden="true"></i></a>Controlling Things With Tags</h2>
-<p>steps/testutil.py</p>
-<pre><code class="lang-py"><span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
-<span class="hljs-string">&quot;&quot;&quot;
-Test utility support.
-&quot;&quot;&quot;</span>
-
-<span class="hljs-comment"># @mark.test_support</span>
-<span class="hljs-comment"># ----------------------------------------------------------------------------</span>
-<span class="hljs-comment"># TEST SUPPORT:</span>
-<span class="hljs-comment"># ----------------------------------------------------------------------------</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NamedNumber</span><span class="hljs-params">(object)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot;Map named numbers into numbers.&quot;&quot;&quot;</span>
-    MAP = {
-        <span class="hljs-string">&quot;one&quot;</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;two&quot;</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-string">&quot;three&quot;</span>: <span class="hljs-number">3</span>,
-        <span class="hljs-string">&quot;four&quot;</span>:  <span class="hljs-number">4</span>,
-        <span class="hljs-string">&quot;five&quot;</span>:  <span class="hljs-number">5</span>,
-        <span class="hljs-string">&quot;six&quot;</span>:   <span class="hljs-number">6</span>,
-    }
-
-<span class="hljs-meta">    @classmethod</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">from_string</span><span class="hljs-params">(cls, named_number)</span>:</span>
-        name = named_number.strip().lower()
-        <span class="hljs-keyword">return</span> cls.MAP[name]
-</code></pre>
-<h3 id="&#x6E2C;&#x8A66;&#x5E33;&#x865F;&#x8207;&#x8CC7;&#x6599;&#x7684;&#x7BA1;&#x7406;"><a name="&#x6E2C;&#x8A66;&#x5E33;&#x865F;&#x8207;&#x8CC7;&#x6599;&#x7684;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x6E2C;&#x8A66;&#x5E33;&#x865F;&#x8207;&#x8CC7;&#x6599;&#x7684;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E2C;&#x8A66;&#x5E33;&#x865F;&#x8207;&#x8CC7;&#x6599;&#x7684;&#x7BA1;&#x7406;</h3>
 
                                 
                                 </section>
@@ -1158,12 +1115,12 @@ Test utility support.
 
             
                 
-                <a href="practices/week6-1.html" class="navigation navigation-prev " aria-label="Previous page: 練習題：登入">
+                <a href="report.html" class="navigation navigation-prev " aria-label="Previous page: 報表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="pom.html" class="navigation navigation-next " aria-label="Next page: POM">
+                <a href="environment.html" class="navigation navigation-next " aria-label="Next page: environment 模組">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1174,7 +1131,7 @@ Test utility support.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"組織測試專案","level":"1.7.3","depth":2,"next":{"title":"POM","level":"1.7.4","depth":2,"path":"pom.md","ref":"pom.md","articles":[]},"previous":{"title":"練習題：登入","level":"1.7.2","depth":2,"path":"practices/week6-1.md","ref":"practices/week6-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"organization.md","mtime":"2021-05-09T02:03:39.379Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T02:03:45.132Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"組織測試專案","level":"1.7.2","depth":2,"next":{"title":"environment 模組","level":"1.7.2.1","depth":3,"path":"environment.md","ref":"environment.md","articles":[]},"previous":{"title":"報表","level":"1.7.1","depth":2,"path":"report.md","ref":"report.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"organization.md","mtime":"2021-05-09T07:22:35.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T07:22:39.579Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
