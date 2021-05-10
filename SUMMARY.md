@@ -54,7 +54,6 @@
     - [練習題](practices/week6-2.md)
   - [組織測試專案](organization.md)
     - [environment 模組](environment.md)
-    - [fixture 模組](fixture.md)
   - [報表](report.md)
   - [經驗談](experience-talks.md)
   - [檔案下載](download.md)
@@ -68,6 +67,7 @@
 
 <!--
 - [第六週]()
+  - [fixture 模組](fixture.md)
   - [Scenario Outline](outline.md)
   - [常見錯誤處理](error.md)
   - [進階選取元素](locating_elements_advanced.md)
