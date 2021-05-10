@@ -1068,6 +1068,93 @@
 </ul>
 </li>
 </ul>
+<h2 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h2>
+<p>features/login.feature</p>
+<pre><code>Feature: OrangeHRM Login
+
+  Scenario: Login to OrangeHRM with valid parameters
+    When I open orange HRM Homepage
+    And Enter username &quot;Admin&quot; and password &quot;admin123&quot;
+    And Click on login button
+    Then User must successfully login to the Dashboard Page
+</code></pre><p>features/environment.py</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">before_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    context.driver = webdriver.Chrome(<span class="hljs-string">&quot;../chromedriver&quot;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_feature</span><span class="hljs-params">(context, feature)</span>:</span>
+    print(<span class="hljs-string">&quot;=== after_feature ===&quot;</span>)
+    context.driver.close()
+</code></pre>
+<p>features/steps/login.py</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> behave <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> page <span class="hljs-keyword">import</span> *
+
+<span class="hljs-meta">@when(u&apos;I open orange HRM Homepage&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_impl</span><span class="hljs-params">(context)</span>:</span>
+    main_page = MainPage(context.driver)
+    main_page.go()
+    context.main_page = main_page
+
+<span class="hljs-meta">@when(u&apos;Enter username &quot;{username}&quot; and password &quot;{password}&quot;&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_impl</span><span class="hljs-params">(context, username, password)</span>:</span>
+    context.main_page.set_username(username)
+    context.main_page.set_password(password)
+
+<span class="hljs-meta">@when(u&apos;Click on login button&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_impl</span><span class="hljs-params">(context)</span>:</span>
+    context.main_page.click_submit_button()
+
+<span class="hljs-meta">@then(u&apos;User must successfully login to the Dashboard Page&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_impl</span><span class="hljs-params">(context)</span>:</span>
+    dashboard_page = DashboardPage(context.driver)
+    <span class="hljs-keyword">assert</span> dashboard_page.is_title_matches() == <span class="hljs-keyword">True</span>
+</code></pre>
+<p>features/steps/page.py</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
+<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BasePage</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, driver)</span>:</span>
+        self.driver = driver
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainPage</span><span class="hljs-params">(BasePage)</span>:</span>
+    <span class="hljs-comment"># Navigation Bar</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">go</span><span class="hljs-params">(self)</span>:</span>
+        self.driver.get(<span class="hljs-string">&quot;https://opensource-demo.orangehrmlive.com/&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_title_matches</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;OrangeHRM&quot;</span> <span class="hljs-keyword">in</span> self.driver.title
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_username</span><span class="hljs-params">(self, username)</span>:</span>
+        self.driver.find_element_by_id(<span class="hljs-string">&quot;txtUsername&quot;</span>).send_keys(username)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_password</span><span class="hljs-params">(self, password)</span>:</span>
+        self.driver.find_element_by_id(<span class="hljs-string">&quot;txtPassword&quot;</span>).send_keys(password)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_submit_button</span><span class="hljs-params">(self)</span>:</span>
+        self.driver.find_element_by_id(<span class="hljs-string">&quot;btnLogin&quot;</span>).click()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span><span class="hljs-params">(self, username, password)</span>:</span>
+        self.set_username(username)
+        self.set_password(password)
+        self.click_submit_button()
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DashboardPage</span><span class="hljs-params">(BasePage)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_title_matches</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.get_title() == <span class="hljs-string">&quot;Dashboard&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_title</span><span class="hljs-params">(self)</span>:</span>
+        h1 = WebDriverWait(self.driver, <span class="hljs-number">10</span>).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, <span class="hljs-string">&quot;h1&quot;</span>))
+        )
+        <span class="hljs-keyword">return</span> h1.text
+</code></pre>
 
                                 
                                 </section>
@@ -1111,7 +1198,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.7.2.1","depth":3,"next":{"title":"組織測試專案","level":"1.7.3","depth":2,"path":"organization.md","ref":"organization.md","articles":[{"title":"environment 模組","level":"1.7.3.1","depth":3,"path":"environment.md","ref":"environment.md","articles":[]}]},"previous":{"title":"POM","level":"1.7.2","depth":2,"path":"pom.md","ref":"pom.md","articles":[{"title":"練習題","level":"1.7.2.1","depth":3,"path":"practices/week6-2.md","ref":"practices/week6-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week6-2.md","mtime":"2021-05-10T04:49:40.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T06:28:22.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.7.2.1","depth":3,"next":{"title":"組織測試專案","level":"1.7.3","depth":2,"path":"organization.md","ref":"organization.md","articles":[{"title":"environment 模組","level":"1.7.3.1","depth":3,"path":"environment.md","ref":"environment.md","articles":[]}]},"previous":{"title":"POM","level":"1.7.2","depth":2,"path":"pom.md","ref":"pom.md","articles":[{"title":"練習題","level":"1.7.2.1","depth":3,"path":"practices/week6-2.md","ref":"practices/week6-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week6-2.md","mtime":"2021-05-10T13:45:04.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T13:45:07.773Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
