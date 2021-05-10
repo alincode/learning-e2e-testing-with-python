@@ -11,3 +11,6 @@
 ```
 
 - 講 Login 的程式，改寫成 POM 的格式。
+  - 建立 environment.py
+  - 建立 BasePage class
+  - 建立個別的 Page class

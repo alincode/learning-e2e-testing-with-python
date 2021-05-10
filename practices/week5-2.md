@@ -59,7 +59,7 @@
 }
 ```
 
-<!-- ### 答案
+### 答案
 
 ```py
 import unittest
@@ -87,11 +87,10 @@ class ApiTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-``` -->
+```
 
 - 測試 POST `https://reqres.in/api/login` API
 
-<!--
 ### 解答
 
 ```py
@@ -118,4 +117,4 @@ class ApiTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-``` -->
+```
