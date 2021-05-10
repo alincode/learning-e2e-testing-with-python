@@ -1111,66 +1111,61 @@
   }
 }
 </code></pre>
-<!-- ### 答案
+<h3 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> unittest
+<span class="hljs-keyword">import</span> requests
 
-```py
-import unittest
-import requests
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApiTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
 
-class ApiTest(unittest.TestCase):
-
-    def test_get_users(self):
-        url = "https://reqres.in/api/users?page=1"
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_get_users</span><span class="hljs-params">(self)</span>:</span>
+        url = <span class="hljs-string">&quot;https://reqres.in/api/users?page=1&quot;</span>
         res = requests.get(url)
-        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.status_code, <span class="hljs-number">200</span>)
         body = res.json()
 
-        for body_key in body.keys():
-            self.assertIn(body_key, ['page', 'per_page', 'total', 'total_pages', 'data', 'support'])
-        for support_key in body["support"]:
-            self.assertIn(support_key, ['url', 'text'])
+        <span class="hljs-keyword">for</span> body_key <span class="hljs-keyword">in</span> body.keys():
+            self.assertIn(body_key, [<span class="hljs-string">&apos;page&apos;</span>, <span class="hljs-string">&apos;per_page&apos;</span>, <span class="hljs-string">&apos;total&apos;</span>, <span class="hljs-string">&apos;total_pages&apos;</span>, <span class="hljs-string">&apos;data&apos;</span>, <span class="hljs-string">&apos;support&apos;</span>])
+        <span class="hljs-keyword">for</span> support_key <span class="hljs-keyword">in</span> body[<span class="hljs-string">&quot;support&quot;</span>]:
+            self.assertIn(support_key, [<span class="hljs-string">&apos;url&apos;</span>, <span class="hljs-string">&apos;text&apos;</span>])
 
-        self.assertEqual(len(body["data"]), 6)
-        row = body["data"][1]
-        for row_key in row:
-            self.assertIn(row_key, ['id', 'email', 'first_name', 'last_name', 'avatar'])
-        self.assertIsInstance(row["id"], int)
-        self.assertEqual(row["id"], 2)
+        self.assertEqual(len(body[<span class="hljs-string">&quot;data&quot;</span>]), <span class="hljs-number">6</span>)
+        row = body[<span class="hljs-string">&quot;data&quot;</span>][<span class="hljs-number">1</span>]
+        <span class="hljs-keyword">for</span> row_key <span class="hljs-keyword">in</span> row:
+            self.assertIn(row_key, [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;first_name&apos;</span>, <span class="hljs-string">&apos;last_name&apos;</span>, <span class="hljs-string">&apos;avatar&apos;</span>])
+        self.assertIsInstance(row[<span class="hljs-string">&quot;id&quot;</span>], int)
+        self.assertEqual(row[<span class="hljs-string">&quot;id&quot;</span>], <span class="hljs-number">2</span>)
 
-if __name__ == '__main__':
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
     unittest.main()
-``` -->
+</code></pre>
 <ul>
 <li>&#x6E2C;&#x8A66; POST <code>https://reqres.in/api/login</code> API</li>
 </ul>
-<!--
-### 解答
+<h3 id="&#x89E3;&#x7B54;"><a name="&#x89E3;&#x7B54;" class="plugin-anchor" href="#&#x89E3;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x7B54;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> unittest
+<span class="hljs-keyword">import</span> requests
 
-```py
-import unittest
-import requests
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApiTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
 
-class ApiTest(unittest.TestCase):
-
-    def test_login(self):
-        url = "https://reqres.in/api/login"
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_login</span><span class="hljs-params">(self)</span>:</span>
+        url = <span class="hljs-string">&quot;https://reqres.in/api/login&quot;</span>
         req_body = {
-            "email": "eve.holt@reqres.in",
-            "password": "cityslicka"
+            <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;eve.holt@reqres.in&quot;</span>,
+            <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;cityslicka&quot;</span>
         }
         res = requests.post(url, req_body)
-        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.status_code, <span class="hljs-number">200</span>)
         body = res.json()
         print(body)
 
-        for body_key in body.keys():
-            self.assertIn(body_key, ['token'])
+        <span class="hljs-keyword">for</span> body_key <span class="hljs-keyword">in</span> body.keys():
+            self.assertIn(body_key, [<span class="hljs-string">&apos;token&apos;</span>])
 
-        self.assertIsInstance(body['token'], str)
+        self.assertIsInstance(body[<span class="hljs-string">&apos;token&apos;</span>], str)
 
-if __name__ == '__main__':
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
     unittest.main()
-``` -->
+</code></pre>
 
                                 
                                 </section>
@@ -1214,7 +1209,7 @@ if __name__ == '__main__':
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.6.2.1","depth":3,"next":{"title":"活文件","level":"1.6.3","depth":2,"path":"living_document.md","ref":"living_document.md","articles":[]},"previous":{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[{"title":"練習題","level":"1.6.2.1","depth":3,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-2.md","mtime":"2021-05-03T04:52:20.578Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T04:30:18.805Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.6.2.1","depth":3,"next":{"title":"活文件","level":"1.6.3","depth":2,"path":"living_document.md","ref":"living_document.md","articles":[]},"previous":{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[{"title":"練習題","level":"1.6.2.1","depth":3,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-2.md","mtime":"2021-05-10T04:49:40.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T04:49:44.153Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

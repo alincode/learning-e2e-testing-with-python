@@ -1074,25 +1074,22 @@ rebate_discount = <span class="hljs-number">0.9</span>
             amount = original_amount * vip_discount
     <span class="hljs-keyword">return</span> amount
 </code></pre>
-<!--
-### 答案
+<h3 id="&#x7B54;&#x6848;"><a name="&#x7B54;&#x6848;" class="plugin-anchor" href="#&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B54;&#x6848;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> unittest
+<span class="hljs-keyword">import</span> order
 
-```py
-import unittest
-import order
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestOrder</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_calculate_order_not_vip</span><span class="hljs-params">(self)</span>:</span>
+        self.assertEqual(order.calculate_order(<span class="hljs-number">100</span>, <span class="hljs-keyword">False</span>), <span class="hljs-number">100</span>)
+        self.assertEqual(order.calculate_order(<span class="hljs-number">1100</span>, <span class="hljs-keyword">False</span>), <span class="hljs-number">990</span>)
 
-class TestOrder(unittest.TestCase):
-    def test_calculate_order_not_vip(self):
-        self.assertEqual(order.calculate_order(100, False), 100)
-        self.assertEqual(order.calculate_order(1100, False), 990)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_calculate_order_vip</span><span class="hljs-params">(self)</span>:</span>
+        self.assertEqual(order.calculate_order(<span class="hljs-number">100</span>, <span class="hljs-keyword">True</span>), <span class="hljs-number">95</span>)
+        self.assertEqual(order.calculate_order(<span class="hljs-number">1100</span>, <span class="hljs-keyword">True</span>), <span class="hljs-number">940.5</span>)
 
-    def test_calculate_order_vip(self):
-        self.assertEqual(order.calculate_order(100, True), 95)
-        self.assertEqual(order.calculate_order(1100, True), 940.5)
-
-if __name__ == '__main__':
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
     unittest.main()
-``` -->
+</code></pre>
 
                                 
                                 </section>
@@ -1136,7 +1133,7 @@ if __name__ == '__main__':
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.6.1.1","depth":3,"next":{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[{"title":"練習題","level":"1.6.2.1","depth":3,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]}]},"previous":{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[{"title":"練習題","level":"1.6.1.1","depth":3,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-1.md","mtime":"2021-05-08T00:51:04.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T04:30:18.805Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"練習題","level":"1.6.1.1","depth":3,"next":{"title":"API 測試","level":"1.6.2","depth":2,"path":"api_testing.md","ref":"api_testing.md","articles":[{"title":"練習題","level":"1.6.2.1","depth":3,"path":"practices/week5-2.md","ref":"practices/week5-2.md","articles":[]}]},"previous":{"title":"單元測試","level":"1.6.1","depth":2,"path":"unittest.md","ref":"unittest.md","articles":[{"title":"練習題","level":"1.6.1.1","depth":3,"path":"practices/week5-1.md","ref":"practices/week5-1.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"2","family":"sans","theme":"night"},"pluginsConfig":{"expandable-chapters":{},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"AILIN LIOU <alin.code@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"網站自動化測試 for Python","language":"zh","gitbook":"*","description":"適合入門者的網站自動化測試教材，範例使用的語言是 Python。"},"file":{"path":"practices/week5-1.md","mtime":"2021-05-10T04:49:40.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-10T04:49:44.153Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
