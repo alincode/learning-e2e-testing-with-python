@@ -2,6 +2,13 @@
 
 ## Step1
 
+```
+pip install behave
+pip install selenium
+```
+
+## Step2
+
 1. 建立 `features/` 和 `features/steps/` 資料夾
 1. 建立 feature 檔案，例如 `login.feature`。
 1. 執行 `behave`
@@ -19,12 +26,12 @@ Feature: OrangeHRM Login
     Then User must successfully login to the Dashboard Page
 ```
 
-## Step2
+## Step3
 
 1. 建立 step 檔案，例如 `features/steps/login.py`。
 1. 添加 `behave` 和 `selenium` 模組
 
-## Step3
+## Step4
 
 1. 實作 `login.py` 細節
 1. 執行 `behave`

@@ -8,8 +8,7 @@
 
 ![](assets/logo_feature.png)
 
-<!--
-````
+```
 Feature: OrangeHRM Logo
 
   Scenario: Logo presence on OrangeHRM home page
@@ -17,7 +16,7 @@ Feature: OrangeHRM Logo
     When open orange hrm homepage
     Then verify that the logo present on page
     And close browser
-``` -->
+```
 
 ## Step2
 
@@ -29,7 +28,8 @@ Feature: OrangeHRM Logo
 1. 實作 `logo.py` 細節
 1. 執行 `behave`
 
-<!--
+## 解答
+
 ```py
 from behave import *
 from selenium import webdriver
@@ -54,7 +54,7 @@ def step_impl(context):
 def step_impl(context):
     context.driver.close()
 
-``` -->
+```
 
 <!--
 ## Step4

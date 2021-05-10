@@ -22,7 +22,6 @@ def calculate_order(original_amount, is_vip):
     return amount
 ```
 
-<!--
 ### 答案
 
 ```py
@@ -40,4 +39,4 @@ class TestOrder(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-``` -->
+```
